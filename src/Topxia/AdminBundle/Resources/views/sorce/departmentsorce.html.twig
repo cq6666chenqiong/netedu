@@ -1,0 +1,78 @@
+{% extends 'TopxiaAdminBundle:sorce:layout.html.twig' %}
+
+
+
+{% block main %}
+<script>
+    window.onload=function(){
+        var year = $("#year").val();
+        var url = '/functionDir/createExcel/make_xuefentongji.php?year='+year;
+        //myajax('/functionDir/createExcel/make_xueshengtongji.php?year='+year+'&department='+department+'&truename='+truename);
+        $("#mydownload").attr("href",url);
+    }
+   /* function getExcel(){
+        var year = $("#year").val();
+        myajax('/functionDir/createExcel/make_xuefentongji.php?year='+year);
+    }*/
+</script>
+    <div style="height: 40px">
+        <form action="{{ path('admin_sorce_statisticaldepartment') }}" method="get">
+        <span>统计年度</span><input id="year" name="year" value="{{ year }}"/><input type="submit" value="查询">
+           {# <button onclick="getExcel()" style="float: right">结果导出</button>#}
+            <a id="mydownload" class="btn btn-info btn-sm button1"  style="float: right">结果导出</a>
+        </form>
+
+    </div>
+
+    <table id="user-table" class="table table-striped table-hover" data-search-form="#user-search-form">
+        <thead>
+        <tr>
+            <th>科室名称</th>
+            <th>在岗人数</th>
+            <th>初级合格人数</th>
+            <th>中级合格人数</th>
+            <th>副高级合格人数</th>
+            <th>高级合格人数</th>
+            <th>30岁以下合格人数</th>
+            <th>30-40岁合格人数</th>
+            <th>40-50岁合格人数</th>
+            <th>50岁以上合格人数</th>
+            <th>合计人数</th>
+            <th>合格率</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for k in kkeys %}
+            <tr>
+                <td>{{ keshi[k] }}</td>
+                <td>{{ arrayk[k][1] }}</td>
+                <td>{{ arrayk[k][2] }}</td>
+                <td>{{ arrayk[k][3] }}</td>
+                <td>{{ arrayk[k][4] }}</td>
+                <td>{{ arrayk[k][5] }}</td>
+                <td>{{ arrayk[k][6] }}</td>
+                <td>{{ arrayk[k][7] }}</td>
+                <td>{{ arrayk[k][8] }}</td>
+                <td>{{ arrayk[k][9] }}</td>
+                <td>{{ arrayk[k][10] }}</td>
+                <td>{{ arrayk[k][11] }}%</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <th>合计</th>
+            <th>{{ heji[0] }}</th>
+            <th>{{ heji[1] }}</th>
+            <th>{{ heji[2] }}</th>
+            <th>{{ heji[3] }}</th>
+            <th>{{ heji[4] }}</th>
+            <th>{{ heji[5] }}</th>
+            <th>{{ heji[6] }}</th>
+            <th>{{ heji[7] }}</th>
+            <th>{{ heji[8] }}</th>
+            <th>{{ heji[9] }}</th>
+            <th>{{ heji[10] }}%</th>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

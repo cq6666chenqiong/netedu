@@ -1,0 +1,110 @@
+{#
+{% for nav in navigations if nav.isOpen %}
+    {% set subNavs = nav.children|default([]) %}
+    {% if  loop.index == 6  and not isMobile|default(false) %}
+        <li class="nav-more nav-hover">
+            <a class="more">
+                <i class="es-icon es-icon-morehoriz"></i>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                {% for nav in navigations[5:]  if nav.isOpen %}
+                    {% set subNavs = nav.children|default([]) %}
+
+                    {% include 'TopxiaWebBundle:Default:navigation-li.html.twig' %}
+                {% endfor %}
+            </ul>
+        </li>
+    {% endif %}
+
+    {% if loop.index < 6 or isMobile|default(false) %}
+        {% include 'TopxiaWebBundle:Default:navigation-li.html.twig' %}
+    {% endif %}
+{% endfor %}
+
+#}
+
+
+
+{% if 'ROLE_TEACHER' in app.user.roles %}
+    {#
+    <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+        <a href="{{ url('admin') }}">首页</a>
+    </li>
+#}
+
+    <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+        <a href="{{ path('admin_course') }}">课程管理</a>
+    </li>
+
+    <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+        <a href="{{ path('admin_classroom') }}">科室管理</a>
+    </li>
+
+    <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+        <a href="{{ path('admin_user') }}">用户管理</a>
+    </li>
+
+    <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+        <a href="{{ path('settings') }}">个人设置</a>
+    </li>
+
+    <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+        <a href="{{ path('admin_sorce_statistical') }}">学分统计</a>
+    </li>
+
+{% else %}
+
+   {# {% if app.user %}
+        <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+            <a href="{{ url('homepage') }}">首页</a>
+        </li>
+        <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+            <a href="{{ path('settings') }}">个人设置</a>
+        </li>
+        <li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+            <a href="{{ path('my') }}">我的学习</a>
+        </li>
+{% endif %}
+#}
+{% endif %}
+
+
+{#
+{% for nav in navigations if nav.isOpen %}
+ {% set subNavs = nav.children|default([]) %}
+ {% if loop.index < 3 or isMobile|default(false) %}
+
+     {% if loop.index == 2%}
+
+         <li class="{% if subNavs %}nav-hover{% endif %}{% if siteNav and siteNav == nav.url %} active {% endif %}">
+             <a href="{% if nav.url %}{{ nav.url|navigation_url }}{% else %}javascript:;{% endif %}" {% if nav.isNewWin %}target="_blank"{% endif %}>科室 {% if subNavs %} {% endif %}</a>
+
+             {% if subNavs %}
+                 <ul class="dropdown-menu" role="menu">
+                     {% for subNav in subNavs if subNav.isOpen %}
+
+                         <li><a href="{{ subNav.url|navigation_url }}"  {% if subNav.isNewWin %}target="_blank"{% endif %}>{{ subNav.name }}</a></li>
+                     {% endfor %}
+                 </ul>
+             {% endif %}
+         </li>
+      {% endif %}
+      {% if loop.index == 1%}
+
+          <li class="{% if subNavs %}nav-hover{% endif %}{% if siteNav and siteNav == nav.url %} active {% endif %}">
+              <a href="{% if nav.url %}{{ nav.url|navigation_url }}{% else %}javascript:;{% endif %}" {% if nav.isNewWin %}target="_blank"{% endif %}>{{ nav.name }} {% if subNavs %} {% endif %}</a>
+
+              {% if subNavs %}
+                  <ul class="dropdown-menu" role="menu">
+                      {% for subNav in subNavs if subNav.isOpen %}
+
+                          <li><a href="{{ subNav.url|navigation_url }}"  {% if subNav.isNewWin %}target="_blank"{% endif %}>{{ subNav.name }}</a></li>
+                      {% endfor %}
+                  </ul>
+              {% endif %}
+
+          </li>
+      {% endif %}
+ {% endif %}
+{% endfor %}
+#}

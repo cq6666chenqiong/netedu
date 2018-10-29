@@ -1,0 +1,75 @@
+{% extends 'TopxiaAdminBundle::layout.html.twig' %}
+
+{% set menu = 'admin_classroom_manage' %}
+
+{% set script_controller='classroombundle/controller/classroom-admin/classroom' %}
+{% block main %}
+  <style type="text/css">
+    .ri {
+      float:right;
+    }
+    .div{width:400px; height:30px;float:right}
+    .input{width:200px;height:30px;float:right}
+    .button1{width:100px;height:30px;float:right}
+  </style>
+  <a class="btn btn-info btn-sm" href="{{ path('admin_classroom_create') }}"><span class="glyphicon glyphicon-plus"></span>创建科室</a>
+  <div class="form-group mbm div">
+    <button type="button" class="btn btn-info btn-sm ri" onclick="myajaxFileUpload('/functionDir/upload_file.php',null)" ><span class="glyphicon glyphicon-plus"></span>批量创建科室</button>
+        <input type="text" class="button1" id="copyFile" name="copyFile"  style=" width:66%;margin-right:10px;display: none" />
+
+        <input type="file" class="input" id="file"   name="file" onchange="getFile(this,'copyFile')" />
+       <a href="#" onclick="myajaxFileUpload('/functionDir/download_keshi.php',null)">下载模板</a>
+
+  </div>
+  <form id="message-search-form" class="form-inline well well-sm" action="" method="get" novalidate>
+    {% include 'OrgBundle:Org:org-tree-select.html.twig' with {orgCode: app.request.get('orgCode'), modal: 'list'} %}
+
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="科室名称" name="title" value="{{ app.request.get('title') }}">
+    </div>
+
+    <button class="btn btn-primary">搜索</button>
+
+  </form>
+  {% if classroomInfo%}
+  <table class="table table-striped table-hover" id="classroom-table">
+    <thead>
+    <tr>
+      <th>科室编号</th>
+      <th width="40%">科室名称</th>
+      <th>课程数</th>
+      {#
+      <th>学员数</th>
+      <th>价格</th>
+      #}
+      <th>状态</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+   {% for classroom in classroomInfo %}
+      {% set category = categories[classroom.categoryId]|default(null) %}
+      {% include 'ClassroomBundle:ClassroomAdmin:table-tr.html.twig' with {classroom:classroom,category:category} %}
+
+   {% endfor %}
+
+    </tbody>
+
+  </table>
+  {% else %}
+    <div class="empty">暂无科室信息!</div>
+  {% endif %}
+  <div class="pull-right">
+    {#{{ web_macro.paginator(paginator) }} #}
+    <ul  class="pagination">
+      <li {% if paginator.currentPage == paginator.firstPage %}class="disabled"{% endif %}><a  href="{{ paginator.getPageUrl(paginator.previousPage) }}">上一页</a></li>
+        {% for page in paginator.pages %}
+          <li {% if page == paginator.currentPage %}class="active"{% endif %}><a href="{{ paginator.getPageUrl(page) }}">{{ page }}</a></li>
+        {% endfor %}
+      <li {% if paginator.currentPage == paginator.lastPage %}class="disabled"{% endif %}><a  href="{{ paginator.getPageUrl(paginator.nextPage) }}">下一页</a></li>
+    </ul>
+</div>
+
+
+{% endblock %}

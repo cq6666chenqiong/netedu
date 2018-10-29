@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Video.js 5.18.4</title>
+	<link href="css/video-js.css" rel="stylesheet">
+	<!-- If you'd like to support IE8 -->
+	<script src="js/videojs-ie8.min.js"></script>
+	<style>
+		body{background-color: #191919}
+		.m{ width: 640px; height: 264; margin-left: auto; margin-right: auto; margin-top: 100px; }
+	</style>
+</head>
+
+<body>
+	<div class="m">
+		<video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+		  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+			<source src="http://orxvve9ws.bkt.clouddn.com/%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%BA%94%E4%BB%98%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%9A%84%E5%BA%94%E7%94%A8.mp4" type="video/mp4">
+			<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+			<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+			<p class="vjs-no-js">
+			  To view this video please enable JavaScript, and consider upgrading to a web browser that
+			  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			</p>
+		  </video>
+		  <script src="http://vjs.zencdn.net/5.18.4/video.min.js"></script>	
+		  <script type="text/javascript">
+		  /*
+			var myPlayer = videojs('my-video');
+			videojs("my-video").ready(function(){
+				var myPlayer = this;
+				myPlayer.play();
+			});
+			*/
+			var player = videojs('my-video', { /* Options */ }, function() {
+					console.log('Good to go!');
+		
+					this.play(); // if you don't trust autoplay for some reason
+
+					// How about an event listener?
+					this.on('ended', function() {
+					console.log('awww...over so soon?');
+				    });
+					this.on('timeupdate',function(){
+					   // alert('aaaa');
+					});
+					this.on('volumechange',function(){
+					    alert('aaaa1');
+					});
+					this.on('durationchange',function(){
+					    alert('aaaa2');
+					});
+					this.on('firstplay',function(){
+					    alert('aaaa3');
+					});
+					this.on('fullscreenchange',function(){
+					    alert('aaaa4');
+					});
+					this.on('loadedalldata',function(){
+					    alert('aaaa5');
+					});this.on('loadeddata',function(){
+					    alert('aaaa6');
+					});this.on('loadedmetadata',function(){
+					    alert('aaaa7');
+					});this.on('loadstart',function(){
+					    alert('aaaa8');
+					});this.on('progress',function(){
+					    alert('aaaa9');
+					});
+					});this.on('progress',function(){
+					    alert('aaaa10');
+					});
+					});this.on('seeked',function(){
+					    alert('aaaa11');
+					});
+					});this.on('seeking',function(){
+					    alert('aaaa12');
+					});});
+					this.on('waiting',function(){
+					    alert('aaaa13');
+					});
+					this.on('resize inherited',function(){
+					    alert('aaaa14');
+					});
+					this.on('firstplay',function(){
+					    alert('aaaa15');
+					});
+				/*	
+					durationchange
+ended //播放结束
+firstplay
+fullscreenchange
+loadedalldata
+loadeddata
+loadedmetadata
+loadstart
+pause //暂停
+play  //播放
+progress
+seeked
+seeking
+timeupdate
+volumechange
+waiting
+resize inherited
+				*/	
+			});
+		</script>
+	</div>
+
+</body>
+</html>

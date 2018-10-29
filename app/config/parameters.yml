@@ -1,0 +1,14 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: 3306
+    database_name: myBanana
+    database_user: root
+    database_password:
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: zh_CN
+    secret: 1hkcbroykc004gc8ko844co40g4kwco
+    user_partner: none

@@ -1,0 +1,44 @@
+{#
+{% set currentTheme = current_theme() %}
+{% set themeConfig = isEditColor|default(false) ? currentTheme.config : currentTheme.confirmConfig %}
+{% for config in themeConfig.blocks.left|default([]) %}
+    {% set code = config.code %}
+    {% if code == 'footer-link' %}
+      {% set category = config.categoryId|default(0) ? data('Category', {categoryId: config.categoryId})  : null %}
+      {% include 'TopxiaWebBundle:Default:' ~ code ~ '.html.twig' with {config:config, category: category} %}
+    {% endif %}
+{% endfor %}
+#}
+<footer class="es-footer">
+    <div class="es-footer container" style="z-index:0;background-color: #037eb6;width: 100%;height: 80px;bottom:0;padding-bottom:0px">
+        <div style="background-color: #037eb6;width: 600px;margin: 0 auto;text-align: center;line-height: 80px">
+            <table style="background-color: #037eb6;">
+                <tr><td style="width: 100px">平台介绍&nbsp;&nbsp;&nbsp;&nbsp;|</td><td style="width: 100px">联系我们&nbsp;&nbsp;&nbsp;&nbsp;|</td><td style="width: 300px">天津人民医院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;津ICP备11005729号</td></tr>
+            </table>
+
+        </div>
+    </div>
+    {#
+  <div class="copyright">
+    <div class="container">
+      {% include "TopxiaWebBundle::powered-by.html.twig" %}
+      {{ setting('site.analytics')|raw }}
+      <a class="mlm" href="{{ path('course_archive') }}">{{'课程存档'|trans}}</a>
+      <div class="mts">
+        {% if setting('site.copyright') %}
+          {{'课程内容版权均归'|trans}}
+          <a href="/">
+            {{ setting('site.copyright') }}
+          </a>
+          {{'所有'|trans}}
+        {% endif %}
+        {% if setting('site.icp') %}
+          <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+            {{ setting('site.icp') }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+ #}
+</footer>

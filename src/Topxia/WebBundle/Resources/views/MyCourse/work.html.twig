@@ -1,0 +1,126 @@
+{% extends 'TopxiaWebBundle:MyCourse:layout.html.twig' %}
+
+{% block title %}{{'我的工作量'|trans}} - {{ parent() }}{% endblock %}
+
+{% set tab_nav = 'work' %}
+
+{% block main %}
+    <style type="text/css">
+        .ri {
+            float:right;
+        }
+        .div{width:450px; height:30px;float: left}
+        .input{width:300px;height:30px;float: left}
+        .button1{width:100px;height:30px;float: right}
+    </style>
+    <div class="panel panel-default panel-col">
+        <div class="panel-heading">{{'我的工作量'|trans}}</div>
+        <div class="panel-body">
+
+      {% if pass=="1"%}
+          提交成功
+      {% else %}
+          <form id="user-edit-form" class="form-horizontal" method="post" action="{{ path('school_work_add',{userId:userId})}}">
+
+              <input type="hidden" name="work.userId" value="{{ userId }}">
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="gender">管床</label>
+                  </div>
+                  <div class="col-md-7 controls radios">
+                      <input type="text" id="gc" name="work[gc]" class="form-control" value="">
+                  </div>
+              </div>
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="gender">跟台</label>
+                  </div>
+                  <div class="col-md-7 controls radios">
+                      <input type="text" id="gentai" name="work[gentai]" class="form-control" value="">
+                  </div>
+              </div>
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="gender">夜班</label>
+                  </div>
+                  <div class="col-md-7 controls radios">
+                      <input type="text" id="yeban" name="work[yeban]" class="form-control" value="">
+                  </div>
+              </div>
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="gender">学术活动</label>
+                  </div>
+                  <div class="col-md-7 controls radios">
+                      <input type="text" id="xshd" name="work[xshd]" class="form-control" value="">
+                  </div>
+              </div>
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="gender">其他</label>
+                  </div>
+                  <div class="col-md-7 controls radios">
+                      <input type="text" id="other" name="work[other]" class="form-control" value="">
+                  </div>
+              </div>
+
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="idcard">工作量</label>
+                  </div>
+                  <div class="col-md-7 controls">
+                      <input type="text" id="volume" name="work[volume]" class="form-control" value="">
+                  </div>
+              </div>
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="idcard">工作量文件上传</label>
+                  </div>
+                  <div class="col-md-7 controls ">
+                      <div class="div">
+                      <input type="text" id="copyFile" name="copyFile"  style=" width:66%;margin-right:10px;display: none" />
+
+                      <input type="file" id="file"  class="input" name="file" onchange="getFile(this,'copyFile')" />
+                      <input type="text" id="filepath" name="work[filepath]" style=" width:66%;margin-right:10px;display: none" />
+                      <button type="button" class="btn btn-info btn-sm button1" onclick="myajaxFileUpload('/new/upload_work.php',{{ user.id }})" ><span class="glyphicon glyphicon-plus"></span>上传</button>
+                      </div>
+                  </div>
+              </div>
+
+
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="idcard">住院号</label>
+                  </div>
+                  <div class="col-md-7 controls">
+                      <input type="text" id="hnum" name="work[hnum]" class="form-control" value="">
+                  </div>
+              </div>
+
+              <div class="row form-group">
+                  <div class="col-md-2 control-label">
+                      <label for="idcard">备注</label>
+                  </div>
+                  <div class="col-md-7 controls">
+                      <input type="text" id="remark" name="work[remark]" class="form-control" value="">
+                  </div>
+              </div>
+
+              <input type="hidden" name="_csrf_token" value="{{ csrf_token('site') }}">
+              <button id="edit-user-btn" data-submiting-text="正在提交" type="submit" class="btn btn-primary pull-right" data-toggle="form-submit" data-target="#user-edit-form">保存</button>
+              <button type="button" class="btn btn-link pull-right" data-dismiss="modal">取消</button>
+
+          </form>
+          </div>
+          </div>
+      {%  endif%}
+    {% include 'TopxiaWebBundle::script_boot.html.twig' with {script_main: asset('bundles/topxiaweb/js/app.js')} %}
+
+{% endblock %}

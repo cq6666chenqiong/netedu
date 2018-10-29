@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Video.js 5.18.4</title>
+	<link href="/video/css/video-js.css" rel="stylesheet">
+	<!-- If you'd like to support IE8 -->
+	<script src="/video/js/videojs-ie8.min.js"></script>
+	<style>
+		body{background-color: #191919}
+		.m{ width: 640px; height: 264; margin-left: auto; margin-right: auto; margin-top: 100px; }
+	</style>
+</head>
+
+<body>
+	<div class="m">
+		<video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+		  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+			<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+			<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+			<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+		  </video>
+		<script src="/video/video.min.js"></script>
+		<script type="text/javascript">
+
+              var player = videojs('my-video', { /* Options */ }, function() {
+                  console.log('Good to go!');
+                  alert('aaaaaaaaa');
+                  this.play(); // if you don't trust autoplay for some reason
+                  this.on('pause',function(){
+                      alert("aaaaaaaa");
+                  });
+
+              });
+		</script>
+	</div>
+
+</body>
+</html>

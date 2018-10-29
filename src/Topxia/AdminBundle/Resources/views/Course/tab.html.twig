@@ -1,0 +1,10 @@
+<div class="btn-group">
+<a id="create-course" href="{{ path('course_create') }}" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus"></span> {{'创建课程'|trans}}</a>
+</div>
+<div class="btn-group">
+
+	<a href=" {{ url('admin_course', {filter: 'normal'}) }}" type="button" class="btn btn-default btn-sm {% if filter == 'normal'%}btn-primary{% endif %}">普通课程</a>
+
+
+	<a href=" {{ url('admin_course', {filter: 'classroom'}) }}" type="button" class="btn btn-default btn-sm {% if filter == 'classroom' %}btn-primary{% endif %}">科室课程</a>
+</div>

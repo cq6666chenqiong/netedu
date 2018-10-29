@@ -1,0 +1,32 @@
+{% extends 'TopxiaAdminBundle::layout.html.twig' %}
+
+{% block title %}{{'学分统计'|trans}} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <div style="height: 20px">
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            {% block side %}
+                <div class="sidenav">
+                    <ul class="list-group">
+                        <li class="list-group-heading">{{'学分统计'|trans}}</li>
+                        {% set side_nav = side_nav|default(null) %}
+
+                        <li class="list-group-item {% if side_nav == 'profile' %}active{% endif %}">
+                            <a href="{{ path('admin_sorce_statistical') }}"><i class="glyphicon glyphicon-user"></i> {{'科室学分统计'|trans}}</a>
+                        </li>
+                        <li class="list-group-item {% if side_nav == 'avatar' %}active{% endif %}">
+                            <a href="{{ path('admin_sorce_statisticaldepartment',{year:''}) }}"><i class="glyphicon glyphicon-picture"></i> {{'单位职称学分统计'|trans}}</a>
+                        </li>
+
+                    </ul>
+                </div>
+            {% endblock %}
+        </div>
+        <div class="col-md-9">
+            {% block main %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}

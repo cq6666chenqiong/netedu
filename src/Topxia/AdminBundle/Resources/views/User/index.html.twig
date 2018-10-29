@@ -1,0 +1,103 @@
+
+{% extends 'TopxiaAdminBundle::layout.html.twig' %}
+
+{% set menu = 'admin_user_manage' %}
+
+{% set script_controller = 'user/list' %}
+
+{% block main %}
+<style type="text/css">
+  .ri {
+    float:right;
+  }
+  .div{width:400px; height:30px;float:right}
+  .input{width:200px;height:30px;float:right}
+  .button1{width:100px;height:30px;float:right}
+</style>
+{{ web_macro.flash_messages() }}
+    <script src="/js/jquery.js?6.17.13"></script>
+<div>
+
+  <a class="btn btn-info btn-sm" href="{{ path('admin_user_create') }}"><span class="glyphicon glyphicon-plus"></span>添加用户</a>
+    <a class="btn btn-info btn-sm" onclick="getBatMemenber()"><span class="glyphicon glyphicon-plus"></span>批量下载用户信息</a>
+<a id="download" href="" target="_blank"></a>
+  <div class="form-group div">
+
+    <button type="button" class="btn btn-info btn-sm button1"  onclick="myajaxFileUpload('/functionDir/upload_members.php',null)" class="btn"><span class="glyphicon glyphicon-plus"></span>批量创建用户</button>
+    <input type="text" id="copyFile" name="copyFile"  style=" width:66%;margin-right:10px;display: none" />
+
+    <input type="file" class="input"id="file"    name="file" onchange="getFile(this,'copyFile')"  />
+    <a href="/functionDir/download_student.php">下载模板</a>
+
+  </div>
+</div>
+    <div>
+<form id="user-search-form" class="form-inline well well-sm" action="" method="get" novalidate>
+   <div class="mbm">
+     {% include 'OrgBundle:Org:org-tree-select.html.twig' with {orgCode: app.request.get('orgCode'), modal: 'list'} %}
+            <span class="divider"></span>
+            <div class="form-group">
+                 <select id="keywordType" name="keywordType" class="form-control">
+                   <option value="nickname">工号</option>
+                 </select>
+                 <input type="text" id="keyword" name="keyword" class="form-control" value="{{ memberNum }}" placeholder="关键词">
+                    姓名
+                   <input type="text" id="truename" name="truename" class="form-control" value="{{ truename }}" placeholder="关键词">
+                  所属科室
+                  <select id="company" name="company" class="form-control">
+                      <option value="">全选</option>
+                      {% for k in classr1 %}
+                        <option {% if company == k.id %} selected {% endif %} value="{{ k.id }}">{{ k.title }}</option>
+                      {% endfor %}
+                  </select>
+                  <button class="btn btn-primary" style="float: right">搜索</button>
+            </div>
+   </div>
+</form>
+
+<table id="user-table" class="table table-striped table-hover" data-search-form="#user-search-form">
+  <thead>
+    <tr>
+      <th>工号</th>
+      <th>姓名</th>
+      <th>职称</th>
+      <th>所属科室</th>
+      <th>科室分类</th>
+      <th>最高学位</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <p class="text-muted">
+      <span class="mrl">用户总数：<strong class="inflow-num">{{userCount}}</strong></span>
+    </p>
+    {% for user in users %}
+        {% include 'TopxiaAdminBundle:User:user-table-tr.html.twig' with {user:user,profile:profiles[user.id]} %}
+    {% endfor %}
+  </tbody>
+</table>
+{# {{ web_macro.paginator(paginator) }} #}
+    </div>
+  <ul  class="pagination ri">
+    <li {% if paginator.currentPage == paginator.firstPage %}class="disabled"{% endif %}><a  href="{{ paginator.getPageUrl(paginator.previousPage) }}">上一页</a></li>
+      {% for page in paginator.pages %}
+        <li {% if page == paginator.currentPage %}class="active"{% endif %}><a href="{{ paginator.getPageUrl(page) }}">{{ page }}</a></li>
+      {% endfor %}
+    <li {% if paginator.currentPage == paginator.lastPage %}class="disabled"{% endif %}><a  href="{{ paginator.getPageUrl(paginator.nextPage) }}">下一页</a></li>
+  </ul>
+
+    <script>
+
+        function getBatMemenber() {
+            var nickname = $("#keyword").val();
+            var truename = encodeURIComponent($("#truename").val());
+            var company = $("#company").val();
+            var url = "/functionDir/ajax/download_user_message.php?nickname=" + nickname + "&truename=" + truename + "&company=" + company;
+
+            myajax(url);
+        }
+    </script>
+{% endblock %}
+
+
+

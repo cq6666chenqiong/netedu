@@ -1,0 +1,167 @@
+{% import 'TopxiaAdminBundle::macro.html.twig' as admin_macro %}
+
+<style>
+    .fs{
+        color: black;
+    }
+</style>
+<tr id="user-table-tr-{{ user.nickname }}">
+  <td>
+      <span class="fs">
+    <strong class="fs">{{ admin_macro.user_link(user) }}</strong>
+      </span>
+    {% if user.locked %}
+      <label class="label label-danger">禁</label>
+    {% endif %}
+
+    <br>
+      {#
+    <span class="text-muted text-sm">
+      {% for role in user.roles %}
+        {{ dict_text('userRole', role) }}
+      {% endfor %}
+    </span>
+    #}
+  </td>
+
+  <td>
+     {{ profile.truename }}
+  </td>
+
+  <td>
+      {{ profile.job }}
+  </td>
+  <td>
+      {{ classr[profile.company] }}
+  </td>
+  <td>
+      {{ profile.varcharField4|default('') }}
+  </td>
+  <td>
+      {{ profile.varcharField5|default('') }}
+  </td>
+
+
+{#
+  <td>
+    {% set emailArr = user.email|split('@') %}
+    {% if emailArr[1] != 'myBanana.net' %}
+      {{ user.email }}
+    {% else %}
+      --
+    {% endif %}
+    
+    <br>
+    {% if user.emailVerified %}
+      <label class="label label-success" title="该Email地址已验证">已验证</label>
+    {% endif %}
+  </td>
+
+  <td>
+    <span class="text-sm">{{ user.createdTime|date('Y-n-d H:i:s') }}</span>
+    <br>
+    <span class="text-muted text-sm">
+    <a class="text-muted text-sm" href="http://www.baidu.com/s?wd={{ user.createdIp }}" target="_blank">{{ user.createdIp }}</a>
+    {{convertIP(user.createdIp)}}
+  </span>
+    <span></span>
+  </td>
+  <td>
+    <span class="text-sm">
+      {% if user.loginTime == 0 %}
+       --
+      {% else %}
+        {{ user.loginTime|date('Y-n-d H:i:s') }}
+      {% endif %}
+    </span>
+    <br>
+    <span class="text-muted text-sm">
+    <a class="text-muted text-sm" href="http://www.baidu.com/s?wd={{ user.loginIp }}" target="_blank">{{ user.loginIp }}</a>
+    {{convertIP(user.loginIp)}}
+  </span>
+  </td>
+  #}
+  <td>
+    <div class="btn-group">
+{#
+      <a href="#modal" data-toggle="modal" data-url="{{ path('admin_user_show', {id:user.id}) }}"   class="btn btn-default btn-sm">查看</a>
+      <a href="#" type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+#}
+{# {{ path('admin_user_edit', {id:user.id}) }} #}
+          <li><a href="{{ path('admin_user_edit', {id:user.id}) }}" data-toggle="modal" data-url="{{ path('admin_user_edit', {id:user.id}) }}"  >编辑用户信息</a></li>
+          <li><a href="{{ path('admin_user_change_password', {userId:user.id}) }}" data-toggle="modal" data-url="{{ path('admin_user_change_password', {userId:user.id}) }}" >修改密码</a></li>
+            {% set enableOrg = setting('magic.enable_org','0')%}
+          {#
+            {% if enableOrg %}
+              <li><a href="#modal" data-toggle="modal" data-url="{{ path('admin_user_org_update', {id: user.id}) }}">修改用户组织机构</a></li>
+            {% endif %}
+            {% if 'ROLE_SUPER_ADMIN' not in app.user.roles %}
+                {% if 'ROLE_SUPER_ADMIN' in user.roles %}
+                      <li></li>
+                 {% else %}
+                       <li><a href="#modal" data-toggle="modal" data-url="{{ path('admin_user_roles', {id:user.id}) }}">设置用户组</a></li>
+                {% endif %}
+           {% else %}
+                       <li><a href="#modal" data-toggle="modal" data-url="{{ path('admin_user_roles', {id:user.id}) }}">设置用户组</a></li>
+            {% endif %}
+  #}
+        {% if is_granted('ROLE_SUPER_ADMIN') %}
+{#
+        <li><a href="{{ path('admin_user_avatar', {id:user.id}) }}" data-toggle="modal" data-url="{{ path('admin_user_avatar', {id:user.id}) }}" >修改用户头像</a></li>
+
+        <li><a href="{{ path('admin_user_change_password', {userId:user.id}) }}" data-toggle="modal" data-url="{{ path('admin_user_change_password', {userId:user.id}) }}" >修改密码</a></li>
+#}
+        {% endif %}
+{#
+        <li><a class="send-passwordreset-email" href="javascript:" data-url="{{ path('admin_user_send_passwordreset_email', {id:user.id}) }}">发送密码重置邮件</a></li>
+
+        <li><a class="send-emailverify-email" href="javascript:" data-url="{{ path('admin_user_send_emailverify_email', {id:user.id}) }}">发送Email验证邮件</a></li>
+#}
+        {% if user.locked %}
+          <li><a class="unlock-user" href="{{ path('admin_user_unlock', {id:user.id }) }}" title="解禁用户{{ user.nickname }}" data-url="{{ path('admin_user_unlock', {id:user.id }) }}">解禁用户</a></li>
+        {% else %}
+              {% if 'ROLE_SUPER_ADMIN' not in app.user.roles %}
+                    {% if 'ROLE_SUPER_ADMIN' in user.roles %}
+                          <li></li>
+                           {% else %}
+                            <li><a class="lock-user" href="{{ path('admin_user_lock', {id:user.id}) }}" title="封禁用户{{ user.nickname }}" data-url="{{ path('admin_user_lock', {id:user.id}) }}">封禁用户</a></li>
+                    {% endif %}
+               {% else %}
+                   <li><a class="lock-user" href="{{ path('admin_user_lock', {id:user.id}) }}" title="封禁用户{{ user.nickname }}" data-url="{{ path('admin_user_lock', {id:user.id}) }}">封禁用户</a></li>
+              {% endif %}
+        {% endif %}
+        <li><a class=""    onclick="deleteUser({{ user.nickname }})">删除用户</a></li>
+      </ul>
+    </div>
+  </td>
+</tr>
+{#
+{% if user %}
+  <a {% if class %}class="{{ class }}"{% endif %} href="javascript:;" role="show-user" data-toggle="modal" data-target="#modal" data-url="{{ url('admin_user_show', {id:user.id}) }}">{{ user.nickname }}</a>
+{% else %}
+  <span class="text-muted">用户已删除</span>
+{% endif %}
+#}
+<script src="/js/jquery.js?6.17.13"></script>
+<script>
+
+    function deleteUser(nickname){
+        if(confirm("确认要删除？")){
+
+
+            $.ajax({
+                type: "GET",
+                url: "/functionDir/ajax/delete_user.php?nickname="+nickname,
+                data: {},
+                dataType: "json",
+                success: function(data){
+                    $("#user-table-tr-"+nickname).hide();
+                }
+            });
+        }
+
+    }
+</script>

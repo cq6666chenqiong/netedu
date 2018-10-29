@@ -1,0 +1,48 @@
+{% extends 'TopxiaWebBundle:CourseStudentManage:index.html.twig' %}
+
+{% block title %}学员管理 - {{ parent() }}{% endblock %}
+
+{% set submenu = 'student' %}
+
+{% set script_controller = 'course-manage/students' %}
+
+{% block maincontent %}
+<script>
+    function fun(){
+
+   var value = $('input[type=checkbox]:checked').map(function(){return this.value}).get().join(',');
+   document.getElementById('uids').value = value;
+
+   return true;
+    }
+</script>
+
+
+
+    <form action="{{ path('course_fetch_bat_student',{courseId:courseId}) }}">
+        <select id="keshi" name="keshi">
+            {% for k in classr %}
+                <option value="{{ k.id }}"> {{ k.title }} </option>
+            {% endfor %}
+        </select>
+        <button id="b">搜索</button>
+    </form>
+    <form action="{{ path('course_give_bat_student',{courseId:courseId}) }}" >
+
+        <div  >
+            <table id="userMember">
+                <th><tr><td>选择框</td><td>工号</td><td>姓名</td></tr></th>
+
+                <tbody id="userMemberBody">
+                {% for u in users %}
+                   <tr> <td><input type="checkbox" name="uid" value="{{ u.id }}"/>{{ u.id }}</td><td>{{ u.num }}</td>><td>{{ u.nickname  }}</td> </tr>
+                {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+        <input id="uids" name="uids" type="hidden"  />
+        <button type="submit" onclick="fun();">提交</button>
+    </form>
+
+{% endblock %}

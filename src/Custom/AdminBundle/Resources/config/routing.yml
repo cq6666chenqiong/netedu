@@ -1,0 +1,7 @@
+custom_admin_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: CustomAdminBundle:Default:index }
+
+custom_admin_upload:
+    pattern:  /upload/file
+    defaults: { _controller: CustomAdminBundle:BatDepartment:index }

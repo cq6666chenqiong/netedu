@@ -1,0 +1,11 @@
+
+
+<li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+    <a href="{{ url('homepage') }}">首页</a>
+</li>
+<li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+    <a href="{{ path('settings') }}">个人设置</a>
+</li>
+<li {% if m.code == menu_nav.code|default(null)  %}class="active"{% endif %}>
+    <a href="{{ path('my') }}">我的学习</a>
+</li>

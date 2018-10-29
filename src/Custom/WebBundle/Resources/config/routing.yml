@@ -1,0 +1,3 @@
+custom_upload:
+    pattern:  /custom/upload
+    defaults: { _controller: CustomWebBundle:BatDepartment:index }
