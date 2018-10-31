@@ -6,10 +6,12 @@ use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Exception\LogicException;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 use Symfony\Component\DependencyInjection\ParameterBag\FrozenParameterBag;
+
 class appProdProjectContainer extends Container
 {
     private $parameters;
     private $targetDirs = array();
+
     public function __construct()
     {
         $dir = __DIR__;
@@ -17,6 +19,7 @@ class appProdProjectContainer extends Container
             $this->targetDirs[$i] = $dir = dirname($dir);
         }
         $this->parameters = $this->getDefaultParameters();
+
         $this->services =
         $this->scopedServices =
         $this->scopeStacks = array();
@@ -243,32 +246,39 @@ class appProdProjectContainer extends Container
             'translator' => 'translator.default',
         );
     }
+
     protected function getAnnotationReaderService()
     {
         return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), (__DIR__.'/annotations'), false);
     }
+
     protected function getAssetic_AssetManagerService()
     {
         $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig'), $this->get('monolog.logger.assetic', ContainerInterface::NULL_ON_INVALID_REFERENCE)), new \Assetic\Cache\ConfigCache((__DIR__.'/assetic/config')), false)));
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($this->get('templating.loader'), '', ($this->targetDirs[2].'/Resources/views'), '/\\.[^.]+\\.twig$/'), 'twig');
         return $instance;
     }
+
     protected function getAssetic_Filter_CssrewriteService()
     {
         return $this->services['assetic.filter.cssrewrite'] = new \Assetic\Filter\CssRewriteFilter();
     }
+
     protected function getAssetic_FilterManagerService()
     {
         return $this->services['assetic.filter_manager'] = new \Symfony\Bundle\AsseticBundle\FilterManager($this, array('cssrewrite' => 'assetic.filter.cssrewrite'));
     }
+
     protected function getAuthenticationHandlerService()
     {
         return $this->services['authentication_handler'] = new \Topxia\Service\Common\LoginListener();
     }
+
     protected function getCacheClearerService()
     {
         return $this->services['cache_clearer'] = new \Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer(array());
     }
+
     protected function getCacheWarmerService()
     {
         $a = $this->get('kernel');
@@ -276,26 +286,32 @@ class appProdProjectContainer extends Container
         $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, ($this->targetDirs[2].'/Resources'));
         return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('topxia.templating.locator')), 1 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer($this), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 3 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c), 4 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine'))));
     }
+
     protected function getDebug_EmergencyLoggerListenerService()
     {
         return $this->services['debug.emergency_logger_listener'] = new \Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener('emergency', $this->get('monolog.logger.emergency', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
+
     protected function getDoctrineService()
     {
         return $this->services['doctrine'] = new \Doctrine\Bundle\DoctrineBundle\Registry($this, array('default' => 'doctrine.dbal.default_connection'), array('default' => 'doctrine.orm.default_entity_manager'), 'default', 'default');
     }
+
     protected function getDoctrine_Dbal_ConnectionFactoryService()
     {
         return $this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory(array('enum' => array('class' => 'Topxia\\Common\\DoctrineEnumType', 'commented' => true)));
     }
+
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
         return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => 3306, 'dbname' => 'myBanana', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driverOptions' => array(), 'wrapperClass' => 'Topxia\\Service\\Common\\Connection'), new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array('enum' => 'string'));
     }
+
     protected function getDoctrine_Orm_DefaultEntityListenerResolverService()
     {
         return $this->services['doctrine.orm.default_entity_listener_resolver'] = new \Doctrine\ORM\Mapping\DefaultEntityListenerResolver();
     }
+
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
         $a = new \Doctrine\ORM\Configuration();
@@ -316,36 +332,43 @@ class appProdProjectContainer extends Container
         $this->get('doctrine.orm.default_manager_configurator')->configure($instance);
         return $instance;
     }
+
     protected function getDoctrine_Orm_DefaultManagerConfiguratorService()
     {
         return $this->services['doctrine.orm.default_manager_configurator'] = new \Doctrine\Bundle\DoctrineBundle\ManagerConfigurator(array(), array());
     }
+
     protected function getDoctrine_Orm_Validator_UniqueService()
     {
         return $this->services['doctrine.orm.validator.unique'] = new \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator($this->get('doctrine'));
     }
+
     protected function getDoctrine_Orm_ValidatorInitializerService()
     {
         return $this->services['doctrine.orm.validator_initializer'] = new \Symfony\Bridge\Doctrine\Validator\DoctrineInitializer($this->get('doctrine'));
     }
+
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultMetadataCacheService()
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
-        $instance->setNamespace('sf2orm_default_cf45a62b1ff9a0bb66068ef72d59b59254b61a128025d4f5f9edccd0a137a71a');
+        $instance->setNamespace('sf2orm_default_2216ff120aa17c99ab372063dd909d2c25f9bede12d0ef53699bad8cd6e496e9');
         return $instance;
     }
+
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultQueryCacheService()
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
-        $instance->setNamespace('sf2orm_default_cf45a62b1ff9a0bb66068ef72d59b59254b61a128025d4f5f9edccd0a137a71a');
+        $instance->setNamespace('sf2orm_default_2216ff120aa17c99ab372063dd909d2c25f9bede12d0ef53699bad8cd6e496e9');
         return $instance;
     }
+
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultResultCacheService()
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
-        $instance->setNamespace('sf2orm_default_cf45a62b1ff9a0bb66068ef72d59b59254b61a128025d4f5f9edccd0a137a71a');
+        $instance->setNamespace('sf2orm_default_2216ff120aa17c99ab372063dd909d2c25f9bede12d0ef53699bad8cd6e496e9');
         return $instance;
     }
+
     protected function getEventDispatcherService()
     {
         $this->services['event_dispatcher'] = $instance = new \Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher($this);
@@ -374,198 +397,247 @@ class appProdProjectContainer extends Container
         $instance->addSubscriberService('sensio_framework_extra.security.listener', 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\SecurityListener');
         return $instance;
     }
+
     protected function getFileLocatorService()
     {
         return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), ($this->targetDirs[2].'/Resources'));
     }
+
     protected function getFilesystemService()
     {
         return $this->services['filesystem'] = new \Symfony\Component\Filesystem\Filesystem();
     }
+
     protected function getForm_CsrfProviderService()
     {
         return $this->services['form.csrf_provider'] = new \Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider($this->get('session'), '1hkcbroykc004gc8ko844co40g4kwco');
     }
+
     protected function getForm_FactoryService()
     {
         return $this->services['form.factory'] = new \Symfony\Component\Form\FormFactory($this->get('form.registry'), $this->get('form.resolved_type_factory'));
     }
+
     protected function getForm_RegistryService()
     {
         return $this->services['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('form' => 'form.type.form', 'birthday' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'collection' => 'form.type.collection', 'country' => 'form.type.country', 'date' => 'form.type.date', 'datetime' => 'form.type.datetime', 'email' => 'form.type.email', 'file' => 'form.type.file', 'hidden' => 'form.type.hidden', 'integer' => 'form.type.integer', 'language' => 'form.type.language', 'locale' => 'form.type.locale', 'money' => 'form.type.money', 'number' => 'form.type.number', 'password' => 'form.type.password', 'percent' => 'form.type.percent', 'radio' => 'form.type.radio', 'repeated' => 'form.type.repeated', 'search' => 'form.type.search', 'textarea' => 'form.type.textarea', 'text' => 'form.type.text', 'time' => 'form.type.time', 'timezone' => 'form.type.timezone', 'url' => 'form.type.url', 'button' => 'form.type.button', 'submit' => 'form.type.submit', 'reset' => 'form.type.reset', 'currency' => 'form.type.currency', 'entity' => 'form.type.entity', 'default_category' => 'form.type.default_category', 'user_role' => 'form.type.user_role', 'tags' => 'form.type.tags', 'gender' => 'form.type.gender'), array('form' => array(0 => 'form.type_extension.form.http_foundation', 1 => 'form.type_extension.form.validator', 2 => 'form.type_extension.csrf'), 'repeated' => array(0 => 'form.type_extension.repeated.validator'), 'submit' => array(0 => 'form.type_extension.submit.validator')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))), $this->get('form.resolved_type_factory'));
     }
+
     protected function getForm_ResolvedTypeFactoryService()
     {
         return $this->services['form.resolved_type_factory'] = new \Symfony\Component\Form\ResolvedFormTypeFactory();
     }
+
     protected function getForm_Type_BirthdayService()
     {
         return $this->services['form.type.birthday'] = new \Symfony\Component\Form\Extension\Core\Type\BirthdayType();
     }
+
     protected function getForm_Type_ButtonService()
     {
         return $this->services['form.type.button'] = new \Symfony\Component\Form\Extension\Core\Type\ButtonType();
     }
+
     protected function getForm_Type_CheckboxService()
     {
         return $this->services['form.type.checkbox'] = new \Symfony\Component\Form\Extension\Core\Type\CheckboxType();
     }
+
     protected function getForm_Type_ChoiceService()
     {
         return $this->services['form.type.choice'] = new \Symfony\Component\Form\Extension\Core\Type\ChoiceType();
     }
+
     protected function getForm_Type_CollectionService()
     {
         return $this->services['form.type.collection'] = new \Symfony\Component\Form\Extension\Core\Type\CollectionType();
     }
+
     protected function getForm_Type_CountryService()
     {
         return $this->services['form.type.country'] = new \Symfony\Component\Form\Extension\Core\Type\CountryType();
     }
+
     protected function getForm_Type_CurrencyService()
     {
         return $this->services['form.type.currency'] = new \Symfony\Component\Form\Extension\Core\Type\CurrencyType();
     }
+
     protected function getForm_Type_DateService()
     {
         return $this->services['form.type.date'] = new \Symfony\Component\Form\Extension\Core\Type\DateType();
     }
+
     protected function getForm_Type_DatetimeService()
     {
         return $this->services['form.type.datetime'] = new \Symfony\Component\Form\Extension\Core\Type\DateTimeType();
     }
+
     protected function getForm_Type_DefaultCategoryService()
     {
         return $this->services['form.type.default_category'] = new \Topxia\WebBundle\Form\Common\DefaultCategoryType();
     }
+
     protected function getForm_Type_EmailService()
     {
         return $this->services['form.type.email'] = new \Symfony\Component\Form\Extension\Core\Type\EmailType();
     }
+
     protected function getForm_Type_EntityService()
     {
         return $this->services['form.type.entity'] = new \Symfony\Bridge\Doctrine\Form\Type\EntityType($this->get('doctrine'));
     }
+
     protected function getForm_Type_FileService()
     {
         return $this->services['form.type.file'] = new \Symfony\Component\Form\Extension\Core\Type\FileType();
     }
+
     protected function getForm_Type_FormService()
     {
         return $this->services['form.type.form'] = new \Symfony\Component\Form\Extension\Core\Type\FormType($this->get('property_accessor'));
     }
+
     protected function getForm_Type_GenderService()
     {
         return $this->services['form.type.gender'] = new \Topxia\WebBundle\Form\Common\GenderType();
     }
+
     protected function getForm_Type_HiddenService()
     {
         return $this->services['form.type.hidden'] = new \Symfony\Component\Form\Extension\Core\Type\HiddenType();
     }
+
     protected function getForm_Type_IntegerService()
     {
         return $this->services['form.type.integer'] = new \Symfony\Component\Form\Extension\Core\Type\IntegerType();
     }
+
     protected function getForm_Type_LanguageService()
     {
         return $this->services['form.type.language'] = new \Symfony\Component\Form\Extension\Core\Type\LanguageType();
     }
+
     protected function getForm_Type_LocaleService()
     {
         return $this->services['form.type.locale'] = new \Symfony\Component\Form\Extension\Core\Type\LocaleType();
     }
+
     protected function getForm_Type_MoneyService()
     {
         return $this->services['form.type.money'] = new \Symfony\Component\Form\Extension\Core\Type\MoneyType();
     }
+
     protected function getForm_Type_NumberService()
     {
         return $this->services['form.type.number'] = new \Symfony\Component\Form\Extension\Core\Type\NumberType();
     }
+
     protected function getForm_Type_PasswordService()
     {
         return $this->services['form.type.password'] = new \Symfony\Component\Form\Extension\Core\Type\PasswordType();
     }
+
     protected function getForm_Type_PercentService()
     {
         return $this->services['form.type.percent'] = new \Symfony\Component\Form\Extension\Core\Type\PercentType();
     }
+
     protected function getForm_Type_RadioService()
     {
         return $this->services['form.type.radio'] = new \Symfony\Component\Form\Extension\Core\Type\RadioType();
     }
+
     protected function getForm_Type_RepeatedService()
     {
         return $this->services['form.type.repeated'] = new \Symfony\Component\Form\Extension\Core\Type\RepeatedType();
     }
+
     protected function getForm_Type_ResetService()
     {
         return $this->services['form.type.reset'] = new \Symfony\Component\Form\Extension\Core\Type\ResetType();
     }
+
     protected function getForm_Type_SearchService()
     {
         return $this->services['form.type.search'] = new \Symfony\Component\Form\Extension\Core\Type\SearchType();
     }
+
     protected function getForm_Type_SubmitService()
     {
         return $this->services['form.type.submit'] = new \Symfony\Component\Form\Extension\Core\Type\SubmitType();
     }
+
     protected function getForm_Type_TagsService()
     {
         return $this->services['form.type.tags'] = new \Topxia\WebBundle\Form\Common\TagsType();
     }
+
     protected function getForm_Type_TextService()
     {
         return $this->services['form.type.text'] = new \Symfony\Component\Form\Extension\Core\Type\TextType();
     }
+
     protected function getForm_Type_TextareaService()
     {
         return $this->services['form.type.textarea'] = new \Symfony\Component\Form\Extension\Core\Type\TextareaType();
     }
+
     protected function getForm_Type_TimeService()
     {
         return $this->services['form.type.time'] = new \Symfony\Component\Form\Extension\Core\Type\TimeType();
     }
+
     protected function getForm_Type_TimezoneService()
     {
         return $this->services['form.type.timezone'] = new \Symfony\Component\Form\Extension\Core\Type\TimezoneType();
     }
+
     protected function getForm_Type_UrlService()
     {
         return $this->services['form.type.url'] = new \Symfony\Component\Form\Extension\Core\Type\UrlType();
     }
+
     protected function getForm_Type_UserRoleService()
     {
         return $this->services['form.type.user_role'] = new \Topxia\WebBundle\Form\Common\UserRoleType();
     }
+
     protected function getForm_TypeExtension_CsrfService()
     {
         return $this->services['form.type_extension.csrf'] = new \Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension($this->get('form.csrf_provider'), true, '_token', $this->get('translator.default'), 'validators');
     }
+
     protected function getForm_TypeExtension_Form_HttpFoundationService()
     {
         return $this->services['form.type_extension.form.http_foundation'] = new \Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension();
     }
+
     protected function getForm_TypeExtension_Form_ValidatorService()
     {
         return $this->services['form.type_extension.form.validator'] = new \Symfony\Component\Form\Extension\Validator\Type\FormTypeValidatorExtension($this->get('validator'));
     }
+
     protected function getForm_TypeExtension_Repeated_ValidatorService()
     {
         return $this->services['form.type_extension.repeated.validator'] = new \Symfony\Component\Form\Extension\Validator\Type\RepeatedTypeValidatorExtension();
     }
+
     protected function getForm_TypeExtension_Submit_ValidatorService()
     {
         return $this->services['form.type_extension.submit.validator'] = new \Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension();
     }
+
     protected function getForm_TypeGuesser_DoctrineService()
     {
         return $this->services['form.type_guesser.doctrine'] = new \Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser($this->get('doctrine'));
     }
+
     protected function getForm_TypeGuesser_ValidatorService()
     {
         return $this->services['form.type_guesser.validator'] = new \Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser($this->get('validator.mapping.class_metadata_factory'));
     }
+
     protected function getFragment_HandlerService()
     {
         $this->services['fragment.handler'] = $instance = new \Symfony\Component\HttpKernel\Fragment\FragmentHandler(array(), false);
@@ -574,127 +646,153 @@ class appProdProjectContainer extends Container
         $instance->addRenderer($this->get('fragment.renderer.hinclude'));
         return $instance;
     }
+
     protected function getFragment_ListenerService()
     {
         return $this->services['fragment.listener'] = new \Symfony\Component\HttpKernel\EventListener\FragmentListener($this->get('uri_signer'), '/_fragment');
     }
+
     protected function getFragment_Renderer_HincludeService()
     {
         $this->services['fragment.renderer.hinclude'] = $instance = new \Symfony\Bundle\FrameworkBundle\Fragment\ContainerAwareHIncludeFragmentRenderer($this, $this->get('uri_signer'), NULL);
         $instance->setFragmentPath('/_fragment');
         return $instance;
     }
+
     protected function getFragment_Renderer_InlineService()
     {
         $this->services['fragment.renderer.inline'] = $instance = new \Symfony\Component\HttpKernel\Fragment\InlineFragmentRenderer($this->get('http_kernel'), $this->get('event_dispatcher'));
         $instance->setFragmentPath('/_fragment');
         return $instance;
     }
+
     protected function getHttpKernelService()
     {
         return $this->services['http_kernel'] = new \Symfony\Component\HttpKernel\DependencyInjection\ContainerAwareHttpKernel($this->get('event_dispatcher'), $this, new \Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver($this, $this->get('controller_name_converter'), $this->get('monolog.logger.request', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
     }
+
     protected function getKernelService()
     {
         throw new RuntimeException('You have requested a synthetic service ("kernel"). The DIC does not know how to construct this service.');
     }
+
     protected function getKernel_Listener_AjaxExceptionListenerService()
     {
         return $this->services['kernel.listener.ajax_exception_listener'] = new \Topxia\WebBundle\Listener\AjaxExceptionListener($this);
     }
+
     protected function getKernel_Listener_KernelRequestListenerService()
     {
         return $this->services['kernel.listener.kernel_request_listener'] = new \Topxia\WebBundle\Listener\KernelRequestListener($this);
     }
+
     protected function getKernel_Listener_KernelResponseListenerService()
     {
         return $this->services['kernel.listener.kernel_response_listener'] = new \Topxia\WebBundle\Listener\KernelResponseListener($this);
     }
+
     protected function getKernel_Listener_UserLoginTokenListenerService()
     {
         return $this->services['kernel.listener.user_login_token_listener'] = new \Topxia\WebBundle\Listener\UserLoginTokenListener($this);
     }
+
     protected function getLocaleListenerService()
     {
         $this->services['locale_listener'] = $instance = new \Symfony\Component\HttpKernel\EventListener\LocaleListener('zh_CN', $this->get('router', ContainerInterface::NULL_ON_INVALID_REFERENCE));
         $instance->setRequest($this->get('request', ContainerInterface::NULL_ON_INVALID_REFERENCE));
         return $instance;
     }
+
     protected function getLoggerService()
     {
         $this->services['logger'] = $instance = new \Symfony\Bridge\Monolog\Logger('app');
         $instance->pushHandler($this->get('monolog.handler.main'));
         return $instance;
     }
+
     protected function getMonolog_Handler_MainService()
     {
         return $this->services['monolog.handler.main'] = new \Monolog\Handler\FingersCrossedHandler($this->get('monolog.handler.nested'), 400, 0, true, true, NULL);
     }
+
     protected function getMonolog_Handler_NestedService()
     {
         return $this->services['monolog.handler.nested'] = new \Monolog\Handler\StreamHandler(($this->targetDirs[2].'\\logs/prod.log'), 100, true, NULL);
     }
+
     protected function getMonolog_Logger_AsseticService()
     {
         $this->services['monolog.logger.assetic'] = $instance = new \Symfony\Bridge\Monolog\Logger('assetic');
         $instance->pushHandler($this->get('monolog.handler.main'));
         return $instance;
     }
+
     protected function getMonolog_Logger_DoctrineService()
     {
         $this->services['monolog.logger.doctrine'] = $instance = new \Symfony\Bridge\Monolog\Logger('doctrine');
         $instance->pushHandler($this->get('monolog.handler.main'));
         return $instance;
     }
+
     protected function getMonolog_Logger_EmergencyService()
     {
         $this->services['monolog.logger.emergency'] = $instance = new \Symfony\Bridge\Monolog\Logger('emergency');
         $instance->pushHandler($this->get('monolog.handler.main'));
         return $instance;
     }
+
     protected function getMonolog_Logger_RequestService()
     {
         $this->services['monolog.logger.request'] = $instance = new \Symfony\Bridge\Monolog\Logger('request');
         $instance->pushHandler($this->get('monolog.handler.main'));
         return $instance;
     }
+
     protected function getMonolog_Logger_RouterService()
     {
         $this->services['monolog.logger.router'] = $instance = new \Symfony\Bridge\Monolog\Logger('router');
         $instance->pushHandler($this->get('monolog.handler.main'));
         return $instance;
     }
+
     protected function getMonolog_Logger_SecurityService()
     {
         $this->services['monolog.logger.security'] = $instance = new \Symfony\Bridge\Monolog\Logger('security');
         $instance->pushHandler($this->get('monolog.handler.main'));
         return $instance;
     }
+
     protected function getPropertyAccessorService()
     {
         return $this->services['property_accessor'] = new \Symfony\Component\PropertyAccess\PropertyAccessor();
     }
+
     protected function getRequestService()
     {
         if (!isset($this->scopedServices['request'])) {
             throw new InactiveScopeException('request', 'request');
         }
+
         throw new RuntimeException('You have requested a synthetic service ("request"). The DIC does not know how to construct this service.');
     }
+
     protected function getResponseListenerService()
     {
         return $this->services['response_listener'] = new \Symfony\Component\HttpKernel\EventListener\ResponseListener('UTF-8');
     }
+
     protected function getRouterService()
     {
         return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, ($this->targetDirs[2].'/config/routing.yml'), array('cache_dir' => __DIR__, 'debug' => false, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appProdUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appProdUrlMatcher', 'strict_requirements' => NULL), $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('monolog.logger.router', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
+
     protected function getRouterListenerService()
     {
         $this->services['router_listener'] = $instance = new \Symfony\Component\HttpKernel\EventListener\RouterListener($this->get('router'), $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('monolog.logger.request', ContainerInterface::NULL_ON_INVALID_REFERENCE));
         $instance->setRequest($this->get('request', ContainerInterface::NULL_ON_INVALID_REFERENCE));
         return $instance;
     }
+
     protected function getRouting_LoaderService()
     {
         $a = $this->get('file_locator');
@@ -709,22 +807,27 @@ class appProdProjectContainer extends Container
         $d->addLoader($c);
         return $this->services['routing.loader'] = new \Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader($this->get('controller_name_converter'), $this->get('monolog.logger.router', ContainerInterface::NULL_ON_INVALID_REFERENCE), $d);
     }
+
     protected function getSecurity_ContextService()
     {
         return $this->services['security.context'] = new \Symfony\Component\Security\Core\SecurityContext($this->get('security.authentication.manager'), $this->get('security.access.decision_manager'), false);
     }
+
     protected function getSecurity_EncoderFactoryService()
     {
         return $this->services['security.encoder_factory'] = new \Symfony\Component\Security\Core\Encoder\EncoderFactory(array('Topxia\\Service\\User\\CurrentUser' => array('class' => 'Symfony\\Component\\Security\\Core\\Encoder\\MessageDigestPasswordEncoder', 'arguments' => array(0 => 'sha256', 1 => true, 2 => 5000))));
     }
+
     protected function getSecurity_FirewallService()
     {
         return $this->services['security.firewall'] = new \Symfony\Component\Security\Http\Firewall(new \Symfony\Bundle\SecurityBundle\Security\FirewallMap($this, array('security.firewall.map.context.dev' => new \Symfony\Component\HttpFoundation\RequestMatcher('^/(_(profiler|wdt)|css|images|js)/'), 'security.firewall.map.context.main' => new \Symfony\Component\HttpFoundation\RequestMatcher('/.*'))), $this->get('event_dispatcher'));
     }
+
     protected function getSecurity_Firewall_Map_Context_DevService()
     {
         return $this->services['security.firewall.map.context.dev'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(), NULL);
     }
+
     protected function getSecurity_Firewall_Map_Context_MainService()
     {
         $a = $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE);
@@ -768,40 +871,49 @@ class appProdProjectContainer extends Container
         $x->addHandler($w);
         $y = new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $v, 'main', new \Topxia\WebBundle\Handler\AuthenticationSuccessHandler($v, array()), new \Topxia\WebBundle\Handler\AuthenticationFailureHandler($f, $v, array(), $a), array('check_path' => 'login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $a, $d);
         $y->setRememberMeServices($w);
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($u, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $x, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $w, $g, $a, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5adbedf47ca04', $a), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $u, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $v, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $v, 'login', false), NULL, NULL, $a));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($u, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $x, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $w, $g, $a, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5bd8fac2e8ef5', $a), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $u, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $v, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $v, 'login', false), NULL, NULL, $a));
     }
+
     protected function getSecurity_Rememberme_ResponseListenerService()
     {
         return $this->services['security.rememberme.response_listener'] = new \Symfony\Component\Security\Http\RememberMe\ResponseListener();
     }
+
     protected function getSecurity_SecureRandomService()
     {
         return $this->services['security.secure_random'] = new \Symfony\Component\Security\Core\Util\SecureRandom((__DIR__.'/secure_random.seed'), $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
+
     protected function getSecurity_Validator_UserPasswordService()
     {
         return $this->services['security.validator.user_password'] = new \Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator($this->get('security.context'), $this->get('security.encoder_factory'));
     }
+
     protected function getSensioFrameworkExtra_Cache_ListenerService()
     {
         return $this->services['sensio_framework_extra.cache.listener'] = new \Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener();
     }
+
     protected function getSensioFrameworkExtra_Controller_ListenerService()
     {
         return $this->services['sensio_framework_extra.controller.listener'] = new \Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener($this->get('annotation_reader'));
     }
+
     protected function getSensioFrameworkExtra_Converter_DatetimeService()
     {
         return $this->services['sensio_framework_extra.converter.datetime'] = new \Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DateTimeParamConverter();
     }
+
     protected function getSensioFrameworkExtra_Converter_Doctrine_OrmService()
     {
         return $this->services['sensio_framework_extra.converter.doctrine.orm'] = new \Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter($this->get('doctrine', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
+
     protected function getSensioFrameworkExtra_Converter_ListenerService()
     {
         return $this->services['sensio_framework_extra.converter.listener'] = new \Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener($this->get('sensio_framework_extra.converter.manager'), true);
     }
+
     protected function getSensioFrameworkExtra_Converter_ManagerService()
     {
         $this->services['sensio_framework_extra.converter.manager'] = $instance = new \Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterManager();
@@ -809,80 +921,99 @@ class appProdProjectContainer extends Container
         $instance->add($this->get('sensio_framework_extra.converter.datetime'), 0, 'datetime');
         return $instance;
     }
+
     protected function getSensioFrameworkExtra_Security_ListenerService()
     {
         return $this->services['sensio_framework_extra.security.listener'] = new \Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListener($this->get('security.context', ContainerInterface::NULL_ON_INVALID_REFERENCE), NULL, $this->get('security.authentication.trust_resolver', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('security.role_hierarchy', ContainerInterface::NULL_ON_INVALID_REFERENCE), NULL, NULL);
     }
+
     protected function getSensioFrameworkExtra_View_GuesserService()
     {
         return $this->services['sensio_framework_extra.view.guesser'] = new \Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser($this->get('kernel'));
     }
+
     protected function getSensioFrameworkExtra_View_ListenerService()
     {
         return $this->services['sensio_framework_extra.view.listener'] = new \Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener($this);
     }
+
     protected function getServiceContainerService()
     {
         throw new RuntimeException('You have requested a synthetic service ("service_container"). The DIC does not know how to construct this service.');
     }
+
     protected function getSessionService()
     {
         return $this->services['session'] = new \Symfony\Component\HttpFoundation\Session\Session($this->get('session.storage.native'), new \Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag(), new \Symfony\Component\HttpFoundation\Session\Flash\FlashBag());
     }
+
     protected function getSession_Handler_FactoryService()
     {
         return $this->services['session.handler.factory'] = call_user_func(array('Topxia\\Service\\Common\\SessionHandlerFactory', 'getSessionHandler'), $this);
     }
+
     protected function getSession_Handler_PdoService()
     {
         return $this->services['session.handler.pdo'] = new \Topxia\WebBundle\Handler\UserPdoSessionHandler($this->get('session.handler.pdo.connection'), array('db_table' => 'sessions', 'db_id_col' => 'sess_id', 'db_data_col' => 'sess_data', 'db_time_col' => 'sess_time', 'db_lifetime_col' => 'sess_lifetime', 'db_user_id_col' => 'sess_user_id'), $this->get('security.context'), $this);
     }
+
     protected function getSession_Handler_Pdo_ConnectionService()
     {
         $this->services['session.handler.pdo.connection'] = $instance = new \PDO('mysql:host=localhost;port=3306;dbname=myBanana', 'root', NULL);
         $instance->setAttribute(3, 2);
         return $instance;
     }
+
     protected function getSession_Handler_RedisService()
     {
         return $this->services['session.handler.redis'] = new \Topxia\WebBundle\Handler\RedisSessionHandler($this->get('session.handler.redis.factory'), $this->get('security.context'));
     }
+
     protected function getSession_Handler_Redis_FactoryService()
     {
         return $this->services['session.handler.redis.factory'] = call_user_func(array('Topxia\\Service\\Common\\Redis\\RedisFactory', 'instance'), $this);
     }
+
     protected function getSession_SaveListenerService()
     {
         return $this->services['session.save_listener'] = new \Symfony\Component\HttpKernel\EventListener\SaveSessionListener();
     }
+
     protected function getSession_Storage_FilesystemService()
     {
         return $this->services['session.storage.filesystem'] = new \Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage((__DIR__.'/sessions'));
     }
+
     protected function getSession_Storage_NativeService()
     {
         return $this->services['session.storage.native'] = new \Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage(array(), $this->get('session.handler.factory'));
     }
+
     protected function getSession_Storage_PhpBridgeService()
     {
         return $this->services['session.storage.php_bridge'] = new \Symfony\Component\HttpFoundation\Session\Storage\PhpBridgeSessionStorage($this->get('session.handler.factory'));
     }
+
     protected function getSessionListenerService()
     {
         return $this->services['session_listener'] = new \Symfony\Bundle\FrameworkBundle\EventListener\SessionListener($this);
     }
+
     protected function getStreamedResponseListenerService()
     {
         return $this->services['streamed_response_listener'] = new \Symfony\Component\HttpKernel\EventListener\StreamedResponseListener();
     }
+
     protected function getSwiftmailer_EmailSender_ListenerService()
     {
         return $this->services['swiftmailer.email_sender.listener'] = new \Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener($this, $this->get('logger', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
+
     protected function getSwiftmailer_Mailer_DefaultService()
     {
         return $this->services['swiftmailer.mailer.default'] = new \Swift_Mailer($this->get('swiftmailer.mailer.default.transport'));
     }
+
     protected function getSwiftmailer_Mailer_Default_TransportService()
     {
         $a = new \Swift_Transport_Esmtp_AuthHandler(array(0 => new \Swift_Transport_Esmtp_Auth_CramMd5Authenticator(), 1 => new \Swift_Transport_Esmtp_Auth_LoginAuthenticator(), 2 => new \Swift_Transport_Esmtp_Auth_PlainAuthenticator()));
@@ -897,37 +1028,46 @@ class appProdProjectContainer extends Container
         $instance->setSourceIp(NULL);
         return $instance;
     }
+
     protected function getTemplatingService()
     {
         return $this->services['templating'] = new \Symfony\Bundle\TwigBundle\TwigEngine($this->get('twig'), $this->get('templating.name_parser'), $this->get('topxia.templating.locator'));
     }
+
     protected function getTemplating_Asset_PackageFactoryService()
     {
         return $this->services['templating.asset.package_factory'] = new \Symfony\Bundle\FrameworkBundle\Templating\Asset\PackageFactory($this);
     }
+
     protected function getTemplating_FilenameParserService()
     {
         return $this->services['templating.filename_parser'] = new \Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser();
     }
+
     protected function getTemplating_GlobalsService()
     {
         return $this->services['templating.globals'] = new \Symfony\Bundle\FrameworkBundle\Templating\GlobalVariables($this);
     }
+
     protected function getTemplating_Helper_ActionsService()
     {
         return $this->services['templating.helper.actions'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\ActionsHelper($this->get('fragment.handler'));
     }
+
     protected function getTemplating_Helper_AssetsService()
     {
         if (!isset($this->scopedServices['request'])) {
             throw new InactiveScopeException('templating.helper.assets', 'request');
         }
+
         return $this->services['templating.helper.assets'] = $this->scopedServices['request']['templating.helper.assets'] = new \Symfony\Component\Templating\Helper\CoreAssetsHelper(new \Symfony\Bundle\FrameworkBundle\Templating\Asset\PathPackage($this->get('request'), '6.17.13', '%s?%s'), array());
     }
+
     protected function getTemplating_Helper_CodeService()
     {
         return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, $this->targetDirs[2], 'UTF-8');
     }
+
     protected function getTemplating_Helper_FormService()
     {
         $a = new \Symfony\Bundle\FrameworkBundle\Templating\PhpEngine($this->get('templating.name_parser'), $this, $this->get('templating.loader'), $this->get('templating.globals'));
@@ -935,156 +1075,194 @@ class appProdProjectContainer extends Container
         $a->setHelpers(array('slots' => 'templating.helper.slots', 'assets' => 'templating.helper.assets', 'request' => 'templating.helper.request', 'session' => 'templating.helper.session', 'router' => 'templating.helper.router', 'actions' => 'templating.helper.actions', 'code' => 'templating.helper.code', 'translator' => 'templating.helper.translator', 'form' => 'templating.helper.form', 'logout_url' => 'templating.helper.logout_url', 'security' => 'templating.helper.security', 'assetic' => 'assetic.helper.static'));
         return $this->services['templating.helper.form'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\FormHelper(new \Symfony\Component\Form\FormRenderer(new \Symfony\Component\Form\Extension\Templating\TemplatingRendererEngine($a, array(0 => 'FrameworkBundle:Form')), $this->get('form.csrf_provider', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
     }
+
     protected function getTemplating_Helper_LogoutUrlService()
     {
         $this->services['templating.helper.logout_url'] = $instance = new \Symfony\Bundle\SecurityBundle\Templating\Helper\LogoutUrlHelper($this, $this->get('router'));
         $instance->registerListener('main', 'logout', 'logout', '_csrf_token', NULL);
         return $instance;
     }
+
     protected function getTemplating_Helper_RequestService()
     {
         return $this->services['templating.helper.request'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\RequestHelper($this->get('request'));
     }
+
     protected function getTemplating_Helper_RouterService()
     {
         return $this->services['templating.helper.router'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\RouterHelper($this->get('router'));
     }
+
     protected function getTemplating_Helper_SecurityService()
     {
         return $this->services['templating.helper.security'] = new \Symfony\Bundle\SecurityBundle\Templating\Helper\SecurityHelper($this->get('security.context', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
+
     protected function getTemplating_Helper_SessionService()
     {
         return $this->services['templating.helper.session'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\SessionHelper($this->get('request'));
     }
+
     protected function getTemplating_Helper_SlotsService()
     {
         return $this->services['templating.helper.slots'] = new \Symfony\Component\Templating\Helper\SlotsHelper();
     }
+
     protected function getTemplating_Helper_TranslatorService()
     {
         return $this->services['templating.helper.translator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\TranslatorHelper($this->get('translator.default'));
     }
+
     protected function getTemplating_LoaderService()
     {
         return $this->services['templating.loader'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\FilesystemLoader($this->get('topxia.templating.locator'));
     }
+
     protected function getTemplating_NameParserService()
     {
         return $this->services['templating.name_parser'] = new \Symfony\Bundle\FrameworkBundle\Templating\TemplateNameParser($this->get('kernel'));
     }
+
     protected function getTopxia_DataDict_GenderService()
     {
         return $this->services['topxia.data_dict.gender'] = new \Topxia\WebBundle\DataDict\GenderDict();
     }
+
     protected function getTopxia_DataDict_UserRoleService()
     {
         return $this->services['topxia.data_dict.user_role'] = new \Topxia\WebBundle\DataDict\UserRoleDict();
     }
+
     protected function getTopxia_FileLocatorService()
     {
         return $this->services['topxia.file_locator'] = new \Topxia\WebBundle\Theme\FileLocator($this->get('kernel'), ($this->targetDirs[2].'/Resources'));
     }
+
     protected function getTopxia_TargetHelperService()
     {
         return $this->services['topxia.target_helper'] = new \Topxia\WebBundle\Util\TargetHelper($this);
     }
+
     protected function getTopxia_Templating_LocatorService()
     {
         return $this->services['topxia.templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('topxia.file_locator'), __DIR__);
     }
+
     protected function getTopxia_TimemachineService()
     {
         return $this->services['topxia.timemachine'] = new \Topxia\Common\TimeMachine('Asia/Shanghai');
     }
+
     protected function getTopxia_Twig_BlockExtensionService()
     {
         return $this->services['topxia.twig.block_extension'] = new \Topxia\WebBundle\Twig\Extension\BlockExtension($this);
     }
+
     protected function getTopxia_Twig_CacheExtensionService()
     {
         return $this->services['topxia.twig.cache_extension'] = new \Asm89\Twig\CacheExtension\Extension($this->get('topxia.twig.cache_strategy'));
     }
+
     protected function getTopxia_Twig_CacheProviderService()
     {
         return $this->services['topxia.twig.cache_provider'] = new \Asm89\Twig\CacheExtension\CacheProvider\DoctrineCacheAdapter($this->get('topxia.twig.file_cache'));
     }
+
     protected function getTopxia_Twig_CacheStrategyService()
     {
         return $this->services['topxia.twig.cache_strategy'] = new \Asm89\Twig\CacheExtension\CacheStrategy\LifetimeCacheStrategy($this->get('topxia.twig.cache_provider'));
     }
+
     protected function getTopxia_Twig_DataExtensionService()
     {
         return $this->services['topxia.twig.data_extension'] = new \Topxia\WebBundle\Twig\Extension\DataExtension();
     }
+
     protected function getTopxia_Twig_DictionaryExtensionService()
     {
         return $this->services['topxia.twig.dictionary_extension'] = new \Topxia\WebBundle\Twig\Extension\DictionaryExtension();
     }
+
     protected function getTopxia_Twig_FileCacheService()
     {
         return $this->services['topxia.twig.file_cache'] = new \Topxia\Service\Common\FilesystemCache(($this->targetDirs[2].'/../app/cache'));
     }
+
     protected function getTopxia_Twig_HtmlExtensionService()
     {
         return $this->services['topxia.twig.html_extension'] = new \Topxia\WebBundle\Twig\Extension\HtmlExtension();
     }
+
     protected function getTopxia_Twig_MenuExtensionService()
     {
         return $this->services['topxia.twig.menu_extension'] = new \Topxia\WebBundle\Twig\Extension\MenuExtension($this);
     }
+
     protected function getTopxia_Twig_ThemeExtensionService()
     {
         return $this->services['topxia.twig.theme_extension'] = new \Topxia\WebBundle\Twig\Extension\ThemeExtension($this);
     }
+
     protected function getTopxia_Twig_UploaderExtensionService()
     {
         return $this->services['topxia.twig.uploader_extension'] = new \Topxia\WebBundle\Twig\Extension\UploaderExtension($this);
     }
+
     protected function getTopxia_Twig_WebExtensionService()
     {
         return $this->services['topxia.twig.web_extension'] = new \Topxia\WebBundle\Twig\Extension\WebExtension($this);
     }
+
     protected function getTopxia_UserProviderService()
     {
         return $this->services['topxia.user_provider'] = new \Topxia\Service\User\UserProvider($this);
     }
+
     protected function getTranslation_Dumper_CsvService()
     {
         return $this->services['translation.dumper.csv'] = new \Symfony\Component\Translation\Dumper\CsvFileDumper();
     }
+
     protected function getTranslation_Dumper_IniService()
     {
         return $this->services['translation.dumper.ini'] = new \Symfony\Component\Translation\Dumper\IniFileDumper();
     }
+
     protected function getTranslation_Dumper_MoService()
     {
         return $this->services['translation.dumper.mo'] = new \Symfony\Component\Translation\Dumper\MoFileDumper();
     }
+
     protected function getTranslation_Dumper_PhpService()
     {
         return $this->services['translation.dumper.php'] = new \Symfony\Component\Translation\Dumper\PhpFileDumper();
     }
+
     protected function getTranslation_Dumper_PoService()
     {
         return $this->services['translation.dumper.po'] = new \Symfony\Component\Translation\Dumper\PoFileDumper();
     }
+
     protected function getTranslation_Dumper_QtService()
     {
         return $this->services['translation.dumper.qt'] = new \Symfony\Component\Translation\Dumper\QtFileDumper();
     }
+
     protected function getTranslation_Dumper_ResService()
     {
         return $this->services['translation.dumper.res'] = new \Symfony\Component\Translation\Dumper\IcuResFileDumper();
     }
+
     protected function getTranslation_Dumper_XliffService()
     {
         return $this->services['translation.dumper.xliff'] = new \Symfony\Component\Translation\Dumper\XliffFileDumper();
     }
+
     protected function getTranslation_Dumper_YmlService()
     {
         return $this->services['translation.dumper.yml'] = new \Symfony\Component\Translation\Dumper\YamlFileDumper();
     }
+
     protected function getTranslation_ExtractorService()
     {
         $this->services['translation.extractor'] = $instance = new \Symfony\Component\Translation\Extractor\ChainExtractor();
@@ -1092,10 +1270,12 @@ class appProdProjectContainer extends Container
         $instance->addExtractor('twig', $this->get('twig.translation.extractor'));
         return $instance;
     }
+
     protected function getTranslation_Extractor_PhpService()
     {
         return $this->services['translation.extractor.php'] = new \Symfony\Bundle\FrameworkBundle\Translation\PhpExtractor();
     }
+
     protected function getTranslation_LoaderService()
     {
         $a = $this->get('translation.loader.xliff');
@@ -1113,46 +1293,57 @@ class appProdProjectContainer extends Container
         $instance->addLoader('ini', $this->get('translation.loader.ini'));
         return $instance;
     }
+
     protected function getTranslation_Loader_CsvService()
     {
         return $this->services['translation.loader.csv'] = new \Symfony\Component\Translation\Loader\CsvFileLoader();
     }
+
     protected function getTranslation_Loader_DatService()
     {
         return $this->services['translation.loader.dat'] = new \Symfony\Component\Translation\Loader\IcuDatFileLoader();
     }
+
     protected function getTranslation_Loader_IniService()
     {
         return $this->services['translation.loader.ini'] = new \Symfony\Component\Translation\Loader\IniFileLoader();
     }
+
     protected function getTranslation_Loader_MoService()
     {
         return $this->services['translation.loader.mo'] = new \Symfony\Component\Translation\Loader\MoFileLoader();
     }
+
     protected function getTranslation_Loader_PhpService()
     {
         return $this->services['translation.loader.php'] = new \Symfony\Component\Translation\Loader\PhpFileLoader();
     }
+
     protected function getTranslation_Loader_PoService()
     {
         return $this->services['translation.loader.po'] = new \Symfony\Component\Translation\Loader\PoFileLoader();
     }
+
     protected function getTranslation_Loader_QtService()
     {
         return $this->services['translation.loader.qt'] = new \Symfony\Component\Translation\Loader\QtFileLoader();
     }
+
     protected function getTranslation_Loader_ResService()
     {
         return $this->services['translation.loader.res'] = new \Symfony\Component\Translation\Loader\IcuResFileLoader();
     }
+
     protected function getTranslation_Loader_XliffService()
     {
         return $this->services['translation.loader.xliff'] = new \Symfony\Component\Translation\Loader\XliffFileLoader();
     }
+
     protected function getTranslation_Loader_YmlService()
     {
         return $this->services['translation.loader.yml'] = new \Symfony\Component\Translation\Loader\YamlFileLoader();
     }
+
     protected function getTranslation_WriterService()
     {
         $this->services['translation.writer'] = $instance = new \Symfony\Component\Translation\Writer\TranslationWriter();
@@ -1167,6 +1358,7 @@ class appProdProjectContainer extends Container
         $instance->addDumper('res', $this->get('translation.dumper.res'));
         return $instance;
     }
+
     protected function getTranslator_DefaultService()
     {
         $this->services['translator.default'] = $instance = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, new \Symfony\Component\Translation\MessageSelector(), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini')), array('cache_dir' => (__DIR__.'/translations'), 'debug' => false));
@@ -1307,6 +1499,7 @@ class appProdProjectContainer extends Container
         $instance->addResource('xlf', ($this->targetDirs[3].'\\src\\Custom\\AdminBundle/Resources/translations\\messages.fr.xlf'), 'fr', 'messages');
         return $instance;
     }
+
     protected function getTwigService()
     {
         $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => false, 'strict_variables' => false, 'paths' => array(($this->targetDirs[2].'/../web/customize') => 'customize', ($this->targetDirs[2].'/../src/Topxia/WebBundle/Resources/views') => 'topxiaweb', ($this->targetDirs[2].'/../web/themes') => 'theme', ($this->targetDirs[2].'/../') => 'root'), 'exception_controller' => 'twig.controller.exception:showAction', 'autoescape' => array(0 => 'Symfony\\Bundle\\TwigBundle\\TwigDefaultEscapingStrategy', 1 => 'guess'), 'cache' => (__DIR__.'/twig'), 'charset' => 'UTF-8'));
@@ -1335,14 +1528,17 @@ class appProdProjectContainer extends Container
         $instance->addGlobal('disabled_features', array());
         return $instance;
     }
+
     protected function getTwig_Controller_ExceptionService()
     {
         return $this->services['twig.controller.exception'] = new \Symfony\Bundle\TwigBundle\Controller\ExceptionController($this->get('twig'), false);
     }
+
     protected function getTwig_ExceptionListenerService()
     {
         return $this->services['twig.exception_listener'] = new \Symfony\Component\HttpKernel\EventListener\ExceptionListener('twig.controller.exception:showAction', $this->get('monolog.logger.request', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
+
     protected function getTwig_LoaderService()
     {
         $this->services['twig.loader'] = $instance = new \Symfony\Bundle\TwigBundle\Loader\FilesystemLoader($this->get('topxia.templating.locator'), $this->get('templating.name_parser'));
@@ -1369,26 +1565,32 @@ class appProdProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form'));
         return $instance;
     }
+
     protected function getTwig_Translation_ExtractorService()
     {
         return $this->services['twig.translation.extractor'] = new \Symfony\Bridge\Twig\Translation\TwigExtractor($this->get('twig'));
     }
+
     protected function getUriSignerService()
     {
         return $this->services['uri_signer'] = new \Symfony\Component\HttpKernel\UriSigner('1hkcbroykc004gc8ko844co40g4kwco');
     }
+
     protected function getUser_LoginGenerateNotificationHandlerService()
     {
         return $this->services['user.login_generate_notification_handler'] = new \Topxia\WebBundle\Handler\GenerateNotificationHandler($this);
     }
+
     protected function getUser_LoginListenerService()
     {
         return $this->services['user.login_listener'] = new \Topxia\WebBundle\Handler\LoginSuccessHandler($this->get('security.context'), $this->get('doctrine'));
     }
+
     protected function getValidatorService()
     {
         return $this->services['validator'] = new \Symfony\Component\Validator\Validator($this->get('validator.mapping.class_metadata_factory'), new \Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory($this, array('security.validator.user_password' => 'security.validator.user_password', 'doctrine.orm.validator.unique' => 'doctrine.orm.validator.unique')), $this->get('translator.default'), 'validators', array(0 => $this->get('doctrine.orm.validator_initializer')));
     }
+
     protected function synchronizeRequestService()
     {
         if ($this->initialized('locale_listener')) {
@@ -1401,63 +1603,79 @@ class appProdProjectContainer extends Container
             $this->get('router_listener')->setRequest($this->get('request', ContainerInterface::NULL_ON_INVALID_REFERENCE));
         }
     }
+
     protected function getAssetic_AssetFactoryService()
     {
         return $this->services['assetic.asset_factory'] = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, $this->getParameterBag(), ($this->targetDirs[2].'/../web'), false);
     }
+
     protected function getControllerNameConverterService()
     {
         return $this->services['controller_name_converter'] = new \Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser($this->get('kernel'));
     }
+
     protected function getRouter_RequestContextService()
     {
         return $this->services['router.request_context'] = new \Symfony\Component\Routing\RequestContext('', 'GET', 'localhost', 'http', 80, 443);
     }
+
     protected function getSecurity_Access_DecisionManagerService()
     {
         return $this->services['security.access.decision_manager'] = new \Symfony\Component\Security\Core\Authorization\AccessDecisionManager(array(0 => new \Symfony\Component\Security\Core\Authorization\Voter\RoleHierarchyVoter($this->get('security.role_hierarchy')), 1 => new \Symfony\Component\Security\Core\Authorization\Voter\AuthenticatedVoter($this->get('security.authentication.trust_resolver'))), 'affirmative', false, true);
     }
+
     protected function getSecurity_Authentication_ManagerService()
     {
         $a = new \Symfony\Component\Security\Core\User\UserChecker();
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Topxia\WebBundle\Handler\AuthenticationProvider($this->get('topxia.user_provider'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, '1hkcbroykc004gc8ko844co40g4kwco', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5adbedf47ca04')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Topxia\WebBundle\Handler\AuthenticationProvider($this->get('topxia.user_provider'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, '1hkcbroykc004gc8ko844co40g4kwco', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5bd8fac2e8ef5')), true);
         $instance->setEventDispatcher($this->get('event_dispatcher'));
         return $instance;
     }
+
     protected function getSecurity_Authentication_TrustResolverService()
     {
         return $this->services['security.authentication.trust_resolver'] = new \Symfony\Component\Security\Core\Authentication\AuthenticationTrustResolver('Symfony\\Component\\Security\\Core\\Authentication\\Token\\AnonymousToken', 'Symfony\\Component\\Security\\Core\\Authentication\\Token\\RememberMeToken');
     }
+
     protected function getSecurity_RoleHierarchyService()
     {
         return $this->services['security.role_hierarchy'] = new \Symfony\Component\Security\Core\Role\RoleHierarchy(array('ROLE_TEACHER' => array(0 => 'ROLE_USER'), 'ROLE_BACKEND' => array(0 => 'ROLE_USER'), 'ROLE_ADMIN' => array(0 => 'ROLE_TEACHER', 1 => 'ROLE_BACKEND'), 'ROLE_SUPER_ADMIN' => array(0 => 'ROLE_ADMIN', 1 => 'ROLE_ALLOWED_TO_SWITCH')));
     }
+
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
         return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml'))), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
     }
+
     public function getParameter($name)
     {
         $name = strtolower($name);
+
         if (!(isset($this->parameters[$name]) || array_key_exists($name, $this->parameters))) {
             throw new InvalidArgumentException(sprintf('The parameter "%s" must be defined.', $name));
         }
+
         return $this->parameters[$name];
     }
+
     public function hasParameter($name)
     {
         $name = strtolower($name);
+
         return isset($this->parameters[$name]) || array_key_exists($name, $this->parameters);
     }
+
     public function setParameter($name, $value)
     {
         throw new LogicException('Impossible to call set() on a frozen ParameterBag.');
     }
+
     public function getParameterBag()
     {
         if (null === $this->parameterBag) {
             $this->parameterBag = new FrozenParameterBag($this->parameters);
         }
+
         return $this->parameterBag;
     }
     protected function getDefaultParameters()
@@ -1897,10 +2115,10 @@ class appProdProjectContainer extends Container
                 'debug' => false,
                 'strict_variables' => false,
                 'paths' => array(
-                    'D:\\wamp64\\www\\myBanana\\app/../web/customize' => 'customize',
-                    'D:\\wamp64\\www\\myBanana\\app/../src/Topxia/WebBundle/Resources/views' => 'topxiaweb',
-                    'D:\\wamp64\\www\\myBanana\\app/../web/themes' => 'theme',
-                    'D:\\wamp64\\www\\myBanana\\app/../' => 'root',
+                    'E:\\wamp64\\www\\netedu\\app/../web/customize' => 'customize',
+                    'E:\\wamp64\\www\\netedu\\app/../src/Topxia/WebBundle/Resources/views' => 'topxiaweb',
+                    'E:\\wamp64\\www\\netedu\\app/../web/themes' => 'theme',
+                    'E:\\wamp64\\www\\netedu\\app/../' => 'root',
                 ),
                 'exception_controller' => 'twig.controller.exception:showAction',
                 'autoescape' => array(
@@ -2020,7 +2238,7 @@ class appProdProjectContainer extends Container
             'assetic.write_to' => ($this->targetDirs[2].'/../web'),
             'assetic.variables' => array(
             ),
-            'assetic.java.bin' => '/usr/bin/java',
+            'assetic.java.bin' => 'E:\\software\\jdk\\bin\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.ruby.bin' => '/usr/bin/ruby',
             'assetic.sass.bin' => '/usr/bin/sass',
