@@ -7,6 +7,9 @@ use Topxia\Service\Common\MailFactory;
 use Topxia\WebBundle\DataDict\UserRoleDict;
 use Symfony\Component\HttpFoundation\Request;
 use Topxia\System;
+use Topxia\AdminBundle\Controller\httpclient;
+//require_once(__DIR__.'/httpclient.php');
+
 
 class UserController extends BaseController
 {
@@ -211,6 +214,8 @@ class UserController extends BaseController
 
     public function createAction(Request $request)
     {
+
+        error_log("create2===========".__DIR__);
         if ($request->getMethod() == 'POST') {
             $formData         = $request->request->all();
             $formData['type'] = 'import';
@@ -218,6 +223,12 @@ class UserController extends BaseController
             $registration     = $this->getRegisterData($formData, $request->getClientIp());
             $user             = $this->getAuthService()->register($registration);
             $this->get('session')->set('registed_email', $user['email']);
+
+            $http = new HttpClient('http://www.kuaidi100.com/query?type=1&postid=1');
+            $http->get();
+            error_log("result===========".$http->getBody());
+            // Just print the response body
+            error_log(__DIR__);
 
             if (isset($formData['roles'])) {
                 $roles[] = 'ROLE_TEACHER';
