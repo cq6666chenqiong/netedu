@@ -12,7 +12,7 @@
 		      {% for index, answer in item.question.answer %}
 		        {% set userAnswer = item.question.testResult.answer[index]|default(null) %}
 			    	<li>
-			    		填空({{index+1}})： 正确答案 <strong class="text-success">{{ answer|join(' 或 ') }}</strong>
+			    		{#填空({{index+1}})： 正确答案 <strong class="text-success">{{ answer|join(' 或 ') }}</strong>
 			    	  {% if userAnswer == '' %}
 			    	  {{'。你未回答'|trans}}
 			    	  {% elseif item.question.testResult.status == "right" %}
@@ -21,7 +21,7 @@
 			    	  {{'，你的答案'|trans}}　<strong class="text-warning">{{ userAnswer }}</strong>。
 			    	  {% else %}
 			    	  {{'，你的答案'|trans}}　<strong class="text-danger">{{ userAnswer }}</strong>。
-			    	  {% endif %}
+			    	  {% endif %}#}
 			    	</li>
 		    	{% endfor %}
 		    </ul>

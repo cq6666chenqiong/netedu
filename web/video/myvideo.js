@@ -15,11 +15,29 @@
                     "</p>"+
                     "</video>"
                 );
-                myPlayer = videojs('my-video');
+                /*myPlayer = videojs('my-video');
                 videojs("my-video").ready(function(){
                     var myPlayer = this;
                     myPlayer.play();
+                });*/
+                var myPlayer = videojs('my-video', {
+                    controls: false,
+                    autoplay: true,
+                    preload: 'auto',
+                    loop: false,
+                    controlBar: {
+                        captionsButton: false,
+                        chaptersButton: false,
+                        playbackRateMenuButton: true,
+                        LiveDisplay: true,
+                        subtitlesButton: false,
+                        remainingTimeDisplay: true,
+                        progressControl: false,
+                        fullscreenToggle: false
+                    }
+
                 });
+
                 $("#start").hide();
             }else{
                 $('#lesson-swf-content').hide();

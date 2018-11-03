@@ -13,23 +13,27 @@
     <div class="form-group" style="width: 100%">
        <form action="{{ path('course_fetch_bat_student',{courseId:courseId}) }}">
            <div class="form-group">
-                科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室
+                层级
                <select id="keshi" name="keshi" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
                    <option value=""> 全选 </option>
                    {% for k in classr %}
                        <option {% if keshi == k.id %} selected {% endif %} value="{{ k.id }}"> {{ k.title }} </option>
                    {% endfor %}
                </select>
-               科室分类
+               专业类别
                <select id="sskeshi" name="sskeshi" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
                    <option value=""> 全选 </option>
-                   <option value="管理及其他部门"> 管理及其他部门 </option>
-                   <option value="临床部门"> 临床部门 </option>
-                   <option value="医技部门"> 医技部门 </option>
+                   <option value="康复小组"> 康复小组 </option>
+                   <option value="糖尿病小组"> 糖尿病小组 </option>
+                   <option value="静脉小组"> 静脉小组 </option>
+                   <option value="肿瘤小组"> 肿瘤小组 </option>
+                   <option value="营养小组"> 营养小组 </option>
+                   <option value="危重小组"> 危重小组 </option>
+                   <option value="应急小组"> 应急小组 </option>
                </select>
            </div>
            <div class="form-group">
-             人员类别
+               职称
                <select id="memberType" name="memberType" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
                    <option value=""> 全选 </option>
                    <option value="护士"> 护士 </option>
@@ -39,7 +43,7 @@
                    <option value="收款员"> 收款员 </option>
                    <option value="其他"> 其他 </option>
                </select>
-               职称分类
+               行政职务
                <select id="jobType" name="jobType" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
                    <option value=""> 全选 </option>
                    <option value="正高"> 正高 </option>

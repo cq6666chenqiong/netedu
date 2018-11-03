@@ -10,6 +10,7 @@
   {# {% if showTestpaperNavbar|default('on') == 'off' %} #}
     <form id='teacherCheckForm' autocomplete="off">
     {# {% endif %} #}
+        {# 显示测试答案#}
     {% for type in types|default(paper.metas.question_type_seq) %}
       {% if items[type] != [] %}
         <div class="panel panel-default testpaper-question-block" id="testpaper-questions-{{ type }}">

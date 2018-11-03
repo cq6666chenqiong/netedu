@@ -224,9 +224,9 @@ class UserController extends BaseController
             $user             = $this->getAuthService()->register($registration);
             $this->get('session')->set('registed_email', $user['email']);
 
-            $http = new HttpClient('http://www.kuaidi100.com/query?type=1&postid=1');
-            $http->get();
-            error_log("result===========".$http->getBody());
+           // $http = new HttpClient('http://www.kuaidi100.com/query?type=1&postid=1');
+           // $http->get();
+           // error_log("result===========".$http->getBody());
             // Just print the response body
             error_log(__DIR__);
 
