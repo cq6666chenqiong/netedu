@@ -15,20 +15,47 @@ use Topxia\Common\FileToolkit;
 use Topxia\Component\OAuthClient\OAuthClientFactory;
 use Topxia\Common\Paginator;
 use Topxia\System;
+use Topxia\AdminBundle\Controller\httpclient;
 
 class SorceStatisticalController  extends BaseController
 {
     public function indexAction(Request $request){
+        ini_set('display_errors','off');
         $year = $request->query->get("year");
-        $department = $request->query->get("department");
-        $truename = $request->query->get("truename");
+
+/*        $department = $request->query->get("department");
+        $truename = $request->query->get("truename");*/
         if(is_null($year)||$year==''){
             $year=intval (date("Y"));
         }
         $beginTime = date($year."-01-01 00:00:00");
         $endTime = date($year."-12-31 23:59:59");
+
+        $http = new HttpClient('http://localhost:8080/statistics/getScoreByGradeCount');
+        $http->get();
+        //rror_log("result===========".$http->getBody());
+        $jsonCount = json_decode($http->getBody(),true);
+        $num = $jsonCount['sum'];
+        $paginator = new Paginator($this->get('request'), $num, 20);
+        if(is_null($paginator->getCurrentPage())){
+            $paginator->setCurrentPage(1);
+        }
+        $http = new HttpClient('http://localhost:8080/statistics/getScoreByGrade?start='.$paginator->getCurrentPage().'&plimit=10');
+        $http->get();
+        //error_log("result===========".$http->getBody());
+        $json = json_decode($http->getBody(),true);
+
+  /*
+
+        $beginTime = date($year."-01-01 00:00:00");
+        $endTime = date($year."-12-31 23:59:59");
         $condition="";
         $condition1="";
+
+
+
+
+        /*
         if(!is_null($department)&&$department!=''){
             $condition = $condition." and uk.company = ".$department;
         }
@@ -41,6 +68,7 @@ class SorceStatisticalController  extends BaseController
             $condition1 = $condition1." and us.year = ".$year;
         }
         $con = System::getConnection();
+        */
         /*
         $sql = "select count(1) count from user u ".
             "left join user_profile uk on u.id = uk.id ".
@@ -49,6 +77,7 @@ class SorceStatisticalController  extends BaseController
             "where (us.year = ".$year." or us.year is null)  ".
             $condition." ;";
         */
+        /*
         $sql =  "select count(1) count ".
                 "from ( ".
                         " select u.id id,uk.truename truename from user u left outer join user_profile uk on u.id = uk.id ".
@@ -166,17 +195,25 @@ class SorceStatisticalController  extends BaseController
         $classr = array();
         error_log(json_encode($arry));
         System::closeConnection($con);
-        return $this->render('TopxiaAdminBundle:sorce:score.html.twig', array(
+        */
+        /*;return $this->render('TopxiaAdminBundle:sorce:score.html.twig', array(
             'arry'                       =>  $arry,
             'classr'                     =>  $result2,
             'paginator'                  =>  $paginator,
             'department'                 =>  $department,
             'year'                        =>  $year,
             'truename'                    =>  $truename
+        ));*/
+        return $this->render('TopxiaAdminBundle:sorce:score.html.twig', array(
+            'year'                        =>  $year,
+            'paginator'                  =>  $paginator,
+            'arry'                       =>  $json
+
         ));
     }
 
     public function statisticalByDepartmentAction(Request $request){
+        ini_set('display_errors','off');
         $year = $request->query->get("year");
         if(is_null($year)||$year==''){
             error_log("this");
@@ -186,6 +223,13 @@ class SorceStatisticalController  extends BaseController
 
         $beginTime = date($year."-01-01 00:00:00");
         $endTime = date($year."-12-31 23:59:59");
+
+        $http = new HttpClient('http://localhost:8080/statistics/getScoreByBingQu');
+        $http->get();
+        error_log("result===========".$http->getBody());
+        $json = json_decode($http->getBody(),true);
+
+        /*
         $con = System::getConnection();
         $sql = "select uk.id id,u.nickname nickname,c.title title,us.score score,us.createTime createTime,uk.job job,uk.idcard idcard,uk.company department,uk.varcharField2 varcharField2  from user u ".
                 "left outer join user_profile uk on u.id = uk.id ".
@@ -398,6 +442,13 @@ class SorceStatisticalController  extends BaseController
             'heji'                         => $heji,
             'kkeys'                        => $kkeys,
             'year'                         => $year
+        ));
+        */
+
+        return $this->render('TopxiaAdminBundle:sorce:departmentsorce.html.twig', array(
+            'year'                        =>  $year,
+            'arry'                       =>  $json
+
         ));
     }
 
