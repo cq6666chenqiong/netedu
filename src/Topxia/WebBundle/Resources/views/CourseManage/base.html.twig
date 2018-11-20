@@ -127,8 +127,19 @@
             <div class="col-md-8 controls">
                 <div class="iDate date">
                    <select name="buyable">
-                        <option value="1" {% if course.buyable==1 %} selected="selected" {% endif %}>必修</option>
-                        <option value="0" {% if course.buyable==0 %} selected="selected" {% endif %}>选修</option>
+                        {#<option value="1" {% if course.buyable==1 %} selected="selected" {% endif %}>必修</option>
+                        <option value="0" {% if course.buyable==0 %} selected="selected" {% endif %}>选修</option>#}
+                       <option value="1" {% if course.buyable==1 %} selected="selected" {% endif %}>N1</option>
+                       <option value="2" {% if course.buyable==2 %} selected="selected" {% endif %}>N2</option>
+                       <option value="3" {% if course.buyable==3 %} selected="selected" {% endif %}>N3</option>
+                       <option value="4" {% if course.buyable==4 %} selected="selected" {% endif %}>N4</option>
+                       <option value="5" {% if course.buyable==5 %} selected="selected" {% endif %}>康复课程</option>
+                       <option value="6" {% if course.buyable==6 %} selected="selected" {% endif %}>糖尿病课程</option>
+                       <option value="7" {% if course.buyable==7 %} selected="selected" {% endif %}>静脉课程</option>
+                       <option value="8" {% if course.buyable==8 %} selected="selected" {% endif %}>肿瘤课程</option>
+                       <option value="9" {% if course.buyable==9 %} selected="selected" {% endif %}>营养课程</option>
+                       <option value="10" {% if course.buyable==10 %} selected="selected" {% endif %}>危重课程</option>
+                       <option value="11" {% if course.buyable==11 %} selected="selected" {% endif %}>应急课程</option>
                    </select>
                 </div>
             </div>
