@@ -32,7 +32,19 @@
       {{ profile.job }}
   </td>
   <td>
-      {{ classr[profile.company] }}
+      {% if profile.company == '1' %}
+          层级1
+      {% endif %}
+      {% if profile.company == '2' %}
+          层级2
+      {% endif %}
+      {% if profile.company == '3' %}
+          层级3
+      {% endif %}
+      {% if profile.company == '4' %}
+          层级4
+      {% endif %}
+      {#{{ classr[profile.company] }}#}
   </td>
   <td>
       {{ profile.varcharField4|default('') }}

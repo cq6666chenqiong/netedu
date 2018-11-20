@@ -14,10 +14,39 @@
       {% set progress = course.progress %}
       {#<p class="teacher-name">{{'教师：'|trans}}{{ teacher.nickname|default("") }}</p> #}
         {% if course.buyable == 1 %}
-          <p class="teacher-name">必修</p>
-        {% else %}
-          <p class="teacher-name">选修</p>
+          <p class="teacher-name">层级1</p>
         {% endif %}
+        {% if course.buyable == 2 %}
+          <p class="teacher-name">层级2</p>
+        {% endif %}
+        {% if course.buyable == 3 %}
+          <p class="teacher-name">层级3</p>
+        {% endif %}
+        {% if course.buyable == 4 %}
+          <p class="teacher-name">层级4</p>
+        {% endif %}
+        {% if course.buyable == 5 %}
+          <p class="teacher-name">康复小组</p>
+        {% endif %}
+        {% if course.buyable == 6 %}
+          <p class="teacher-name">糖尿病小组</p>
+        {% endif %}
+        {% if course.buyable == 7 %}
+          <p class="teacher-name">静脉小组</p>
+        {% endif %}
+        {% if course.buyable == 8 %}
+          <p class="teacher-name">肿瘤小组</p>
+        {% endif %}
+        {% if course.buyable == 9 %}
+          <p class="teacher-name">营养小组</p>
+        {% endif %}
+        {% if course.buyable == 10 %}
+          <p class="teacher-name">危重小组</p>
+        {% endif %}
+        {% if course.buyable == 11 %}
+          <p class="teacher-name">应急小组</p>
+        {% endif %}
+
       <div class="progress-block clearfix">
         <div class="progress" style="width:90%">
           <span class="progress-bar" style="width: {{ progress.percent }};"></span>

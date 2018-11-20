@@ -165,63 +165,59 @@ class __TwigTemplate_39cbc35b72f866287d79c59ee8e3289e0bb2b828f3d516ea18af4e508d3
             </tr>
         </thead>
         <tbody>
-        ssss======================";
-        // line 138
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["arry"]) ? $context["arry"] : null), 0, array(), "array"), "name", array(), "array"), "html", null, true);
-        echo "
         ";
-        // line 139
+        // line 138
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["arry"]) ? $context["arry"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["ar"]) {
-            // line 140
+            // line 139
             echo "
             <tr>
                 <td>";
-            // line 142
+            // line 141
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "name", array(), "array"), "html", null, true);
             echo "</td>
                 <td><a onclick=\"fun(this)\" data-toggle=\"modal\" data-target=\"#myModal\"  data_id=\"";
-            // line 143
+            // line 142
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "userNo", array(), "array"), "html", null, true);
             echo "\" >";
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "userNo", array(), "array"), "html", null, true);
             echo "</a>
                 <td>";
-            // line 144
+            // line 143
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "cengji", array(), "array"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 145
+            // line 144
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "cjcoursenum", array(), "array"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 146
+            // line 145
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "cjscore", array(), "array"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 147
+            // line 146
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "hasnopasscj", array(), "array"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 148
+            // line 147
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "zhuanye", array(), "array"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 149
+            // line 148
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "zycoursenum", array(), "array"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 150
+            // line 149
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "zyscore", array(), "array"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 151
+            // line 150
             echo twig_escape_filter($this->env, $this->getAttribute($context["ar"], "hasnopasszy", array(), "array"), "html", null, true);
             echo "</td>
                 <td>大于13</td>
                 <td>";
-            // line 153
+            // line 152
             echo twig_escape_filter($this->env, ($this->getAttribute($context["ar"], "cjscore", array(), "array") + $this->getAttribute($context["ar"], "zyscore", array(), "array")), "html", null, true);
             echo "</td>
                 <td>评定</td>
@@ -231,19 +227,19 @@ class __TwigTemplate_39cbc35b72f866287d79c59ee8e3289e0bb2b828f3d516ea18af4e508d3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ar'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 157
+        // line 156
         echo "        </tbody>
     </table>
 
     ";
-        // line 160
+        // line 159
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "currentPage", array()), "html", null, true);
         echo "
    ";
-        // line 162
+        // line 161
         echo "    <ul  class=\"pagination\">
         <li ";
-        // line 163
+        // line 162
         if (($this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "currentPage", array()) == $this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "firstPage", array()))) {
             echo "class=\"disabled\"";
         }
@@ -251,11 +247,11 @@ class __TwigTemplate_39cbc35b72f866287d79c59ee8e3289e0bb2b828f3d516ea18af4e508d3
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "getPageUrl", array(0 => $this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "previousPage", array())), "method"), "html", null, true);
         echo "\">上一页</a></li>
         ";
-        // line 164
+        // line 163
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "pages", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-            // line 165
+            // line 164
             echo "            <li ";
             if (($context["page"] == $this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "currentPage", array()))) {
                 echo "class=\"active\"";
@@ -270,7 +266,7 @@ class __TwigTemplate_39cbc35b72f866287d79c59ee8e3289e0bb2b828f3d516ea18af4e508d3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 167
+        // line 166
         echo "        <li ";
         if (($this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "currentPage", array()) == $this->getAttribute((isset($context["paginator"]) ? $context["paginator"] : null), "lastPage", array()))) {
             echo "class=\"disabled\"";
@@ -331,6 +327,6 @@ class __TwigTemplate_39cbc35b72f866287d79c59ee8e3289e0bb2b828f3d516ea18af4e508d3
 
     public function getDebugInfo()
     {
-        return array (  274 => 167,  259 => 165,  255 => 164,  247 => 163,  244 => 162,  240 => 160,  235 => 157,  225 => 153,  220 => 151,  216 => 150,  212 => 149,  208 => 148,  204 => 147,  200 => 146,  196 => 145,  192 => 144,  186 => 143,  182 => 142,  178 => 140,  174 => 139,  170 => 138,  142 => 112,  123 => 72,  119 => 70,  104 => 68,  100 => 67,  93 => 63,  89 => 62,  31 => 6,  28 => 5,  11 => 1,);
+        return array (  270 => 166,  255 => 164,  251 => 163,  243 => 162,  240 => 161,  236 => 159,  231 => 156,  221 => 152,  216 => 150,  212 => 149,  208 => 148,  204 => 147,  200 => 146,  196 => 145,  192 => 144,  188 => 143,  182 => 142,  178 => 141,  174 => 139,  170 => 138,  142 => 112,  123 => 72,  119 => 70,  104 => 68,  100 => 67,  93 => 63,  89 => 62,  31 => 6,  28 => 5,  11 => 1,);
     }
 }

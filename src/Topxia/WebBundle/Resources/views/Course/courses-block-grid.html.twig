@@ -34,10 +34,43 @@
 
         <span class="title">{{ course.title }}</span>
 
-          {% if course.buyable == 1 %}
+          {#{% if course.buyable == 1 %}
               <span class="title" style="float: right">必修</span>
           {% else %}
               <span class="title" style="float: right">选修</span>
+          {% endif %}#}
+          {% if course.buyable == 1 %}
+              <span class="title" style="float: right">层级1</span>
+          {% endif %}
+          {% if course.buyable == 2 %}
+              <span class="title" style="float: right">层级2</span>
+          {% endif %}
+          {% if course.buyable == 3 %}
+              <span class="title" style="float: right">层级3</span>
+          {% endif %}
+          {% if course.buyable == 4 %}
+              <span class="title" style="float: right">层级4</span>
+          {% endif %}
+          {% if course.buyable == 5 %}
+              <span class="title" style="float: right">康复小组</span>
+          {% endif %}
+          {% if course.buyable == 6 %}
+              <span class="title" style="float: right">糖尿病小组</span>
+          {% endif %}
+          {% if course.buyable == 7 %}
+              <span class="title" style="float: right">静脉小组</span>
+          {% endif %}
+          {% if course.buyable == 8 %}
+              <span class="title" style="float: right">肿瘤小组</span>
+          {% endif %}
+          {% if course.buyable == 9 %}
+              <span class="title" style="float: right">营养小组</span>
+          {% endif %}
+          {% if course.buyable == 10 %}
+              <span class="title" style="float: right">危重小组</span>
+          {% endif %}
+          {% if course.buyable == 11 %}
+              <span class="title" style="float: right">应急小组</span>
           {% endif %}
         {% if mode in ['default', 'teach'] %}
 
