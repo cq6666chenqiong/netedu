@@ -9,9 +9,9 @@
 
 
 define("DBADDR","localhost");
-define("DBNAME","myBanana");
+define("DBNAME","netedu");
 define("DBUSER","root");
-define("DBPASSWORD","");
+define("DBPASSWORD","123456");
 define("__ROOT__",dirname(__FILE__));
 
  function getConnection(){

@@ -2223,6 +2223,7 @@ class CourseServiceImpl extends BaseService implements CourseService
             $deadline = 0;
         }
 */
+
         if (!empty($info['orderId'])) {
             $order = $this->getOrderService()->getOrder($info['orderId']);
 
@@ -2266,8 +2267,10 @@ class CourseServiceImpl extends BaseService implements CourseService
         $setting = $this->getSettingService()->get('course', array());
 
         if (!empty($setting['welcome_message_enabled']) && !empty($course['teacherIds'])) {
+
             $message = $this->getWelcomeMessageBody($user, $course);
-            $this->getMessageService()->sendMessage($course['teacherIds'][0], $user['id'], $message);
+
+            //$this->getMessageService()->sendMessage($course['teacherIds'][0], $user['id'], $message);
         }
 
         $fields = array(

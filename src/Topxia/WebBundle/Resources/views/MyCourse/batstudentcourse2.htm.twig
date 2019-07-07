@@ -13,42 +13,58 @@
   <div class="form-group" style="width: 100%">
     <form action="{{ path('course_fetch_bat_student',{courseId:courseId}) }}">
       <div class="form-group">
-        科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室
+        层级
         <select id="keshi" name="keshi" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
             <option value=""> 全选 </option>
             {% for k in classr %}
-              <option {% if keshi == k.id %} selected {% endif %} value="{{ k.id }}"> {{ k.title }} </option>
+              {#<option {% if keshi == k.id %} selected {% endif %} value="{{ k.id }}"> {{ k.title }}  </option>#}
+              <option value="{{ k.id }}"> {{ k.title }}  </option>
             {% endfor %}
         </select>
-        科室分类
+        专业类别
         <select id="sskeshi" name="sskeshi" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
           <option value=""> 全选 </option>
-          <option value="护士"> 管理及其他部门 </option>
-          <option value="技师"> 临床部门 </option>
-          <option value="医生"> 医技部门 </option>
+          <option value="康复小组"> 康复小组 </option>
+          <option value="糖尿病小组"> 糖尿病小组 </option>
+          <option value="静脉小组"> 静脉小组 </option>
+          <option value="肿瘤小组"> 肿瘤小组 </option>
+          <option value="营养小组"> 营养小组 </option>
+          <option value="危重小组"> 危重小组 </option>
+          <option value="应急小组"> 应急小组 </option>
         </select>
       </div>
       <div class="form-group">
-        人员类别
+        病区
         <select id="memberType" name="memberType" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
           <option value=""> 全选 </option>
-          <option value="护士"> 护士 </option>
-          <option value="技师"> 技师 </option>
-          <option value="医生"> 医生 </option>
-          <option value="药师"> 药师 </option>
-          <option value="收款员"> 收款员 </option>
-          <option value="其他"> 其他 </option>
+          <option {% if sskeshi == "静疗" %} selected {% endif %} value="静疗"> 静疗 </option>
+          <option {% if sskeshi == "糖尿病" %} selected {% endif %} value="糖尿病"> 糖尿病 </option>
+          <option {% if sskeshi == "危重症" %} selected {% endif %} value="危重症"> 危重症 </option>
+          <option {% if sskeshi == "跌倒坠床及压疮" %} selected {% endif %} value="跌倒坠床及压疮"> 跌倒坠床及压疮 </option>
+          <option {% if sskeshi == "肿瘤" %} selected {% endif %} value="肿瘤"> 肿瘤 </option>
+          <option {% if sskeshi == "管路" %} selected {% endif %} value="管路"> 管路 </option>
+          <option {% if sskeshi == "健康教育" %} selected {% endif %} value="健康教育"> 健康教育 </option>
+          <option {% if sskeshi == "信息化建设" %} selected {% endif %} value="信息化建设"> 信息化建设 </option>
+          <option {% if sskeshi == "设备及耗材" %} selected {% endif %} value="设备及耗材"> 设备及耗材 </option>
+          <option {% if sskeshi == "科室运行文件" %} selected {% endif %} value="科室运行文件"> 科室运行文件 </option>
+          <option {% if sskeshi == "临床药品" %} selected {% endif %} value="临床药品"> 临床药品 </option>
+          <option {% if sskeshi == "院感" %} selected {% endif %} value="院感"> 院感 </option>
+          <option {% if sskeshi == "敏感指标" %} selected {% endif %} value="敏感指标"> 敏感指标 </option>
+          <option {% if sskeshi == "造口" %} selected {% endif %} value="造口"> 造口 </option>
+          <option {% if sskeshi == "护理文书" %} selected {% endif %} value="护理文书"> 护理文书 </option>
+          <option {% if sskeshi == "应急" %} selected {% endif %} value="应急"> 应急 </option>
+          <option {% if sskeshi == "宣传" %} selected {% endif %} value="宣传"> 宣传 </option>
         </select>
-        职称分类
+       {# 职称分类
         <select id="jobType" name="jobType" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
           <option value=""> 全选 </option>
           <option value="正高"> 正高 </option>
           <option value="副高"> 副高 </option>
           <option value="中级"> 中级 </option>
           <option value="初级"> 初级 </option>
-        </select>
+        </select>#}
       </div>
-      <div class="form-group">
+      {#<div class="form-group">
         出生日期
         <input type="text" name="birthday" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;"/>
         到
@@ -89,7 +105,7 @@
           <option value="硕士..."> 硕士... </option>
           <option value="学士..."> 学士... </option>
         </select>
-      </div>
+      </div>#}
       <button type="submit" clas="btn btn-info btn-sm button1" style="width: 10%">搜索</button>
     </form>
   </div>

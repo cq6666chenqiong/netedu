@@ -39,38 +39,74 @@
           {% else %}
               <span class="title" style="float: right">选修</span>
           {% endif %}#}
+          {% if course.buyable == 0 %}
+              <p class="teacher-name">层级0</p>
+          {% endif %}
           {% if course.buyable == 1 %}
-              <span class="title" style="float: right">层级1</span>
+              <p class="teacher-name">层级1</p>
           {% endif %}
           {% if course.buyable == 2 %}
-              <span class="title" style="float: right">层级2</span>
+              <p class="teacher-name">层级2</p>
           {% endif %}
           {% if course.buyable == 3 %}
-              <span class="title" style="float: right">层级3</span>
+              <p class="teacher-name">层级3</p>
           {% endif %}
           {% if course.buyable == 4 %}
-              <span class="title" style="float: right">层级4</span>
+              <p class="teacher-name">层级4</p>
           {% endif %}
           {% if course.buyable == 5 %}
-              <span class="title" style="float: right">康复小组</span>
+              <p class="teacher-name">GN1</p>
           {% endif %}
-          {% if course.buyable == 6 %}
-              <span class="title" style="float: right">糖尿病小组</span>
+          {% if course.buyable == 35 %}
+              <p class="teacher-name">静疗</p>
           {% endif %}
-          {% if course.buyable == 7 %}
-              <span class="title" style="float: right">静脉小组</span>
+          {% if course.buyable == 36 %}
+              <p class="teacher-name">糖尿病</p>
           {% endif %}
-          {% if course.buyable == 8 %}
-              <span class="title" style="float: right">肿瘤小组</span>
+          {% if course.buyable == 37 %}
+              <p class="teacher-name">危重病</p>
           {% endif %}
-          {% if course.buyable == 9 %}
-              <span class="title" style="float: right">营养小组</span>
+          {% if course.buyable == 38 %}
+              <p class="teacher-name">跌倒坠床及压疮</p>
           {% endif %}
-          {% if course.buyable == 10 %}
-              <span class="title" style="float: right">危重小组</span>
+          {% if course.buyable == 39 %}
+              <p class="teacher-name">肿瘤</p>
           {% endif %}
-          {% if course.buyable == 11 %}
-              <span class="title" style="float: right">应急小组</span>
+          {% if course.buyable == 40 %}
+              <p class="teacher-name">管路</p>
+          {% endif %}
+          {% if course.buyable == 41 %}
+              <p class="teacher-name">健康教育</p>
+          {% endif %}
+          {% if course.buyable == 42 %}
+              <p class="teacher-name">信息化建设</p>
+          {% endif %}
+          {% if course.buyable == 43 %}
+              <p class="teacher-name">设备及耗材</p>
+          {% endif %}
+          {% if course.buyable == 44 %}
+              <p class="teacher-name">科室运行文件</p>
+          {% endif %}
+          {% if course.buyable == 45 %}
+              <p class="teacher-name">临床药品</p>
+          {% endif %}
+          {% if course.buyable == 46 %}
+              <p class="teacher-name">院感</p>
+          {% endif %}
+          {% if course.buyable == 47 %}
+              <p class="teacher-name">敏感指标</p>
+          {% endif %}
+          {% if course.buyable == 48 %}
+              <p class="teacher-name">造口</p>
+          {% endif %}
+          {% if course.buyable == 49 %}
+              <p class="teacher-name">护理文书</p>
+          {% endif %}
+          {% if course.buyable == 50 %}
+              <p class="teacher-name">宣传</p>
+          {% endif %}
+          {% if course.buyable == 51 %}
+              <p class="teacher-name">应急</p>
           {% endif %}
         {% if mode in ['default', 'teach'] %}
 

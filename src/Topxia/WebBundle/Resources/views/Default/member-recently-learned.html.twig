@@ -13,6 +13,9 @@
       {% set teacher = course.teachers|first %}
       {% set progress = course.progress %}
       {#<p class="teacher-name">{{'教师：'|trans}}{{ teacher.nickname|default("") }}</p> #}
+        {% if course.buyable == 0 %}
+            <p class="teacher-name">层级0</p>
+        {% endif %}
         {% if course.buyable == 1 %}
           <p class="teacher-name">层级1</p>
         {% endif %}
@@ -25,28 +28,60 @@
         {% if course.buyable == 4 %}
           <p class="teacher-name">层级4</p>
         {% endif %}
+        {% if course.buyable == 22 %}
+            <p class="teacher-name">GN1</p>
+        {% endif %}
         {% if course.buyable == 5 %}
-          <p class="teacher-name">康复小组</p>
+          <p class="teacher-name">静疗</p>
         {% endif %}
         {% if course.buyable == 6 %}
-          <p class="teacher-name">糖尿病小组</p>
+          <p class="teacher-name">糖尿病</p>
         {% endif %}
         {% if course.buyable == 7 %}
-          <p class="teacher-name">静脉小组</p>
+          <p class="teacher-name">危重病</p>
         {% endif %}
         {% if course.buyable == 8 %}
-          <p class="teacher-name">肿瘤小组</p>
+          <p class="teacher-name">跌倒坠床及压疮</p>
         {% endif %}
         {% if course.buyable == 9 %}
-          <p class="teacher-name">营养小组</p>
+          <p class="teacher-name">肿瘤</p>
         {% endif %}
         {% if course.buyable == 10 %}
-          <p class="teacher-name">危重小组</p>
+          <p class="teacher-name">管路</p>
         {% endif %}
         {% if course.buyable == 11 %}
-          <p class="teacher-name">应急小组</p>
+            <p class="teacher-name">健康教育</p>
         {% endif %}
-
+        {% if course.buyable == 12 %}
+            <p class="teacher-name">信息化建设</p>
+        {% endif %}
+        {% if course.buyable == 13 %}
+            <p class="teacher-name">设备及耗材</p>
+        {% endif %}
+        {% if course.buyable == 14 %}
+            <p class="teacher-name">科室运行文件</p>
+        {% endif %}
+        {% if course.buyable == 15 %}
+            <p class="teacher-name">临床药品</p>
+        {% endif %}
+        {% if course.buyable == 16 %}
+            <p class="teacher-name">院感</p>
+        {% endif %}
+        {% if course.buyable == 17 %}
+            <p class="teacher-name">敏感指标</p>
+        {% endif %}
+        {% if course.buyable == 18 %}
+            <p class="teacher-name">造口</p>
+        {% endif %}
+        {% if course.buyable == 19 %}
+            <p class="teacher-name">护理文书</p>
+        {% endif %}
+        {% if course.buyable == 50 %}
+            <p class="teacher-name">宣传</p>
+        {% endif %}
+        {% if course.buyable == 51 %}
+            <p class="teacher-name">应急</p>
+        {% endif %}
       <div class="progress-block clearfix">
         <div class="progress" style="width:90%">
           <span class="progress-bar" style="width: {{ progress.percent }};"></span>

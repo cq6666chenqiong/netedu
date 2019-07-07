@@ -88,7 +88,9 @@
          {% if side_nav == 'my-classroom' %} active {% endif %}"
         #}
         <li class=" list-group-item  bc " style="background-color: white">
-          <a href="{{ path('school_work',{'userId':app.user.id}) }}">我的工作量 {#{{ setting('classroom.name')|default("科室") }} #}</a>
+{#
+          <a href="{{ path('school_work',{'userId':app.user.id}) }}">我的工作量 </a>
+#}
         </li>
 
         <li class="bc list-group-item " style="background-color: white">

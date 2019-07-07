@@ -76,6 +76,7 @@ class CourseWorkController extends BaseController
 
     public function batstudentindexAction(Request $request,$courseId){
         $classr = array();
+        $memberTypes = array();
         $con = mysqli_connect(System::$DBADDR,System::$DBUSER,System::$DBPASSWORD);
         if (!$con)
         {
@@ -89,18 +90,29 @@ class CourseWorkController extends BaseController
                 array_push($classr,$row);
             }
         }
+
+
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,"select distinct(varcharField3) memberTypeName  from user_profile");
+        if(!is_null($result)){
+            while($row = mysqli_fetch_array($result)){
+                array_push($memberTypes,$row);
+            }
+        }
+
         mysqli_close($con);
         $course = array();
         $course['id'] = $courseId;
         return $this->render('TopxiaWebBundle:MyCourse:batstudentcourse.htm.twig', array(
             'classr'     => $classr,
             'courseId'  =>$courseId,
+            'memberTypes' => $memberTypes,
             'course'     => $course
         ));
     }
 
     public function batstudent1indexAction(Request $request,$courseId){
-        $classr = array();
         $classr1 = array();
         $keshi = $request->query->get('keshi');
         $sskeshi = $request->query->get('sskeshi');
@@ -115,20 +127,38 @@ class CourseWorkController extends BaseController
             die('Could not connect: ' . mysql_error());
         }
 
+        $classr = array();
+        $memberTypes = array();
+
         mysqli_select_db($con,System::$DBNAME);
         mysqli_query($con,"set names 'utf8'");
         $result = mysqli_query($con,"select id,title from classroom where status = 'published'");
 
         if(!is_null($result)){
             while($row = mysqli_fetch_array($result)){
-                //array_push($classr,$row);
-                $classr1[$row['id']] = $row['title'];
+                array_push($classr,$row);
             }
         }
 
-        if(!is_null($result)){
+        /*if(!is_null($result)){
+            while($row = mysqli_fetch_array($result)){
+                //array_push($classr,$row);
+                $classr1[$row['id']] = $row['title'];
+            }
+        }*/
+
+        /*if(!is_null($result)){
             while($row = mysqli_fetch_array($result)){
                 array_push($classr,$row);
+            }
+        }*/
+
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,"select distinct(varcharField3) memberTypeName  from user_profile");
+        if(!is_null($result)){
+            while($row = mysqli_fetch_array($result)){
+                array_push($memberTypes,$row);
             }
         }
 
@@ -140,7 +170,7 @@ class CourseWorkController extends BaseController
             $sql = $sql." and p.company = ".$keshi;
         }
         if(!empty($sskeshi)){
-            $sql = $sql." and p.varcharField4 = '".$sskeshi."'";
+            $sql = $sql." and p.varcharField4 like '%".$sskeshi."%'";
         }
         if(!empty($memberType)){
             $sql = $sql." and p.varcharField3 = '".$memberType."'";
@@ -179,14 +209,19 @@ class CourseWorkController extends BaseController
             'courseId'   =>$courseId,
             'course'     => $course,
             'keshi'      => $keshi,
+            'sskeshi'      => $sskeshi,
+            'memberType'      => $memberType,
+            'memberTypes' => $memberTypes,
             'classr1'    => $classr1
         ));
     }
 
     public function batstudent2indexAction(Request $request,$courseId){
         $classr = array();
+        $memberTypes = array();
         $uids = $request->query->get('uids');
         $keshi = $request->query->get('keshi1');
+        $sskeshi = $request->query->get('sskeshi');
         error_log('uids:'.$uids);
         error_log('uids:'.$keshi);
         $ids = explode(',',$uids);
@@ -235,13 +270,23 @@ class CourseWorkController extends BaseController
             $result = mysqli_query($con,$sql);
         }
 
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,"select distinct(varcharField3) memberTypeName  from user_profile");
+        if(!is_null($result)){
+            while($row = mysqli_fetch_array($result)){
+                array_push($memberTypes,$row);
+            }
+        }
+
         mysqli_close($con);
         $course = array();
         $course['id'] = $courseId;
         return $this->render('TopxiaWebBundle:MyCourse:batstudentcourse2.htm.twig', array(
             'classr'     => $classr,
-            'courseId'           =>$courseId,
+            'courseId'  => $courseId,
             'course' => $course,
+            'sskeshi' => $sskeshi,
             'keshi'      => $keshi
         ));
     }

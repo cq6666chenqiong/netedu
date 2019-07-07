@@ -125,7 +125,7 @@ VALUES ( '".$arry[0]."@hospital.com"."', '', 'TD0T0O925x6QH8vcHgr95+Z3O0QQxgFZ0S
         */
         //'".$arry[5]."', '".$arry[6]."', '".$arry[8]."', '".$arry[10]."', '".$arry[3]."'
     $sql = "INSERT INTO `user_profile` (`id`, `truename`, `idcard`, `gender`, `iam`, `birthday`, `city`, `mobile`, `qq`, `signature`, `about`, `company`, `job`, `school`, `class`, `weibo`, `weixin`, `isQQPublic`, `isWeixinPublic`, `isWeiboPublic`, `site`,  `varcharField1`, `varcharField2`, `varcharField3`, `varcharField4`, `varcharField5`, `varcharField6`, `varcharField7`, `varcharField8`, `varcharField9`, `varcharField10`, `textField1`, `textField2`, `textField3`, `textField4`, `textField5`, `textField6`, `textField7`, `textField8`, `textField9`, `textField10`)
-                                               VALUES ('".$id."', '".$arry[1]."', '".$arry[9]."', '".$gender."', '', NULL, '', '"."保密"."', '', '"."保密"."', '', '".$keshi[trim($arry[8])]."', '".$arry[4]."', '".$arry[10]."', '', '','1', '"."1"."', '0', '0', '0', '".$arry[3]."', '".$arry[5]."', '".$arry[6]."', '".$arry[7]."', '".$arry[11]."', '".$arry[10]."' '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');";
+                                               VALUES ('".$id."', '".$arry[1]."', '".$arry[9]."', '".$gender."', '', NULL, '', '"."保密"."', '', '"."保密"."', '', '".$arry[8]."', '".$arry[4]."', '".$arry[10]."', '', '','1', '"."1"."', '0', '0', '0', '".$arry[3]."', '".$arry[5]."', '".$arry[6]."', '".$arry[7]."', '".$arry[11]."', '".$arry[10]."' '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');";
     error_log($sql);
         mysqli_select_db($con,DBNAME);
         mysqli_query($con,"set names 'utf8'");

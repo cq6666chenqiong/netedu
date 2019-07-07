@@ -129,17 +129,30 @@
                    <select name="buyable">
                         {#<option value="1" {% if course.buyable==1 %} selected="selected" {% endif %}>必修</option>
                         <option value="0" {% if course.buyable==0 %} selected="selected" {% endif %}>选修</option>#}
+                       <option value="0" {% if course.buyable==0 %} selected="selected" {% endif %}>N0</option>
                        <option value="1" {% if course.buyable==1 %} selected="selected" {% endif %}>N1</option>
                        <option value="2" {% if course.buyable==2 %} selected="selected" {% endif %}>N2</option>
                        <option value="3" {% if course.buyable==3 %} selected="selected" {% endif %}>N3</option>
                        <option value="4" {% if course.buyable==4 %} selected="selected" {% endif %}>N4</option>
-                       <option value="5" {% if course.buyable==5 %} selected="selected" {% endif %}>康复课程</option>
-                       <option value="6" {% if course.buyable==6 %} selected="selected" {% endif %}>糖尿病课程</option>
-                       <option value="7" {% if course.buyable==7 %} selected="selected" {% endif %}>静脉课程</option>
-                       <option value="8" {% if course.buyable==8 %} selected="selected" {% endif %}>肿瘤课程</option>
-                       <option value="9" {% if course.buyable==9 %} selected="selected" {% endif %}>营养课程</option>
-                       <option value="10" {% if course.buyable==10 %} selected="selected" {% endif %}>危重课程</option>
-                       <option value="11" {% if course.buyable==11 %} selected="selected" {% endif %}>应急课程</option>
+                       <option value="5" {% if course.buyable==5 %} selected="selected" {% endif %}>GN1</option>
+                       <option value="35" {% if course.buyable==35 %} selected="selected" {% endif %}>静疗</option>
+                       <option value="36" {% if course.buyable==36 %} selected="selected" {% endif %}>糖尿病</option>
+                       <option value="37" {% if course.buyable==37 %} selected="selected" {% endif %}>危重病</option>
+                       <option value="38" {% if course.buyable==38 %} selected="selected" {% endif %}>跌倒坠床及压疮</option>
+                       <option value="39" {% if course.buyable==39 %} selected="selected" {% endif %}>肿瘤</option>
+                       <option value="40" {% if course.buyable==40 %} selected="selected" {% endif %}>管路</option>
+                       <option value="41" {% if course.buyable==41 %} selected="selected" {% endif %}>健康教育</option>
+                       <option value="42" {% if course.buyable==42 %} selected="selected" {% endif %}>信息化建设</option>
+                       <option value="43" {% if course.buyable==43 %} selected="selected" {% endif %}>设备及耗材</option>
+                       <option value="44" {% if course.buyable==44 %} selected="selected" {% endif %}>科室运行文件</option>
+                       <option value="45" {% if course.buyable==45 %} selected="selected" {% endif %}>临床药品</option>
+                       <option value="46" {% if course.buyable==46 %} selected="selected" {% endif %}>院感</option>
+                       <option value="47" {% if course.buyable==47 %} selected="selected" {% endif %}>敏感指标</option>
+                       <option value="48" {% if course.buyable==48 %} selected="selected" {% endif %}>造口</option>
+                       <option value="49" {% if course.buyable==49 %} selected="selected" {% endif %}>护理文书</option>
+                       <option value="50" {% if course.buyable==50 %} selected="selected" {% endif %}>宣传</option>
+                       <option value="51" {% if course.buyable==51 %} selected="selected" {% endif %}>应急</option>
+
                    </select>
                 </div>
             </div>

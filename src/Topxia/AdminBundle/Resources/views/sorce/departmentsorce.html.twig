@@ -6,8 +6,9 @@
 <script>
     window.onload=function(){
         var year = $("#year").val();
-        var url = '/functionDir/createExcel/make_xuefentongji.php?year='+year;
+        //var url = '/functionDir/createExcel/make_xuefentongji.php?year='+year;
         //myajax('/functionDir/createExcel/make_xueshengtongji.php?year='+year+'&department='+department+'&truename='+truename);
+        var url = 'http://39.108.165.250:8080/netedustatistics/excel/getScoreByBingQuExcel?year='+year;
         $("#mydownload").attr("href",url);
     }
    /* function getExcel(){
@@ -78,7 +79,7 @@
     <table id="user-table" class="table table-striped table-hover" data-search-form="#user-search-form">
         <thead>
         <tr>
-            <th>病区</th>
+            {#<th>病区</th>
             <th>N1</th>
             <th>N2</th>
             <th>N3</th>
@@ -91,12 +92,36 @@
             <th>危重</th>
             <th>营养</th>
             <th>应急</th>
+            <th>专业组合格率</th>#}
+            <th>病区</th>
+            <th>N0</th>
+            <th>N1</th>
+            <th>N2</th>
+            <th>N3</th>
+            <th>N4</th>
+            <th>GN1</th>
+            <th>总分合格率</th>
+            <th>静疗</th>
+            <th>糖尿病</th>
+            <th>危重病</th>
+            <th>跌倒坠床及压疮</th>
+            <th>肿瘤</th>
+            <th>管路</th>
+            <th>健康教育</th>
+            <th>信息化建设</th>
+            <th>设备及耗材</th>
+            <th>科室运行文件</th>
+            <th>临床药品</th>
+            <th>院感</th>
+            <th>敏感指标</th>
+            <th>造口</th>
+            <th>护理文书</th>
             <th>专业组合格率</th>
         </tr>
         </thead>
         <tbody>
 
-        {% for ar in arry %}
+        {#{% for ar in arry %}
             <tr>
                 <td>{{ ar['bingqu'] }}</td>
                 <td>{{ ar['n1num'] }}/{{ ar['zn1num'] }}</td>
@@ -113,8 +138,26 @@
                 <td>{{ ar['yjnum'] }}/{{ ar['zyjnum'] }}</td>
                 <td></td>
             </tr>
+        {% endfor %}#}
+        {% for ar in arry %}
+            <tr>
+                <td>{{ ar['bingqu'] }}</td>
+                <td>{{ ar['n1']  }}</td>
+                <td>{{ ar['n2']  }}</td>
+                <td>{{ ar['n3'] }}</td>
+                <td>{{ ar['n4'] }}</td>
+                <td>{{ ar['zn'] }}</td>
+                <td>{{ ar['kf'] }}</td>
+                <td>{{ ar['tnb'] }}</td>
+                <td>{{ ar['jm'] }}</td>
+                <td>{{ ar['zl'] }}</td>
+                <td>{{ ar['yy'] }}</td>
+                <td>{{ ar['wz'] }}</td>
+                <td>{{ ar['yj'] }}</td>
+                <td>{{ ar['zz'] }}</td>
+            </tr>
         {% endfor %}
-        <tr>
+        {#<tr>
             <th>合计</th>
             <th>1</th>
             <th>1</th>
@@ -129,7 +172,7 @@
             <th>1</th>
             <th>1</th>
             <th>1</th>
-        </tr>
+        </tr>#}
         </tbody>
     </table>
 

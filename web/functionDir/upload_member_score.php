@@ -45,7 +45,7 @@ for ($i = 2; $i <= $data->sheets[0]['numRows']; $i++) {
     }
 
     $sql = $sql."INSERT INTO `user_score` ( `userId`, `score`, `testId`, `courseId`, `createTime`, `year`, `courseName`, `remark`, `courseType`) 
-    VALUES ( '".$userId."', '".$score."', NULL, NULL, NULL, '".$year."', '".$courseName."', '".$remark."','".$courseType."')".";";
+    VALUES ( '".$userId."', '".$score."', NULL, -1, NULL, '".$year."', '".$courseName."', '".$remark."','".$courseType."')".";";
 }
 
 error_log($sql);

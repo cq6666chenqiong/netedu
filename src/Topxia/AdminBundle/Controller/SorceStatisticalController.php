@@ -23,26 +23,27 @@ class SorceStatisticalController  extends BaseController
         ini_set('display_errors','off');
         $year = $request->query->get("year");
 
-/*        $department = $request->query->get("department");
-        $truename = $request->query->get("truename");*/
+        $department = $request->query->get("department");
+        $truename = $request->query->get("truename");
         if(is_null($year)||$year==''){
             $year=intval (date("Y"));
         }
         $beginTime = date($year."-01-01 00:00:00");
         $endTime = date($year."-12-31 23:59:59");
-
-        $http = new HttpClient('http://localhost:8080/statistics/getScoreByGradeCount');
+        $url = 'http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGradeCount?year='.$year.'&cengji='.$department.'&name='.$truename;
+        error_log($url);
+        $http = new HttpClient($url);
         $http->get();
-        //rror_log("result===========".$http->getBody());
+        error_log("result===========".$http->getBody());
         $jsonCount = json_decode($http->getBody(),true);
         $num = $jsonCount['sum'];
         $paginator = new Paginator($this->get('request'), $num, 20);
         if(is_null($paginator->getCurrentPage())){
             $paginator->setCurrentPage(1);
         }
-        $http = new HttpClient('http://localhost:8080/statistics/getScoreByGrade?start='.$paginator->getCurrentPage().'&plimit=10');
+        $http = new HttpClient('http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGrade?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&cengji='.$department.'&name='.$truename);
         $http->get();
-        //error_log("result===========".$http->getBody());
+        error_log("result===========".$http->getBody());
         $json = json_decode($http->getBody(),true);
 
   /*
@@ -224,7 +225,7 @@ class SorceStatisticalController  extends BaseController
         $beginTime = date($year."-01-01 00:00:00");
         $endTime = date($year."-12-31 23:59:59");
 
-        $http = new HttpClient('http://localhost:8080/statistics/getScoreByBingQu');
+        $http = new HttpClient('http://123.56.7.13:8080/netedustatistics/statistics/getScoreByBingQu?year='.$year);
         $http->get();
         error_log("result===========".$http->getBody());
         $json = json_decode($http->getBody(),true);

@@ -32,6 +32,9 @@
       {{ profile.job }}
   </td>
   <td>
+      {% if profile.company == '0' %}
+          层级0
+      {% endif %}
       {% if profile.company == '1' %}
           层级1
       {% endif %}
@@ -43,6 +46,9 @@
       {% endif %}
       {% if profile.company == '4' %}
           层级4
+      {% endif %}
+      {% if profile.company == '5' %}
+          GN1
       {% endif %}
       {#{{ classr[profile.company] }}#}
   </td>

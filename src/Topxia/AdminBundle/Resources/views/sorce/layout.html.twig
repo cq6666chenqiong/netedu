@@ -15,10 +15,10 @@
                         {% set side_nav = side_nav|default(null) %}
 
                         <li class="list-group-item {% if side_nav == 'profile' %}active{% endif %}">
-                            <a href="{{ path('admin_sorce_statistical') }}"><i class="glyphicon glyphicon-user"></i> {{'科室学分统计'|trans}}</a>
+                            <a href="{{ path('admin_sorce_statistical') }}"><i class="glyphicon glyphicon-user"></i> {{'员工学分统计'|trans}}</a>
                         </li>
                         <li class="list-group-item {% if side_nav == 'avatar' %}active{% endif %}">
-                            <a href="{{ path('admin_sorce_statisticaldepartment',{year:''}) }}"><i class="glyphicon glyphicon-picture"></i> {{'单位职称学分统计'|trans}}</a>
+                            <a href="{{ path('admin_sorce_statisticaldepartment',{year:''}) }}"><i class="glyphicon glyphicon-picture"></i> {{'病区学分统计'|trans}}</a>
                         </li>
 
                     </ul>

@@ -91,6 +91,8 @@ class CourseOrderController extends OrderController
 
     public function modifyUserInfoAction(Request $request)
     {
+        ini_set('display_errors','off');
+
         $formData = $request->request->all();
 
         $user = $this->getCurrentUser();
@@ -106,6 +108,7 @@ class CourseOrderController extends OrderController
         }
 
         $userInfo = ArrayToolkit::parts($formData, array(
+            'nickname',
             'truename',
             'mobile',
             'qq',
@@ -121,7 +124,7 @@ class CourseOrderController extends OrderController
             'varcharField1', 'varcharField2', 'varcharField3', 'varcharField4', 'varcharField5', 'varcharField10', 'varcharField6', 'varcharField7', 'varcharField8', 'varcharField9',
             'textField1', 'textField2', 'textField3', 'textField4', 'textField5', 'textField6', 'textField7', 'textField8', 'textField9', 'textField10'
         ));
-        error_log('ssssssssssssssssssssss1');
+
         $userInfo = $this->getUserService()->updateUserProfile($user['id'], $userInfo);
         if (isset($formData['email']) && !empty($formData['email'])) {
             $this->getAuthService()->changeEmail($user['id'], null, $formData['email']);
@@ -133,7 +136,7 @@ class CourseOrderController extends OrderController
         }
         //判断用户是否为VIP
         $vipStatus = $courseVip = null;
-        error_log('ssssssssssssssssssssss2');
+
         if ($this->isPluginInstalled('Vip') && $this->setting('vip.enabled')) {
             $courseVip = $course['vipLevelId'] > 0 ? $this->getLevelService()->getLevel($course['vipLevelId']) : null;
 
@@ -151,13 +154,14 @@ class CourseOrderController extends OrderController
         $courseSetting = $this->getSettingService()->get('course', array());
         $coinEnable    = isset($coinSetting["coin_enabled"]) && $coinSetting["coin_enabled"] == 1;
         //$userInfoEnable = isset($courseSetting['buy_fill_userinfo']) && $courseSetting['buy_fill_userinfo'] == 1;
-        error_log('ssssssssssssssssssssss3');
+
         if (($coinEnable && isset($coinSetting['price_type']) && $coinSetting['price_type'] == "Coin" && $course['price'] == 0)
             || ((!isset($coinSetting['price_type']) || $coinSetting['price_type'] == "RMB") && $course['price'] == 0) || $vipStatus == 'ok') {
             $data['price']  = 0;
             $data['remark'] = '';
+
             $this->getCourseMemberService()->becomeStudentAndCreateOrder($user["id"], $course['id'], $data);
-            error_log('ssssssssssssssssssssss4');
+
             if (isset($formData['lessonId']) && !empty($formData['lessonId'])) {
                 return $this->redirect($this->generateUrl('course_learn', array('id' => $course['id'])).'#lesson/'.$formData['lessonId']);
             } else {
@@ -170,7 +174,7 @@ class CourseOrderController extends OrderController
             'targetType' => 'course'
         )));
 */
-error_log('ssssssssssssssssssssss');
+
         return $this->redirect($this->generateUrl('order_show', array(
             'targetId'   => $formData['targetId'],
             'targetType' => 'course'
