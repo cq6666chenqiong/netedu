@@ -13,7 +13,7 @@ class System
     public static $DBADDR = 'localhost';
     public static $DBNAME = 'netedu';
     public static $DBUSER = 'root';
-    public static $DBPASSWORD = '123456';
+    public static $DBPASSWORD = '';
     const VERSION = '1.0.1';//'6.17.13';
     const RELEASE_NOTES = "http://www.myBanana.com/intro/13";
 

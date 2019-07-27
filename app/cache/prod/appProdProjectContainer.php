@@ -290,7 +290,7 @@ class appProdProjectContainer extends Container
     }
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => 3306, 'dbname' => 'netedu', 'user' => 'root', 'password' => 123456, 'charset' => 'UTF8', 'driverOptions' => array(), 'wrapperClass' => 'Topxia\\Service\\Common\\Connection'), new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array('enum' => 'string'));
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => 3306, 'dbname' => 'netedu', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driverOptions' => array(), 'wrapperClass' => 'Topxia\\Service\\Common\\Connection'), new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array('enum' => 'string'));
     }
     protected function getDoctrine_Orm_DefaultEntityListenerResolverService()
     {
@@ -331,19 +331,19 @@ class appProdProjectContainer extends Container
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultMetadataCacheService()
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
-        $instance->setNamespace('sf2orm_default_64ef18f321eaf5f60a5b5a158e9f02c68bf489d8de5b216e152a66e0e250ba67');
+        $instance->setNamespace('sf2orm_default_9d737d28b9d1b9b958fb7385235f4198b56c6506a4143e07910bd22a159ad19b');
         return $instance;
     }
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultQueryCacheService()
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
-        $instance->setNamespace('sf2orm_default_64ef18f321eaf5f60a5b5a158e9f02c68bf489d8de5b216e152a66e0e250ba67');
+        $instance->setNamespace('sf2orm_default_9d737d28b9d1b9b958fb7385235f4198b56c6506a4143e07910bd22a159ad19b');
         return $instance;
     }
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultResultCacheService()
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
-        $instance->setNamespace('sf2orm_default_64ef18f321eaf5f60a5b5a158e9f02c68bf489d8de5b216e152a66e0e250ba67');
+        $instance->setNamespace('sf2orm_default_9d737d28b9d1b9b958fb7385235f4198b56c6506a4143e07910bd22a159ad19b');
         return $instance;
     }
     protected function getEventDispatcherService()
@@ -632,7 +632,7 @@ class appProdProjectContainer extends Container
     }
     protected function getMonolog_Handler_NestedService()
     {
-        return $this->services['monolog.handler.nested'] = new \Monolog\Handler\StreamHandler(($this->targetDirs[2].'/logs/prod.log'), 100, true, NULL);
+        return $this->services['monolog.handler.nested'] = new \Monolog\Handler\StreamHandler(($this->targetDirs[2].'\\logs/prod.log'), 100, true, NULL);
     }
     protected function getMonolog_Logger_AsseticService()
     {
@@ -768,7 +768,7 @@ class appProdProjectContainer extends Container
         $x->addHandler($w);
         $y = new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $v, 'main', new \Topxia\WebBundle\Handler\AuthenticationSuccessHandler($v, array()), new \Topxia\WebBundle\Handler\AuthenticationFailureHandler($f, $v, array(), $a), array('check_path' => 'login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $a, $d);
         $y->setRememberMeServices($w);
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($u, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $x, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $w, $g, $a, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5d0f1381f150d', $a), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $u, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $v, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $v, 'login', false), NULL, NULL, $a));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($u, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $x, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $w, $g, $a, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5d3a92602a8cb', $a), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $u, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $v, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $v, 'login', false), NULL, NULL, $a));
     }
     protected function getSecurity_Rememberme_ResponseListenerService()
     {
@@ -839,7 +839,7 @@ class appProdProjectContainer extends Container
     }
     protected function getSession_Handler_Pdo_ConnectionService()
     {
-        $this->services['session.handler.pdo.connection'] = $instance = new \PDO('mysql:host=localhost;port=3306;dbname=netedu', 'root', 123456);
+        $this->services['session.handler.pdo.connection'] = $instance = new \PDO('mysql:host=localhost;port=3306;dbname=netedu', 'root', NULL);
         $instance->setAttribute(3, 2);
         return $instance;
     }
@@ -1171,140 +1171,140 @@ class appProdProjectContainer extends Container
     {
         $this->services['translator.default'] = $instance = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, new \Symfony\Component\Translation\MessageSelector(), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini')), array('cache_dir' => (__DIR__.'/translations'), 'debug' => false));
         $instance->setFallbackLocales(array(0 => 'zh_CN'));
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.bg.xlf'), 'bg', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.it.xlf'), 'it', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.da.xlf'), 'da', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_CN.xlf'), 'zh_CN', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.eu.xlf'), 'eu', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.tr.xlf'), 'tr', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ru.xlf'), 'ru', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_TW.xlf'), 'zh_TW', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fi.xlf'), 'fi', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Cyrl.xlf'), 'sr_Cyrl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ar.xlf'), 'ar', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ca.xlf'), 'ca', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hu.xlf'), 'hu', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fa.xlf'), 'fa', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lt.xlf'), 'lt', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.id.xlf'), 'id', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nl.xlf'), 'nl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sq.xlf'), 'sq', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.de.xlf'), 'de', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.he.xlf'), 'he', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cy.xlf'), 'cy', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.en.xlf'), 'en', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nb.xlf'), 'nb', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf'), 'sr_Latn', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ro.xlf'), 'ro', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.es.xlf'), 'es', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sl.xlf'), 'sl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lb.xlf'), 'lb', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.vi.xlf'), 'vi', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ja.xlf'), 'ja', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt_BR.xlf'), 'pt_BR', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.af.xlf'), 'af', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fr.xlf'), 'fr', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sv.xlf'), 'sv', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.no.xlf'), 'no', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.gl.xlf'), 'gl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.th.xlf'), 'th', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pl.xlf'), 'pl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.mn.xlf'), 'mn', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hr.xlf'), 'hr', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hy.xlf'), 'hy', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cs.xlf'), 'cs', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.uk.xlf'), 'uk', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.el.xlf'), 'el', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.et.xlf'), 'et', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.az.xlf'), 'az', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sk.xlf'), 'sk', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt.xlf'), 'pt', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.bg.xlf'), 'bg', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.it.xlf'), 'it', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.da.xlf'), 'da', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.zh_CN.xlf'), 'zh_CN', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.eu.xlf'), 'eu', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ru.xlf'), 'ru', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fi.xlf'), 'fi', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Cyrl.xlf'), 'sr_Cyrl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ar.xlf'), 'ar', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ca.xlf'), 'ca', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hu.xlf'), 'hu', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fa.xlf'), 'fa', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lt.xlf'), 'lt', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.id.xlf'), 'id', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nl.xlf'), 'nl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.de.xlf'), 'de', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.he.xlf'), 'he', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.en.xlf'), 'en', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nb.xlf'), 'nb', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Latn.xlf'), 'sr_Latn', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ro.xlf'), 'ro', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.es.xlf'), 'es', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sl.xlf'), 'sl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lb.xlf'), 'lb', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ja.xlf'), 'ja', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt_BR.xlf'), 'pt_BR', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fr.xlf'), 'fr', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sv.xlf'), 'sv', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.gl.xlf'), 'gl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pl.xlf'), 'pl', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.mn.xlf'), 'mn', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hr.xlf'), 'hr', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hy.xlf'), 'hy', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.cs.xlf'), 'cs', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lv.xlf'), 'lv', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.uk.xlf'), 'uk', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.el.xlf'), 'el', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.et.xlf'), 'et', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.az.xlf'), 'az', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sk.xlf'), 'sk', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt.xlf'), 'pt', 'validators');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.fr.xlf'), 'fr', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.he.xlf'), 'he', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.ar.xlf'), 'ar', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.it.xlf'), 'it', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.cs.xlf'), 'cs', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.ja.xlf'), 'ja', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.gl.xlf'), 'gl', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.pl.xlf'), 'pl', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.ro.xlf'), 'ro', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.en.xlf'), 'en', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.ua.xlf'), 'ua', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.el.xlf'), 'el', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.pt_PT.xlf'), 'pt_PT', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.ru.xlf'), 'ru', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.sr_Cyrl.xlf'), 'sr_Cyrl', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.fa.xlf'), 'fa', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.es.xlf'), 'es', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.th.xlf'), 'th', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.id.xlf'), 'id', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.hu.xlf'), 'hu', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.de.xlf'), 'de', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.hr.xlf'), 'hr', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.tr.xlf'), 'tr', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.nl.xlf'), 'nl', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.zh_CN.xlf'), 'zh_CN', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.sr_Latn.xlf'), 'sr_Latn', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.pt_BR.xlf'), 'pt_BR', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.vi.xlf'), 'vi', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.bg.xlf'), 'bg', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.az.xlf'), 'az', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.sk.xlf'), 'sk', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.lt.xlf'), 'lt', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.sv.xlf'), 'sv', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.sl.xlf'), 'sl', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.da.xlf'), 'da', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.no.xlf'), 'no', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.lb.xlf'), 'lb', 'security');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../../Resources/translations/security.ca.xlf'), 'ca', 'security');
-        $instance->addResource('yml', ($this->targetDirs[3].'/src/Topxia/WebBundle/Resources/translations/messages.ug_CN.yml'), 'ug_CN', 'messages');
-        $instance->addResource('yml', ($this->targetDirs[3].'/src/Topxia/WebBundle/Resources/translations/messages.zh_CN.yml'), 'zh_CN', 'messages');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/src/Topxia/AdminBundle/Resources/translations/messages.fr.xlf'), 'fr', 'messages');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/src/Classroom/ClassroomBundle/Resources/translations/messages.fr.xlf'), 'fr', 'messages');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/src/SensitiveWord/SensitiveWordBundle/Resources/translations/messages.fr.xlf'), 'fr', 'messages');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/src/Org/OrgBundle/Resources/translations/messages.fr.xlf'), 'fr', 'messages');
-        $instance->addResource('xlf', ($this->targetDirs[3].'/src/Custom/AdminBundle/Resources/translations/messages.fr.xlf'), 'fr', 'messages');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.af.xlf'), 'af', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.ar.xlf'), 'ar', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.az.xlf'), 'az', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.bg.xlf'), 'bg', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.ca.xlf'), 'ca', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.cs.xlf'), 'cs', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.cy.xlf'), 'cy', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.da.xlf'), 'da', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.de.xlf'), 'de', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.el.xlf'), 'el', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.en.xlf'), 'en', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.es.xlf'), 'es', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.et.xlf'), 'et', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.eu.xlf'), 'eu', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.fa.xlf'), 'fa', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.fi.xlf'), 'fi', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.fr.xlf'), 'fr', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.gl.xlf'), 'gl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.he.xlf'), 'he', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.hr.xlf'), 'hr', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.hu.xlf'), 'hu', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.hy.xlf'), 'hy', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.id.xlf'), 'id', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.it.xlf'), 'it', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.ja.xlf'), 'ja', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.lb.xlf'), 'lb', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.lt.xlf'), 'lt', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.mn.xlf'), 'mn', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.nb.xlf'), 'nb', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.nl.xlf'), 'nl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.no.xlf'), 'no', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.pl.xlf'), 'pl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.pt.xlf'), 'pt', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.pt_BR.xlf'), 'pt_BR', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.ro.xlf'), 'ro', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.ru.xlf'), 'ru', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.sk.xlf'), 'sk', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.sl.xlf'), 'sl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.sq.xlf'), 'sq', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.sr_Cyrl.xlf'), 'sr_Cyrl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.sr_Latn.xlf'), 'sr_Latn', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.sv.xlf'), 'sv', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.th.xlf'), 'th', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.tr.xlf'), 'tr', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.uk.xlf'), 'uk', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.vi.xlf'), 'vi', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.zh_CN.xlf'), 'zh_CN', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Validator/Resources/translations\\validators.zh_TW.xlf'), 'zh_TW', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.ar.xlf'), 'ar', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.az.xlf'), 'az', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.bg.xlf'), 'bg', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.ca.xlf'), 'ca', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.cs.xlf'), 'cs', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.da.xlf'), 'da', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.de.xlf'), 'de', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.el.xlf'), 'el', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.en.xlf'), 'en', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.es.xlf'), 'es', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.et.xlf'), 'et', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.eu.xlf'), 'eu', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.fa.xlf'), 'fa', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.fi.xlf'), 'fi', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.fr.xlf'), 'fr', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.gl.xlf'), 'gl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.he.xlf'), 'he', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.hr.xlf'), 'hr', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.hu.xlf'), 'hu', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.hy.xlf'), 'hy', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.id.xlf'), 'id', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.it.xlf'), 'it', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.ja.xlf'), 'ja', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.lb.xlf'), 'lb', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.lt.xlf'), 'lt', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.lv.xlf'), 'lv', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.mn.xlf'), 'mn', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.nb.xlf'), 'nb', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.nl.xlf'), 'nl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.pl.xlf'), 'pl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.pt.xlf'), 'pt', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.pt_BR.xlf'), 'pt_BR', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.ro.xlf'), 'ro', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.ru.xlf'), 'ru', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.sk.xlf'), 'sk', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.sl.xlf'), 'sl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.sr_Cyrl.xlf'), 'sr_Cyrl', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.sr_Latn.xlf'), 'sr_Latn', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.sv.xlf'), 'sv', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.uk.xlf'), 'uk', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/translations\\validators.zh_CN.xlf'), 'zh_CN', 'validators');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.ar.xlf'), 'ar', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.az.xlf'), 'az', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.bg.xlf'), 'bg', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.ca.xlf'), 'ca', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.cs.xlf'), 'cs', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.da.xlf'), 'da', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.de.xlf'), 'de', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.el.xlf'), 'el', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.en.xlf'), 'en', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.es.xlf'), 'es', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.fa.xlf'), 'fa', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.fr.xlf'), 'fr', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.gl.xlf'), 'gl', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.he.xlf'), 'he', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.hr.xlf'), 'hr', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.hu.xlf'), 'hu', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.id.xlf'), 'id', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.it.xlf'), 'it', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.ja.xlf'), 'ja', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.lb.xlf'), 'lb', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.lt.xlf'), 'lt', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.nl.xlf'), 'nl', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.no.xlf'), 'no', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.pl.xlf'), 'pl', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.pt_BR.xlf'), 'pt_BR', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.pt_PT.xlf'), 'pt_PT', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.ro.xlf'), 'ro', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.ru.xlf'), 'ru', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.sk.xlf'), 'sk', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.sl.xlf'), 'sl', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.sr_Cyrl.xlf'), 'sr_Cyrl', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.sr_Latn.xlf'), 'sr_Latn', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.sv.xlf'), 'sv', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.th.xlf'), 'th', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.tr.xlf'), 'tr', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.ua.xlf'), 'ua', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.vi.xlf'), 'vi', 'security');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Exception/../../Resources/translations\\security.zh_CN.xlf'), 'zh_CN', 'security');
+        $instance->addResource('yml', ($this->targetDirs[3].'\\src\\Topxia\\WebBundle/Resources/translations\\messages.ug_CN.yml'), 'ug_CN', 'messages');
+        $instance->addResource('yml', ($this->targetDirs[3].'\\src\\Topxia\\WebBundle/Resources/translations\\messages.zh_CN.yml'), 'zh_CN', 'messages');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\src\\Topxia\\AdminBundle/Resources/translations\\messages.fr.xlf'), 'fr', 'messages');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\src\\Classroom\\ClassroomBundle/Resources/translations\\messages.fr.xlf'), 'fr', 'messages');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\src\\SensitiveWord\\SensitiveWordBundle/Resources/translations\\messages.fr.xlf'), 'fr', 'messages');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\src\\Org\\OrgBundle/Resources/translations\\messages.fr.xlf'), 'fr', 'messages');
+        $instance->addResource('xlf', ($this->targetDirs[3].'\\src\\Custom\\AdminBundle/Resources/translations\\messages.fr.xlf'), 'fr', 'messages');
         return $instance;
     }
     protected function getTwigService()
@@ -1350,23 +1350,23 @@ class appProdProjectContainer extends Container
         $instance->addPath(($this->targetDirs[2].'/../src/Topxia/WebBundle/Resources/views'), 'topxiaweb');
         $instance->addPath(($this->targetDirs[2].'/../web/themes'), 'theme');
         $instance->addPath(($this->targetDirs[2].'/../'), 'root');
-        $instance->addPath(($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views'), 'Framework');
-        $instance->addPath(($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views'), 'Security');
+        $instance->addPath(($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views'), 'Framework');
+        $instance->addPath(($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views'), 'Security');
         $instance->addPath(($this->targetDirs[2].'/Resources/TwigBundle/views'), 'Twig');
-        $instance->addPath(($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views'), 'Twig');
-        $instance->addPath(($this->targetDirs[3].'/vendor2/symfony/swiftmailer-bundle/Resources/views'), 'Swiftmailer');
-        $instance->addPath(($this->targetDirs[3].'/vendor2/doctrine/doctrine-bundle/Resources/views'), 'Doctrine');
-        $instance->addPath(($this->targetDirs[3].'/src/Topxia/WebBundle/Resources/views'), 'TopxiaWeb');
-        $instance->addPath(($this->targetDirs[3].'/src/Topxia/AdminBundle/Resources/views'), 'TopxiaAdmin');
-        $instance->addPath(($this->targetDirs[3].'/src/Topxia/MobileBundle/Resources/views'), 'TopxiaMobile');
-        $instance->addPath(($this->targetDirs[3].'/src/Topxia/MobileBundleV2/Resources/views'), 'TopxiaMobileBundleV2');
-        $instance->addPath(($this->targetDirs[3].'/src/Classroom/ClassroomBundle/Resources/views'), 'Classroom');
-        $instance->addPath(($this->targetDirs[3].'/src/MaterialLib/MaterialLibBundle/Resources/views'), 'MaterialLib');
-        $instance->addPath(($this->targetDirs[3].'/src/SensitiveWord/SensitiveWordBundle/Resources/views'), 'SensitiveWord');
-        $instance->addPath(($this->targetDirs[3].'/src/Org/OrgBundle/Resources/views'), 'Org');
-        $instance->addPath(($this->targetDirs[3].'/src/Custom/AdminBundle/Resources/views'), 'CustomAdmin');
+        $instance->addPath(($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views'), 'Twig');
+        $instance->addPath(($this->targetDirs[3].'\\vendor2\\symfony\\swiftmailer-bundle/Resources/views'), 'Swiftmailer');
+        $instance->addPath(($this->targetDirs[3].'\\vendor2\\doctrine\\doctrine-bundle/Resources/views'), 'Doctrine');
+        $instance->addPath(($this->targetDirs[3].'\\src\\Topxia\\WebBundle/Resources/views'), 'TopxiaWeb');
+        $instance->addPath(($this->targetDirs[3].'\\src\\Topxia\\AdminBundle/Resources/views'), 'TopxiaAdmin');
+        $instance->addPath(($this->targetDirs[3].'\\src\\Topxia\\MobileBundle/Resources/views'), 'TopxiaMobile');
+        $instance->addPath(($this->targetDirs[3].'\\src\\Topxia\\MobileBundleV2/Resources/views'), 'TopxiaMobileBundleV2');
+        $instance->addPath(($this->targetDirs[3].'\\src\\Classroom\\ClassroomBundle/Resources/views'), 'Classroom');
+        $instance->addPath(($this->targetDirs[3].'\\src\\MaterialLib\\MaterialLibBundle/Resources/views'), 'MaterialLib');
+        $instance->addPath(($this->targetDirs[3].'\\src\\SensitiveWord\\SensitiveWordBundle/Resources/views'), 'SensitiveWord');
+        $instance->addPath(($this->targetDirs[3].'\\src\\Org\\OrgBundle/Resources/views'), 'Org');
+        $instance->addPath(($this->targetDirs[3].'\\src\\Custom\\AdminBundle/Resources/views'), 'CustomAdmin');
         $instance->addPath(($this->targetDirs[2].'/Resources/views'));
-        $instance->addPath(($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form'));
+        $instance->addPath(($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form'));
         return $instance;
     }
     protected function getTwig_Translation_ExtractorService()
@@ -1420,7 +1420,7 @@ class appProdProjectContainer extends Container
     protected function getSecurity_Authentication_ManagerService()
     {
         $a = new \Symfony\Component\Security\Core\User\UserChecker();
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Topxia\WebBundle\Handler\AuthenticationProvider($this->get('topxia.user_provider'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, '1hkcbroykc004gc8ko844co40g4kwco', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5d0f1381f150d')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Topxia\WebBundle\Handler\AuthenticationProvider($this->get('topxia.user_provider'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, '1hkcbroykc004gc8ko844co40g4kwco', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5d3a92602a8cb')), true);
         $instance->setEventDispatcher($this->get('event_dispatcher'));
         return $instance;
     }
@@ -1434,7 +1434,7 @@ class appProdProjectContainer extends Container
     }
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
-        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml'))), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml'))), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
     }
     public function getParameter($name)
     {
@@ -1468,7 +1468,7 @@ class appProdProjectContainer extends Container
             'kernel.debug' => false,
             'kernel.name' => 'app',
             'kernel.cache_dir' => __DIR__,
-            'kernel.logs_dir' => ($this->targetDirs[2].'/logs'),
+            'kernel.logs_dir' => ($this->targetDirs[2].'\\logs'),
             'kernel.bundles' => array(
                 'FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle',
                 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle',
@@ -1615,7 +1615,7 @@ class appProdProjectContainer extends Container
             'database_port' => 3306,
             'database_name' => 'netedu',
             'database_user' => 'root',
-            'database_password' => 123456,
+            'database_password' => NULL,
             'mailer_transport' => 'smtp',
             'mailer_host' => '127.0.0.1',
             'mailer_user' => NULL,
@@ -1754,7 +1754,7 @@ class appProdProjectContainer extends Container
             'validator.mapping.loader.yaml_files_loader.class' => 'Symfony\\Component\\Validator\\Mapping\\Loader\\YamlFilesLoader',
             'validator.validator_factory.class' => 'Symfony\\Bundle\\FrameworkBundle\\Validator\\ConstraintValidatorFactory',
             'validator.mapping.loader.xml_files_loader.mapping_files' => array(
-                0 => ($this->targetDirs[3].'/vendor2/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml'),
+                0 => ($this->targetDirs[3].'\\vendor2\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml'),
             ),
             'validator.mapping.loader.yaml_files_loader.mapping_files' => array(
             ),
@@ -1897,10 +1897,10 @@ class appProdProjectContainer extends Container
                 'debug' => false,
                 'strict_variables' => false,
                 'paths' => array(
-                    '/var/www/html/netedu/app/../web/customize' => 'customize',
-                    '/var/www/html/netedu/app/../src/Topxia/WebBundle/Resources/views' => 'topxiaweb',
-                    '/var/www/html/netedu/app/../web/themes' => 'theme',
-                    '/var/www/html/netedu/app/../' => 'root',
+                    'D:\\wamp64\\wamp\\www\\netedu\\app/../web/customize' => 'customize',
+                    'D:\\wamp64\\wamp\\www\\netedu\\app/../src/Topxia/WebBundle/Resources/views' => 'topxiaweb',
+                    'D:\\wamp64\\wamp\\www\\netedu\\app/../web/themes' => 'theme',
+                    'D:\\wamp64\\wamp\\www\\netedu\\app/../' => 'root',
                 ),
                 'exception_controller' => 'twig.controller.exception:showAction',
                 'autoescape' => array(

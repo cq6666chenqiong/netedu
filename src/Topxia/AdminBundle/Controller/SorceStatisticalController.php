@@ -20,29 +20,50 @@ use Topxia\AdminBundle\Controller\httpclient;
 class SorceStatisticalController  extends BaseController
 {
     public function indexAction(Request $request){
+
+        error_log("indexAction");
         ini_set('display_errors','off');
         $year = $request->query->get("year");
 
         $department = $request->query->get("department");
+        $tname = $request->query->get("truename");
         $truename = $request->query->get("truename");
         if(is_null($year)||$year==''){
             $year=intval (date("Y"));
         }
+        if(is_null($truename)||$truename==''){
+            $truename="";
+        }else{
+            $truename=urlencode($truename);
+        }
         $beginTime = date($year."-01-01 00:00:00");
         $endTime = date($year."-12-31 23:59:59");
-        $url = 'http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGradeCount?year='.$year.'&cengji='.$department.'&name='.$truename;
-        error_log($url);
+        //$url = 'http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGradeCount?year='.$year.'&cengji='.$department.'&name='.$truename;
+        $url = 'http://localhost:8080/statistics/getMemberNum?year='.$year.'&cengji='.$department.'&name='.$truename;
+        //error_log($url);
         $http = new HttpClient($url);
         $http->get();
-        error_log("result===========".$http->getBody());
+        //error_log("result===========".$http->getBody());
         $jsonCount = json_decode($http->getBody(),true);
         $num = $jsonCount['sum'];
+       // $num = 1000;
         $paginator = new Paginator($this->get('request'), $num, 20);
         if(is_null($paginator->getCurrentPage())){
             $paginator->setCurrentPage(1);
         }
-        $http = new HttpClient('http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGrade?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&cengji='.$department.'&name='.$truename);
+       // $http = new HttpClient('http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGrade?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&cengji='.$department.'&name='.$truename);
+        $url = 'http://localhost:8080/statistics/getMemberScoreStatistics?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&cengji='.$department.'&name='.$truename;
+       // $url = 'http://localhost:8080/statistics/getMemberScoreStatistics';
+        $http = new HttpClient($url);
+        error_log($url);
         $http->get();
+        /*$ary = [];
+        $ary[0] = "sss";
+        $post_data = array(
+            'name' => 'eeee',
+            'password' => 'handan'
+        );
+        $http->send_post($url,$post_data);*/
         error_log("result===========".$http->getBody());
         $json = json_decode($http->getBody(),true);
 
@@ -207,6 +228,7 @@ class SorceStatisticalController  extends BaseController
         ));*/
         return $this->render('TopxiaAdminBundle:sorce:score.html.twig', array(
             'year'                        =>  $year,
+            'truename'                   => $tname,
             'paginator'                  =>  $paginator,
             'arry'                       =>  $json
 
@@ -225,7 +247,8 @@ class SorceStatisticalController  extends BaseController
         $beginTime = date($year."-01-01 00:00:00");
         $endTime = date($year."-12-31 23:59:59");
 
-        $http = new HttpClient('http://123.56.7.13:8080/netedustatistics/statistics/getScoreByBingQu?year='.$year);
+        //$http = new HttpClient('http://123.56.7.13:8080/netedustatistics/statistics/getScoreByBingQu?year='.$year);
+        $http = new HttpClient('http://localhost:8080/statistics/getEndemicAreaStatistics?year='.$year);
         $http->get();
         error_log("result===========".$http->getBody());
         $json = json_decode($http->getBody(),true);

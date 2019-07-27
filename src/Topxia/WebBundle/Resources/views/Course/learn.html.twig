@@ -169,8 +169,11 @@
                     <input type="hidden" id="nextId"  value="{{ nextLearnLesson.id }}">
                     <input type="hidden" id="courseId"  value="{{ course.id }}">
 
-
+                   {# <input  type="button"   onclick="pdfstart();" value="pdf链接" >#}
+                    <a id="pdf" href="{{ lesson.mediaUri }}" onclick="start();" target="_blank">阅读pdf</a>
                     <input class="hotline24" type="button" id="start"  onclick="start();" value="" >
+
+
 
 
                 </div>

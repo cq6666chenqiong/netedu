@@ -241,8 +241,9 @@ class HttpClient{
         }
         if(!empty($files) && is_array($files)){
             $boundary=uniqid('---------------------------');
-            $this->setHeader('Content-Type','multipart/form-data; boundary='.$boundary);  
+            $this->setHeader('Content-Type','multipart/form-data; boundary='.$boundary);
             if(!empty($this->content) && is_array($this->content)){
+                $boundary=uniqid('------------3---------------');
                 foreach($this->content as $k => $v){
                     $cont.=$boundary.self::CRLF.'Content-Disposition: form-data; name="'.$k.'"'.self::CRLF.self::CRLF.$v.self::CRLF;
                 }
@@ -258,6 +259,27 @@ class HttpClient{
         $this->method="POST";
         $this->send();
         return $this->status_code; 
+    }
+
+    /**
+     * 发送post请求
+     * @param string $url 请求地址
+     * @param array $post_data post键值对数据
+     * @return string
+     */
+    function send_post($url, $post_data) {
+        $postdata = http_build_query($post_data);
+        $options = array(
+            'http' => array(
+                'method' => 'POST',
+                'header' => 'Content-type:application/x-www-form-urlencoded',
+                'content' => $postdata,
+                'timeout' => 15 * 60
+            )
+        );
+        $context = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        return $result;
     }
     
     /**

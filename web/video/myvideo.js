@@ -1,4 +1,15 @@
         var myPlayer;
+
+        function pdfstart(){
+            var url = $('#lessonUrl').val();
+            window.open(url,'_blank');
+        }
+
+       /* $(function(){
+            var url = $('#lessonUrl').val();
+            $('#pdf').attr('href',url);
+        });*/
+
         function start(){
             var type = $('#lessonType').val();
             var url = $('#lessonUrl').val();

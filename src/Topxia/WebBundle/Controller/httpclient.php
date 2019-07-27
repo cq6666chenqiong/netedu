@@ -234,6 +234,7 @@ class HttpClient{
     * @return string status code
     */
     public function post($uri=NULL,$content=NULL,$files=NULL){
+        error_log("====");
         if(!empty($uri)) $this->uri=$uri;
         if(is_array($content) && empty($files)){
             $content=http_build_query($content,"","&");    
@@ -244,6 +245,7 @@ class HttpClient{
             $this->setHeader('Content-Type','multipart/form-data; boundary='.$boundary);  
             if(!empty($this->content) && is_array($this->content)){
                 foreach($this->content as $k => $v){
+                    error_log($k."====".$v);
                     $cont.=$boundary.self::CRLF.'Content-Disposition: form-data; name="'.$k.'"'.self::CRLF.self::CRLF.$v.self::CRLF;
                 }
             } 

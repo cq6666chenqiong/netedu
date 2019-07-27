@@ -11,7 +11,7 @@
 define("DBADDR","localhost");
 define("DBNAME","netedu");
 define("DBUSER","root");
-define("DBPASSWORD","123456");
+define("DBPASSWORD","");
 define("__ROOT__",dirname(__FILE__));
 
  function getConnection(){

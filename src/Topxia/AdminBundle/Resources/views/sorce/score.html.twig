@@ -10,7 +10,7 @@
             var department = $("#department").val();
             var truename = $("#truename").val();
             //var url = '/functionDir/createExcel/make_xueshengtongji.php?year='+year+'&department='+department+'&truename='+truename;
-            var url = 'http://39.108.165.250:8080/netedustatistics/excel/getScoreByGradeExcel?year='+year+'&cengji='+department+'&name='+truename;
+            var url = 'http://localhost:8080/statistics/getMemberScoreExcel?year='+year+'&cengji='+department+'&name='+truename;
             //myajax('/functionDir/createExcel/make_xueshengtongji.php?year='+year+'&department='+department+'&truename='+truename);
             $("#mydownload").attr("href",url);
         }
@@ -20,7 +20,7 @@
             var truename = $("#truename").val();
             //var url = '/functionDir/createExcel/make_xueshengtongji.php?year='+year+'&department='+department+'&truename='+truename;
             //myajax('/functionDir/createExcel/make_xueshengtongji.php?year='+year+'&department='+department+'&truename='+truename);
-            var url = 'http://39.108.165.250:8080/netedustatistics/excel/getScoreByGradeExcel?year='+year+'&cengji='+department+'&name='+truename;
+            var url = 'http://localhost:8080/statistics/getMemberScoreExcel?year='+year+'&cengji='+department+'&name='+truename;
             $("#mydownload").attr("href",url);
             //$("#mydownload").click();
             //alert("wait");
@@ -29,14 +29,15 @@
             $num = $(e).attr('data_id');
             $.ajax({
                 type: "GET",
-                url: "/sorce/member?memberNum="+$num, //用于文件上传的服务器端请求地址
+                //url: "/sorce/member?memberNum="+$num, //用于文件上传的服务器端请求地址
+                url:"/statistics/getMemberScoreStatistics",
                 dataType: 'json', //返回值类型 一般设置为json
                 success: function (data, status)  //服务器成功响应处理函数
                 {
                     var html = "";
                     for(var i = 0;i<data.length;i++){
                         html = html + "<tr>"
-                            +"<td>"+data[i].memberNum+"</td>"
+                            +"<td>"+data[i].nickname+"</td>"
                             +"<td>"+data[i].truename+"</td>"
                             +"<td>"+data[i].score+"</td>";
                             if(data[i].title != null){
@@ -63,13 +64,13 @@
     <div style="height: 40px">
         <form action="{{ path('admin_sorce_statistical') }}" method="get">
             <span>统计年度</span><input id="year" name="year" value="{{ year }}"/>
-            <span>科室</span>
+            {#<span>科室</span>
             <select id="department" name="department" >
                 <option value="">全部</option>
                 {% for k in classr %}
                    <option {% if department == k.id %} selected {% endif %} value="{{ k.id }}">{{ k.title }}</option>
                 {% endfor %}
-            </select>
+            </select>#}
             <span>姓名</span>
             <input id="truename" type="text" name="truename" value="{{ truename }}"/>
             <input type="submit" value="查询" >
@@ -140,19 +141,22 @@
         {% for ar in arry %}
 
             <tr>
-                <td>{{ ar['name'] }}</td>
-                <td><a onclick="fun(this)" data-toggle="modal" data-target="#myModal"  data_id="{{ ar['userNo'] }}" >{{ ar['userNo'] }}</a>
-                <td>{{ ar['cengji'] }}</td>
-                <td>{{ ar['cjcoursenum'] }}</td>
-                <td>{{ ar['cjscore'] }}</td>
-                <td>{{ ar['hasnopasscj'] }}</td>
-                <td>{{ ar['zhuanye'] }}</td>
-                <td>{{ ar['zycoursenum'] }}</td>
-                <td>{{ ar['zyscore'] }}</td>
-                <td>{{ ar['hasnopasszy'] }}</td>
+                <td>{{ ar['truename'] }}</td>
+                <td><a onclick="fun(this)" data-toggle="modal" data-target="#myModal"  data_id="{{ ar['nickname'] }}" >{{ ar['nickname'] }}</a>
+
+                <td colspan="4">
+                    {% for level in ar['levelList'] %}
+                        {{ level['typeName'] }}&nbsp;&nbsp;&nbsp; {{ level['passmark'] }}&nbsp;&nbsp;&nbsp; {{ level['total_score'] }} &nbsp;&nbsp;&nbsp;{{ level['ispass'] }}<br/>
+                    {% endfor %}
+                </td>
+                <td  colspan="4">
+                    {% for profession in ar['professionList'] %}
+                        {{ profession['typeName'] }}&nbsp;&nbsp;&nbsp; {{ profession['passmark'] }}&nbsp;&nbsp;&nbsp; {{ profession['total_score'] }} &nbsp;&nbsp;&nbsp;{{ profession['ispass'] }}<br/>
+                    {% endfor %}
+                </td>
                 <td>大于13</td>
-                <td>{{ ar['cjscore'] + ar['zyscore'] }}</td>
-                <td>评定</td>
+                <td>{{ ar['total_score'] }}</td>
+                <td>{{ ar['ispass'] }}</td>
             </tr>
         {% endfor %}
         </tbody>
