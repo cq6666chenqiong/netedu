@@ -26,27 +26,32 @@
             //alert("wait");
         }
         function fun(e){
+
             $num = $(e).attr('data_id');
+            //alert("http://localhost:8080/statistics/getMemberDetailScore?nickname="+$num);
             $.ajax({
                 type: "GET",
-                //url: "/sorce/member?memberNum="+$num, //用于文件上传的服务器端请求地址
-                url:"/statistics/getMemberScoreStatistics",
+                url: "/sorce/member?memberNum="+$num, //用于文件上传的服务器端请求地址
+                //url:"http://localhost:8080/statistics/getMemberDetailScore?nickname="+$num,
                 dataType: 'json', //返回值类型 一般设置为json
                 success: function (data, status)  //服务器成功响应处理函数
                 {
+
                     var html = "";
-                    for(var i = 0;i<data.length;i++){
+                    var dataObj=eval("("+data+")");
+                   // alert(dataObj[0].nickname);
+                    for(var i = 0;i<dataObj.length;i++){
                         html = html + "<tr>"
-                            +"<td>"+data[i].nickname+"</td>"
-                            +"<td>"+data[i].truename+"</td>"
-                            +"<td>"+data[i].score+"</td>";
-                            if(data[i].title != null){
-                                html = html +  "<td>"+data[i].title+"</td>";
+                            +"<td>"+dataObj[i].nickname+"</td>"
+                            +"<td>"+dataObj[i].truename+"</td>"
+                            +"<td>"+dataObj[i].score+"</td>";
+                            if(dataObj[i].title != null){
+                                html = html +  "<td>"+dataObj[i].title+"</td>";
                             }else{
-                                html = html +  "<td>"+data[i].courseName+"</td>";
+                                html = html +  "<td>"+dataObj[i].courseName+"</td>";
                             }
-                            html = html +"<td>"+data[i].year+"</td>";
-                            html = html +"<td>"+data[i].remark+"</td>"
+                            html = html +"<td>"+dataObj[i].year+"</td>";
+                            html = html +"<td>"+dataObj[i].remark+"</td>"
                             + "</tr>";
 
                     }
@@ -54,9 +59,30 @@
                 },
                 error : function (data, status, e)//服务器响应失败处理函数
                 {
-                    $("#copyFile").val("");
+                    alert("error");
+                    var dataObj=eval("("+data+")");
+                    alert(dataObj[0].nickname);
+                    var html = "";
+
+                    for(var i = 0;i<dataObj.length;i++){
+                        html = html + "<tr>"
+                            +"<td>"+dataObj[i].nickname+"</td>"
+                            +"<td>"+dataObj[i].truename+"</td>"
+                            +"<td>"+dataObj[i].score+"</td>";
+                        if(dataObj[i].title != null){
+                            html = html +  "<td>"+dataObj[i].title+"</td>";
+                        }else{
+                            html = html +  "<td>"+dataObj[i].courseName+"</td>";
+                        }
+                        html = html +"<td>"+dataObj[i].year+"</td>";
+                        html = html +"<td>"+dataObj[i].remark+"</td>"
+                            + "</tr>";
+
+                    }
+                    $('#p_body').html(html);
+                    /*$("#copyFile").val("");
                     $("#file").val("");
-                    $("#depositReceipt").val("");
+                    $("#depositReceipt").val("");*/
                 }
             });
         }

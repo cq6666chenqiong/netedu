@@ -14,6 +14,7 @@ use Topxia\Service\Util\myBananaLiveClient;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Topxia\System;
+use Topxia\AdminBundle\Controller\httpclient;
 
 
 
@@ -51,7 +52,8 @@ class CourseSorceController extends BaseController
 
     public function memberScoreAction(Request $request)
     {
-        error_log("ss");
+        error_reporting(0);
+        /*error_log("ss");
         $userNum = $request->query->get('memberNum');
         $con = System::getConnection();
         $sql = "select u.nickname memberNum, p.truename truename ,ifnull(s.score,0) score ,c.title title,ifnull(s.courseName,'在线课程'),s.year year, 
@@ -62,8 +64,25 @@ class CourseSorceController extends BaseController
         error_log(json_encode(
             $result
         ));
-        System::closeConnection($con);
-
+        System::closeConnection($con);*/
+        $memberNum = $request->query->get("memberNum");
+        error_log($memberNum);
+        $url = "http://localhost:8080/statistics/getMemberDetailScore?nickname=".$memberNum;
+        $http = new HttpClient($url);
+        error_log($url);
+        $http->get();
+        /*$ary = [];
+        $ary[0] = "sss";
+        $post_data = array(
+            'name' => 'eeee',
+            'password' => 'handan'
+        );
+        $http->send_post($url,$post_data);*/
+        $result = $http->getBody();
+        error_log($result);
+        //return new Response(json_encode($result));
         return new Response(json_encode($result));
+        //header("content-type:text/html;charset=utf8");
+        //echo json_encode($result,JSON_UNESCAPED_UNICODE);
     }
 }
