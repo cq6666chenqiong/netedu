@@ -38,14 +38,17 @@ for ($i = 2; $i <= $data->sheets[0]['numRows']; $i++) {
     $remark = $data->sheets[0]['cells'][$i][4];
     $courseType = $data->sheets[0]['cells'][$i][7];
 
-    if($courseType == "层级课程"){
-        $courseType = 0;
+    $courseId = -2;
+
+    if($courseType == "线下层级课程"){
+        $courseType = 34;
+        $courseId = -1;
     }else{
-        $courseType = -1;
+        $courseType = 1001;
     }
 
     $sql = $sql."INSERT INTO `user_score` ( `userId`, `score`, `testId`, `courseId`, `createTime`, `year`, `courseName`, `remark`, `courseType`) 
-    VALUES ( '".$userId."', '".$score."', NULL, -1, NULL, '".$year."', '".$courseName."', '".$remark."','".$courseType."')".";";
+    VALUES ( '".$userId."', '".$score."', NULL, '".$courseId."', NULL, '".$year."', '".$courseName."', '".$remark."','".$courseType."')".";";
 }
 
 error_log($sql);

@@ -2,336 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4906b9a7-0041-4091-bfa2-a0badec4188f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/4c68d4028b5833f214ddb8c9f8a1cba92340ce71#indexAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/4c68d4028b5833f214ddb8c9f8a1cba92340ce71.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/7888c7de1b5ba2f61f35c52178dd801c4b449ef9#statisticalByDepartmentAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#addBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#checkoutBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#createBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#deleteBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#getBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#getBatchNotificationDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#getNotificationDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#getUserService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#publishBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#searchBatchNotifications.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#searchBatchNotificationsCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/07bf14262162c819069b1d67d7731ebe5216eb8f#updateBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#addCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#deleteCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findAllCategories.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findAllCategoriesByParentId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findCategoriesByGroupId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findCategoriesByGroupIdAndOrgId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findCategoriesByGroupIdAndParentId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findCategoriesByIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findCategoriesByParentId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findCategoriesCountByParentId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#findCategoryByCode.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#getCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/1493a7c9d78cddcfded0e5d70a6566adbc3a220d#updateCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#createBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#deleteBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#findBlockHistoryCountByBlockId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#findBlockHistorysByBlockId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#generateBlockTemplateItems.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getBlockByCode.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getBlockDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getBlockHistory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getBlockHistoryDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getContentsByCodes.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getLatestBlockHistoriesByBlockIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getLatestBlockHistory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getLogService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#getSettingService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#recovery.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#searchBlockCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#searchBlocks.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#updateBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/31e881d58d02e59fa7439d10cee2081595e48933#updateContent.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/378375b4c45e0492f1ff3f3259c722bad784a39a#addGroup.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/378375b4c45e0492f1ff3f3259c722bad784a39a#deleteGroup.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/378375b4c45e0492f1ff3f3259c722bad784a39a#findAllGroups.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/378375b4c45e0492f1ff3f3259c722bad784a39a#findGroupByCode.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/378375b4c45e0492f1ff3f3259c722bad784a39a#findGroups.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/378375b4c45e0492f1ff3f3259c722bad784a39a#getGroup.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/594f5f2b4c19a8135469cf8d36312fefa1613393#_createSearchQueryBuilder.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/594f5f2b4c19a8135469cf8d36312fefa1613393#addBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/594f5f2b4c19a8135469cf8d36312fefa1613393#deleteBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/594f5f2b4c19a8135469cf8d36312fefa1613393#getBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/594f5f2b4c19a8135469cf8d36312fefa1613393#searchBatchNotificationCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/594f5f2b4c19a8135469cf8d36312fefa1613393#searchBatchNotifications.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/594f5f2b4c19a8135469cf8d36312fefa1613393#updateBatchNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#_createSearchQueryBuilder.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#addCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#analysisCourseDataByTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#analysisCourseSumByTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#clearCourseDiscountPrice.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#deleteCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#findCoursesByCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#findCoursesByIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#findCoursesByLikeTitle.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#findCoursesByParentIdAndLocked.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#findCoursesCountByLessThanCreatedTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#findNormalCoursesByAnyTagIdsAndStatus.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#getCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#getLessonByCourseIdAndNumber.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#searchCourseCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#searchCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#updateCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5d6c34c3651a5e7269a1c0471fe02a25dea585fc#waveCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#addBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#createBlockQueryBuilder.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#deleteBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#findBlocks.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#getBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#getBlockByCode.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#isSortField.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#searchBlockCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/86e514cacd4684f55ffc3fb32108b6ac07156098#updateBlock.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#addNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#createNotificationQueryBuilder.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#deleteNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#findNotificationsByUserId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#getNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#getNotificationCountByUserId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#searchNotificationCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#searchNotifications.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8a2e04004b349de4a8b049c70cdcda76a20b9740#updateNotification.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#addProfile.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#createProfileQueryBuilder.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#dropFieldData.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#findProfilesByIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#getProfile.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#searchProfileCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#searchProfiles.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/b4e882379abce0ae18f20cd2109fa8ccd3587822#updateProfile.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#addGroup.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#createCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#deleteCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#deleteGroup.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#filterCategoryFields.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findAllCategories.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findAllCategoriesByParentId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findAllGroups.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findCategories.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findCategoriesByGroupIdAndParentId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findCategoriesByIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findCategoryBreadcrumbs.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findCategoryChildrenIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#findGroupRootCategories.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getCategoryByCode.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getCategoryDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getCategoryStructureTree.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getCategoryTree.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getGroup.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getGroupByCode.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getGroupDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getGroups.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getLogService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#getSettingService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#isCategoryCodeAvaliable.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#makeCategoryTree.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#makeNavCategories.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#setCategoryOrg.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#sortCategories.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/c0674f27c1cc0d30f494699a280209f865e98a69#updateCategory.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#_filterCourseFields.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#_filterDraftFields.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#_prepareCourseConditions.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#addCourseLessonReplay.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#addMemberExpiryDays.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#analysisCourseDataByTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#analysisCourseSumByTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#analysisLessonDataByTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#analysisLessonFinishedDataByTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#analysisLessonViewDataByTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#becomeStudent.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#becomeStudentByClassroomJoined.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#calculateLiveCourseLeftCapacityInTimeRange.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#canLearnLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#canManageCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#canTakeCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#cancelLearnLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#cancelRecommendCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#cancelTeacherInAllCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#changeCoursePicture.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#checkWatchNum.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#closeCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#countMembersByStartTimeAndEndTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#createChapter.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#createCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#createCourseDraft.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#createLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#createLessonView.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#createMemberByClassroomJoined.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteChapter.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteCourseDrafts.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteCourseLessonReplayByLessonId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteLessonReplayByLessonId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteMemberByCourseId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteMemberByCourseIdAndRole.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteMemberByCourseIdAndUserId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#deleteNotUsedPictures.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#entryReplay.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#favoriteCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#fillLessonMediaFields.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findChaptersByCopyIdAndLockedCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCourseDraft.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCourseStudents.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCourseStudentsByCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCourseTeachers.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCoursesByCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCoursesByIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCoursesByLikeTitle.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCoursesByParentIdAndLocked.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCoursesByStudentIdAndCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findCoursesCountByLessThanCreatedTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findFavoritesCountByCourseId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findFutureLiveCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findFutureLiveDates.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findLatestFinishedLearns.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findLearnedCoursesByCourseIdAndUserId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findLearnsCountByLessonId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findLessonsByCopyIdAndLockedCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findLessonsByIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findLessonsByTypeAndMediaId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findMemberUserIdsByCourseId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findMinStartTimeByCourseId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findMobileVerifiedMemberCountByCourseId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findNormalCoursesByAnyTagIdsAndStatus.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findPastLiveCourseIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserFavoritedCourseCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserFavoritedCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLeanedCourseCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLeanedCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLeaningCourseCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLeaningCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLearnCourseCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLearnCourseCountNotInClassroom.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLearnCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLearnCoursesNotInClassroom.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserLearnedLessons.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserTeachCourseCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findUserTeachCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#findWillOverdueCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#finishLearnLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#generateLessonReplay.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getAnalysisLessonMinTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getAppService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCategoryService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getChapter.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getChapterDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getClassroomService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseChapters.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseDraft.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseDraftDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseItems.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseLessonReplayByCourseIdAndLessonId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseLessonReplayByLessonId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseLessonReplayDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseLessons.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseMaterialService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseMember.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getCourseStudentCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getDiscountService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getFavoriteDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getFileService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getLearnByUserIdAndLessonId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getLessonDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getLessonLearnDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getLessonViewDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getLogService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getMemberDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getMessageService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getNextChapterNumber.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getNextCourseItemSeq.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getNextLessonNumber.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getNextUnitNumberAndParentId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getNoteDao.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getOrderService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getSettingService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getTagService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getUploadFileService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getUserLearnLessonStatus.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getUserLearnLessonStatuses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getUserNextLearnLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getUserService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getVipService.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#getWelcomeMessageBody.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#hasCourseManagerRole.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#hasFavoritedCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#hitCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#increaseLessonMaterialCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#increaseLessonQuizCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#isClassroomMember.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#isCourseStudent.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#isCourseTeacher.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#isMemberNonExpired.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#liveLessonTimeCheck.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#lockStudent.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#publishCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#publishLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#recommendCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#remarkStudent.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#removeStudent.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#resetLessonMaterialCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#resetLessonMediaId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#resetLessonQuizCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#revertCoursesPriceWithDiscount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchAnalysisLessonView.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchAnalysisLessonViewCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchCourseCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchCourses.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchLearnCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchLearnTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchLearns.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchLessonCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchLessons.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchMember.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchMemberCount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchMemberIds.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchMembers.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#searchWatchTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#setCourseLessonMaxOnlineNum.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#setCoursePrice.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#setCourseTeachers.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#setCoursesPriceWithDiscount.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#setMemberNoteNumber.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#sortCourseItems.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#startLearnLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#tryAdminCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#tryLearnCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#tryManageCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#tryTakeCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#unFavoriteCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#unlockStudent.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#unpublishLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateChapter.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateCourseCounter.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateCourseDraft.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateCourseLessonReplay.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateCourseLessonReplayByLessonId.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateCourseMember.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#updateLesson.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#waveCourse.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#waveLearningTime.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/fa8284aecbcfa900b15fb64f71d8360751e9eaca#waveWatchingTime.cache.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" afterPath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data/session_gc_time.data" afterPath="$PROJECT_DIR$/app/data/session_gc_time.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/prod.log" afterPath="$PROJECT_DIR$/app/logs/prod.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/functionDir/upload_member_score.php" afterPath="$PROJECT_DIR$/web/functionDir/upload_member_score.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -376,7 +49,7 @@
       <file leaf-file-name="SorceStatisticalController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
+            <state relative-caret-position="918">
               <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
               <folding>
                 <element signature="e#132#189#0#PHP" expanded="true" />
@@ -388,9 +61,21 @@
       <file leaf-file-name="score.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="2862">
+              <caret line="106" column="153" lean-forward="false" selection-start-line="106" selection-start-column="130" selection-end-line="106" selection-end-column="153" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_member_score.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/functionDir/upload_member_score.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+              <folding>
+                <marker date="1564441901598" expanded="true" signature="651:705" ph="select id fr... user" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -405,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseSorceController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CourseSorceController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+            <state relative-caret-position="1161">
+              <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
               <folding>
                 <element signature="e#131#159#0#PHP" expanded="true" />
                 <marker date="1564307954606" expanded="true" signature="705:979" ph="select u.nic... user" />
@@ -494,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Default/member-recently-learned.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/courses-block-grid.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/Widget/course-price.html.twig" />
-        <option value="$PROJECT_DIR$/web/functionDir/upload_member_score.php" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/Service/Course/Impl/CourseServiceImpl.php" />
         <option value="$PROJECT_DIR$/src/Topxia/Service/Course/Impl/CourseMemberServiceImpl.php" />
@@ -521,6 +205,7 @@
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig" />
+        <option value="$PROJECT_DIR$/web/functionDir/upload_member_score.php" />
       </list>
     </option>
   </component>
@@ -949,27 +634,30 @@
       <workItem from="1564302792654" duration="1380000" />
       <workItem from="1564304714163" duration="1768000" />
       <workItem from="1564306539559" duration="2147000" />
-      <workItem from="1564309615045" duration="1089000" />
+      <workItem from="1564309615045" duration="1277000" />
+      <workItem from="1564407878137" duration="1841000" />
+      <workItem from="1564410033684" duration="594000" />
+      <workItem from="1564440980372" duration="1363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96603000" />
+    <option name="totallyTimeSpent" value="100589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1924" height="1030" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26717559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2818975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1050,13 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/functionDir/upload_member_score.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1242,7 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1350,17 +1030,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
+        <state relative-caret-position="918">
           <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
           <folding>
             <element signature="e#132#189#0#PHP" expanded="true" />
@@ -1370,12 +1042,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+        <state relative-caret-position="1161">
+          <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
           <folding>
             <element signature="e#131#159#0#PHP" expanded="true" />
             <marker date="1564307954606" expanded="true" signature="705:979" ph="select u.nic... user" />
             <marker date="1564307954606" expanded="true" signature="1875:2222" ph="select u.nic... user_score" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2862">
+          <caret line="106" column="153" lean-forward="false" selection-start-line="106" selection-start-column="130" selection-end-line="106" selection-end-column="153" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/functionDir/upload_member_score.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding>
+            <marker date="1564441901598" expanded="true" signature="651:705" ph="select id fr... user" />
           </folding>
         </state>
       </provider>
