@@ -7,28 +7,90 @@
 {% set script_controller = 'course-manage/students' %}
 
 {% block maincontent %}
+    <script>
+        function fun(){
+            var value = $('input[type=checkbox]:checked').map(function(){return this.value}).get().join(',');
+            var courseId = $("#cid").val();
+
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/courseMg/delAllCourseMember?ids="+value+"&courseId="+courseId, //用于文件上传的服务器端请求地址
+                //url:"http://localhost:8080/statistics/getMemberDetailScore?nickname="+$num,
+                dataType: 'json', //返回值类型 一般设置为json
+                success: function (data, status)  //服务器成功响应处理函数
+                {
+
+
+                    var dataObj=eval("("+data+")");
+                   /* alert(data);
+                    alert(dataObj.code);
+                    if(dataObj.code ==0){
+                        alert("删除成功");
+                    }else{
+                        alert("删除失败");
+                    }*/
+
+                },
+                error : function (data, status, e)//服务器响应失败处理函数
+                {
+                   /* alert("删除失败");
+*/
+                }
+            });
+            return true;
+        }
+
+
+        function bat() {
+            $s = $('#all').is(":checked");
+            if($s){
+                $('input[name=uid]').each(
+                    function(){
+                        $(this).prop("checked",true);
+                    }
+                );
+            }else{
+                $('input[name=uid]').each(
+                    function(){
+                        $(this).prop("checked",false);
+                    }
+                );
+            }
+        }
+    </script>
 <form class="form-inline well well-sm " action="" method="get" novalidate>
   <div class="form-group col-md-7">
     <input class="form-control " type="text" style="width:45%" placeholder="{{'请输入用户名/邮箱/手机号'|trans}}" name="keyword" value="{{ app.request.get('keyword') }}">
 
     <button class="btn btn-primary">{{'搜索'|trans}}</button>
+
+      <button class="btn" onclick="fun()">{{'批量删除'|trans}}</button>
+      <div class="form-group" style="width: 100%">
+          <input input type="checkbox" id="all"  onclick="bat()">全选
+      </div>
+      {{ students.length }}
+      <input type="hidden" id="cid" value="{{ course.id }}"/>
   </div>
   <div class="clearfix"></div>
 </form>
 <table class="table table-striped" id="course-student-list">
   <thead>
     <tr>
-      <th width="40%">{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员'|trans)}}{% else %}{{'学员'|trans}}{% endif %}</th>
+        <th width="10%">{{'序号'|trans}}</th>
+      <th width="30%">{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员'|trans)}}{% else %}{{'学员'|trans}}{% endif %}</th>
      <th width="30%">{{'学习进度'|trans}}</th>
       <th width="30%">{{'操作'|trans}}</th>
     </tr>
   </thead>
   <tbody>
+    {% set no = 1 %}
     {% for student in students %}
       {% set user = users[student.userId] %}
      {% set progress = progresses[student.userId] %}
       {% set isFollowing = user.id in followingIds %}
       {% include 'TopxiaWebBundle:CourseStudentManage:tr.html.twig' %}
+
+        {% set no = no + 1 %}
     {% else %}
       <tr class="empty"><td colspan="20">无{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员')}}{% else %}学员{% endif %}记录</td></tr>
     {% endfor %}

@@ -2092,6 +2092,10 @@ course_bat_student:
     path: /course/{courseId}/batstudent
     defaults: { _controller: TopxiaWebBundle:CourseWork:batstudentindex}
 
+course_bat_del_student:
+    path: /course/{courseId}/batdelstudent
+    defaults: { _controller: TopxiaWebBundle:CourseWork:batdelstudentindex}
+
 course_fetch_bat_student:
     path: /course/{courseId}/fetchbatstudent
     defaults: { _controller: TopxiaWebBundle:CourseWork:batstudent1index}

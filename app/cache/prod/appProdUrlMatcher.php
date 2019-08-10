@@ -3522,6 +3522,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'course_bat_student')), array (  '_controller' => 'Topxia\\WebBundle\\Controller\\CourseWorkController::batstudentindexAction',));
             }
 
+            // course_bat_del_student
+            if (preg_match('#^/course/(?P<courseId>[^/]++)/batdelstudent$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'course_bat_del_student')), array (  '_controller' => 'Topxia\\WebBundle\\Controller\\CourseWorkController::batdelstudentindexAction',));
+            }
+
             // course_fetch_bat_student
             if (preg_match('#^/course/(?P<courseId>[^/]++)/fetchbatstudent$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'course_fetch_bat_student')), array (  '_controller' => 'Topxia\\WebBundle\\Controller\\CourseWorkController::batstudent1indexAction',));

@@ -143,7 +143,7 @@
     <div class="form-group" style="width: 100%">
         <input input type="checkbox" id="all"  onclick="bat()">全选
     </div>
-
+    {{ users.length }}
     <form action="{{ path('course_give_bat_student',{courseId:courseId}) }}" >
             <table class="table table-striped table-hover" >
                 <th>

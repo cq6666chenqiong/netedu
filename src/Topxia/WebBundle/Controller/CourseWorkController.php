@@ -13,6 +13,7 @@ use Topxia\Common\ArrayToolkit;
 use Symfony\Component\HttpFoundation\Request;
 use Topxia\Service\Question\Type\QuestionTypeFactory;
 use Topxia\System;
+use Topxia\AdminBundle\Controller\httpclient;
 
 class CourseWorkController extends BaseController
 {
@@ -104,6 +105,57 @@ class CourseWorkController extends BaseController
         mysqli_close($con);
         $course = array();
         $course['id'] = $courseId;
+        return $this->render('TopxiaWebBundle:MyCourse:batstudentcourse.htm.twig', array(
+            'classr'     => $classr,
+            'courseId'  =>$courseId,
+            'memberTypes' => $memberTypes,
+            'course'     => $course
+        ));
+    }
+
+    public function batdelstudentindexAction(Request $request,$courseId){
+        ini_set('display_errors','off');
+        $classr = array();
+        $memberTypes = array();
+        $con = mysqli_connect(System::$DBADDR,System::$DBUSER,System::$DBPASSWORD);
+        if (!$con)
+        {
+            die('Could not connect: ' . mysql_error());
+        }
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,"select id,title from classroom where status = 'published'");
+        if(!is_null($result)){
+            while($row = mysqli_fetch_array($result)){
+                array_push($classr,$row);
+            }
+        }
+
+
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,"select distinct(varcharField3) memberTypeName  from user_profile");
+        if(!is_null($result)){
+            while($row = mysqli_fetch_array($result)){
+                array_push($memberTypes,$row);
+            }
+        }
+
+        mysqli_close($con);
+        $course = array();
+        $course['id'] = $courseId;
+
+         $ip = System::$URL;
+
+        $url = 'http://'.$ip.'/courseMg/delCourseMember?courseId='.$courseId;
+        // $url = 'http://localhost:8080/statistics/getMemberScoreStatistics';
+        $http = new HttpClient($url);
+        error_log($url);
+        $http->get();
+        error_log("result===========".$http->getBody());
+        $json = json_decode($http->getBody(),true);
+
+
         return $this->render('TopxiaWebBundle:MyCourse:batstudentcourse.htm.twig', array(
             'classr'     => $classr,
             'courseId'  =>$courseId,

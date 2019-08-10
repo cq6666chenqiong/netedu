@@ -17,6 +17,10 @@ class System
     const VERSION = '1.0.1';//'6.17.13';
     const RELEASE_NOTES = "http://www.myBanana.com/intro/13";
 
+    public static $URL = 'localhost:8080';
+    //public static $URL = '123.56.7.13:8080';
+
+
 
     public static function getConnection(){
         $con = mysqli_connect(System::$DBADDR,System::$DBUSER,System::$DBPASSWORD);
