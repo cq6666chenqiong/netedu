@@ -201,7 +201,7 @@
         <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/student.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="36" column="2" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+              <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -1013,12 +1013,12 @@
       <workItem from="1565408720524" duration="1766000" />
       <workItem from="1565410560697" duration="1151000" />
       <workItem from="1565412475940" duration="1782000" />
-      <workItem from="1565414336613" duration="1390000" />
+      <workItem from="1565414336613" duration="1771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115898000" />
+    <option name="totallyTimeSpent" value="116279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1924" height="1030" extended-state="0" />
@@ -1452,7 +1452,7 @@
     <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/student.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="36" column="2" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+          <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
           <folding />
         </state>
       </provider>
