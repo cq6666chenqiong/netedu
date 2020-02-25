@@ -25,6 +25,9 @@ class LoginController extends BaseController
             $inviteCode = $request->query->get('inviteCode');
             return $this->redirect($this->generateUrl('login_bind', array('type' => 'weixinmob', '_target_path' => $this->getTargetPath($request), 'inviteCode' => $inviteCode)));
         }
+       // $user->
+
+
 
         return $this->render('TopxiaWebBundle:Login:index.html.twig', array(
             'last_username' => $request->getSession()->get(SecurityContext::LAST_USERNAME),

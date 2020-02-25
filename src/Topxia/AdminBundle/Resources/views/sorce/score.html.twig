@@ -97,6 +97,14 @@
                    <option {% if department == k.id %} selected {% endif %} value="{{ k.id }}">{{ k.title }}</option>
                 {% endfor %}
             </select>#}
+            <span>病区</span>
+            <select id="area" name="area" >
+                <option value="">全部</option>
+                {% for k in endemicArea %}
+                    <option {% if area == k.area %} selected {% endif %} value="{{ k.area }}">{{ k.area }}</option>
+                {% endfor %}
+            </select>
+
             <span>姓名</span>
             <input id="truename" type="text" name="truename" value="{{ truename }}"/>
             <input type="submit" value="查询" >
@@ -151,11 +159,11 @@
                 <th></th>
                 <th></th>
                 <th>层级</th>
-                <th>培训次数</th>
+                <th>学习进度</th>
                 <th>得分</th>
                 <th>评定</th>
                 <th>专业类型</th>
-                <th>培训次数</th>
+                <th>学习进度</th>
                 <th>得分</th>
                 <th>评定</th>
                 <th>合格标准</th>
@@ -180,7 +188,7 @@
                         {{ profession['typeName'] }}&nbsp;&nbsp;&nbsp; {{ profession['passmark'] }}&nbsp;&nbsp;&nbsp; {{ profession['total_score'] }} &nbsp;&nbsp;&nbsp;{{ profession['ispass'] }}<br/>
                     {% endfor %}
                 </td>
-                <td>大于13</td>
+                <td>>=13</td>
                 <td>{{ ar['total_score'] }}</td>
                 <td>{{ ar['ispass'] }}</td>
             </tr>

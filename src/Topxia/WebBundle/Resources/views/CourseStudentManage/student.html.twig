@@ -14,7 +14,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "http://localhost:8080/courseMg/delAllCourseMember?ids="+value+"&courseId="+courseId, //用于文件上传的服务器端请求地址
+                url: "http://123.56.7.13:8080/courseMg/delAllCourseMember?ids="+value+"&courseId="+courseId, //用于文件上传的服务器端请求地址
                 //url:"http://localhost:8080/statistics/getMemberDetailScore?nickname="+$num,
                 dataType: 'json', //返回值类型 一般设置为json
                 success: function (data, status)  //服务器成功响应处理函数

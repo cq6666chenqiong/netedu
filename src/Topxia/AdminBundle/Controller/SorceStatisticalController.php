@@ -25,7 +25,8 @@ class SorceStatisticalController  extends BaseController
         ini_set('display_errors','off');
         $year = $request->query->get("year");
 
-        $department = $request->query->get("department");
+        $area = $request->query->get("area");
+        error_log("============================".$area);
         $tname = $request->query->get("truename");
         $truename = $request->query->get("truename");
         if(is_null($year)||$year==''){
@@ -36,17 +37,26 @@ class SorceStatisticalController  extends BaseController
         }else{
             $truename=urlencode($truename);
         }
+
+        if(is_null($area)||$area==''){
+            $area="";
+        }else{
+            $area=urlencode($area);
+        }
+
         $beginTime = date($year."-01-01 00:00:00");
         $endTime = date($year."-12-31 23:59:59");
         //$url = 'http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGradeCount?year='.$year.'&cengji='.$department.'&name='.$truename;
        // $url = 'http://localhost:8080/statistics/getMemberNum?year='.$year.'&cengji='.$department.'&name='.$truename;
-        $url = 'http://'.$ip.'/statistics/getMemberNum?year='.$year.'&cengji='.$department.'&name='.$truename;
+        $url = 'http://'.$ip.'/statistics/getMemberNum?year='.$year.'&area='.$area.'&name='.$truename;
+
         //error_log($url);
         $http = new HttpClient($url);
         $http->get();
         //error_log("result===========".$http->getBody());
         $jsonCount = json_decode($http->getBody(),true);
         $num = $jsonCount['sum'];
+        error_log("result===========".$http->getBody());
        // $num = 1000;
         $paginator = new Paginator($this->get('request'), $num, 20);
         if(is_null($paginator->getCurrentPage())){
@@ -55,10 +65,10 @@ class SorceStatisticalController  extends BaseController
 
        // $http = new HttpClient('http://123.56.7.13:8080/netedustatistics/statistics/getScoreByGrade?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&cengji='.$department.'&name='.$truename);
         //$url = 'http://localhost:8080/statistics/getMemberScoreStatistics?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&cengji='.$department.'&name='.$truename;
-        $url = 'http://'.$ip.'/statistics/getMemberScoreStatistics?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&cengji='.$department.'&name='.$truename;
+        $url = 'http://'.$ip.'/statistics/getMemberScoreStatistics?start='.$paginator->getCurrentPage().'&plimit=10&year='.$year.'&area='.$area.'&name='.$truename;
        // $url = 'http://localhost:8080/statistics/getMemberScoreStatistics';
         $http = new HttpClient($url);
-        error_log($url);
+        //error_log($url);
         $http->get();
         /*$ary = [];
         $ary[0] = "sss";
@@ -69,6 +79,17 @@ class SorceStatisticalController  extends BaseController
         $http->send_post($url,$post_data);*/
         error_log("result===========".$http->getBody());
         $json = json_decode($http->getBody(),true);
+
+
+        $url = 'http://'.$ip.'/statistics/getEndemicArea';
+        //error_log($url);
+        $http = new HttpClient($url);
+        $http->get();
+        //error_log("result===========".$http->getBody());
+
+        $endemicArea = json_decode($http->getBody(),true);
+
+
 
   /*
 
@@ -233,8 +254,9 @@ class SorceStatisticalController  extends BaseController
             'year'                        =>  $year,
             'truename'                   => $tname,
             'paginator'                  =>  $paginator,
-            'arry'                       =>  $json
-
+            'arry'                       =>  $json,
+            'endemicArea'               => $endemicArea,
+            'area'                       => urldecode($area)
         ));
     }
 

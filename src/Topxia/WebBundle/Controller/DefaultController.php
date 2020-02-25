@@ -13,6 +13,16 @@ class DefaultController extends BaseController
 
         $user = $this->getCurrentUser();
 
+
+
+        if($user->isAdmin()){
+
+        }else{
+            if($request->query->get('index') == null){
+                return $this->redirect($this->generateUrl('my_courses_learning'));
+            }
+        }
+
         if (!empty($user['id'])) {
             $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
         }

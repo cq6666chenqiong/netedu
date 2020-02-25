@@ -1532,3 +1532,7 @@ admin_sorce_statistical:
 admin_sorce_statisticaldepartment:
     pattern: /sorce/statisticalByDepartment
     defaults: { _controller: TopxiaAdminBundle:SorceStatistical:statisticalByDepartment }
+
+admin_batch_createuser:
+    pattern: /batchcreate/batchCreateUser
+    defaults: { _controller: TopxiaAdminBundle:BatchCreateUser:index }

@@ -48,6 +48,8 @@ define(function(require, exports, module) {
 				} else {
 					$('.modal').modal('show').html(data);
 				}
+				alert("删除成功！");
+                location.reload();
 			});
 		});
 
@@ -57,5 +59,7 @@ define(function(require, exports, module) {
 			e.stopPropagation();
 		});
 	};
+
+
 
 });

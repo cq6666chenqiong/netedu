@@ -6132,6 +6132,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
 
             }
 
+            // admin_batch_createuser
+            if ($pathinfo === '/admin/batchcreate/batchCreateUser') {
+                return array (  '_controller' => 'Topxia\\AdminBundle\\Controller\\BatchCreateUserController::indexAction',  '_route' => 'admin_batch_createuser',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/mapi_v')) {

@@ -59,7 +59,7 @@
 						  </div>
 						{% else %}
 						  <div class="col-md-7 controls radios">
-							<input type="text" id="profile_idcard" name="profile[idcard]" class="form-control" value="{{ profile.idcard|default('') }}" readonly="readonly">
+							<input type="text" id="profile_idcard" name="profile[idcard]" class="form-control" value="{{ profile.idcard|default('') }}" >
 							<div class="help-block" style="display:none;"></div>
 						  </div>
 						{% endif %}
@@ -68,7 +68,7 @@
 					<div class="form-group" >
 						<label class="col-md-2 control-label">{{'出生日期'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_varcharField1" name="profile[varcharField1]" class="form-control" value="{{ profile.varcharField1|default('') }}" readonly="readonly">
+							<input type="text" id="profile_varcharField1" name="profile[varcharField1]" class="form-control" value="{{ profile.varcharField1|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>

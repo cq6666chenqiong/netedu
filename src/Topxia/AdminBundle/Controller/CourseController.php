@@ -6,6 +6,7 @@ use Topxia\Common\ArrayToolkit;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 use Topxia\System;
+use Topxia\AdminBundle\Controller\httpclient;
 
 class CourseController extends BaseController
 {
@@ -203,6 +204,13 @@ class CourseController extends BaseController
                 return $this->createJsonResponse($this->returnDeleteStatus($result, $type));
             }
         }
+
+        error_log("sssssccccccccc");
+        $ip = System::$URL;
+        $url = 'http://'.$ip.'/courseMg/delCourse?courseId='.$courseId;
+        //error_log($url);
+        $http = new HttpClient($url);
+        $http->get();
 
         return $this->render('TopxiaAdminBundle:Course:delete.html.twig', array('course' => $course));
     }
