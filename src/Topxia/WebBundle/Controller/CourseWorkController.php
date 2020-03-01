@@ -173,6 +173,7 @@ class CourseWorkController extends BaseController
         $birthday = $request->query->get('birthday');
         $birthday_end = $request->query->get('birthday_end');
         $degree = $request->query->get('degree');
+        $position = $request->query->get('position');
         $con = mysqli_connect(System::$DBADDR,System::$DBUSER,System::$DBPASSWORD);
         if (!$con)
         {
@@ -192,12 +193,16 @@ class CourseWorkController extends BaseController
             }
         }
 
-        /*if(!is_null($result)){
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,"select id,title from classroom where status = 'published'");
+
+        if(!is_null($result)){
             while($row = mysqli_fetch_array($result)){
                 //array_push($classr,$row);
                 $classr1[$row['id']] = $row['title'];
             }
-        }*/
+        }
 
         /*if(!is_null($result)){
             while($row = mysqli_fetch_array($result)){
@@ -233,13 +238,18 @@ class CourseWorkController extends BaseController
         if(!empty($birthday)){
             $sql = $sql." and p.varcharField1 > '".$birthday."'";
         }
-
         if(!empty($birthday)){
             $sql = $sql." and p.varcharField1 < '".$birthday_end."'";
         }
-
         if(!empty($degree)){
             $sql = $sql ." and p.varcharField5 = '".$degree."'";
+        }
+        if(!empty($position)){
+            if($position == "护士长" || $position == "教学老师"){
+                $sql = $sql ." and p.varcharField2 like  '%".$position."%'";
+            }else{
+                $sql = $sql ." and p.varcharField2 = '".$position."'";
+            }
         }
         $sql = $sql  ." order by p.company;";
 
@@ -255,6 +265,14 @@ class CourseWorkController extends BaseController
         mysqli_close($con);
         $course = array();
         $course['id'] = $courseId;
+
+        $num = 0;
+        foreach($users as $key=>$val)
+        { //使用循环结构遍历数组,获取学号
+            $num = $num + 1;
+            $users[$key]['index'] = $key + 1;
+        }
+
         return $this->render('TopxiaWebBundle:MyCourse:batstudentcourse1.htm.twig', array(
             'classr'     => $classr,
             'users'      => $users,
@@ -264,7 +282,9 @@ class CourseWorkController extends BaseController
             'sskeshi'      => $sskeshi,
             'memberType'      => $memberType,
             'memberTypes' => $memberTypes,
-            'classr1'    => $classr1
+            'classr1'    => $classr1,
+            'num'    => $num,
+            'position'    => $position
         ));
     }
 

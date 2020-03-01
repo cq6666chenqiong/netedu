@@ -26,7 +26,7 @@
                    <option {% if sskeshi == "静疗" %} selected {% endif %} value="静疗"> 静疗 </option>
                    <option {% if sskeshi == "糖尿病" %} selected {% endif %} value="糖尿病"> 糖尿病 </option>
                    <option {% if sskeshi == "危重症" %} selected {% endif %} value="危重症"> 危重症 </option>
-                   <option {% if sskeshi == "跌倒坠床及压疮" %} selected {% endif %} value="跌倒坠床及压疮"> 跌倒坠床及压疮 </option>
+                   <option {% if sskeshi == "跌倒" %} selected {% endif %} value="跌倒"> 跌倒 </option>
                    <option {% if sskeshi == "肿瘤" %} selected {% endif %} value="肿瘤"> 肿瘤 </option>
                    <option {% if sskeshi == "管路" %} selected {% endif %} value="管路"> 管路 </option>
                    <option {% if sskeshi == "健康教育" %} selected {% endif %} value="健康教育"> 健康教育 </option>
@@ -40,6 +40,7 @@
                    <option {% if sskeshi == "护理文书" %} selected {% endif %} value="护理文书"> 护理文书 </option>
                    <option {% if sskeshi == "应急" %} selected {% endif %} value="应急"> 应急 </option>
                    <option {% if sskeshi == "宣传" %} selected {% endif %} value="宣传"> 宣传 </option>
+                   <option {% if sskeshi == "坠床" %} selected {% endif %} value="坠床"> 坠床 </option>
                </select>
            </div>
            <div class="form-group">
@@ -49,6 +50,14 @@
                    {% for m in memberTypes %}
                        <option value="{{ m.memberTypeName }}"> {{ m.memberTypeName }}  </option>
                    {% endfor %}
+               </select>
+               行政职务
+               <select id="position" name="position" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
+                   <option value=""> 全选 </option>
+                   <option {% if position == "高级" %} selected {% endif %} value="高级"> 高级 </option>
+                   <option {% if position == "护士" %} selected {% endif %} value="护士"> 护士 </option>
+                   <option {% if position == "护士长" %} selected {% endif %} value="护士长"> 护士长 </option>
+                   <option {% if position == "教学老师" %} selected {% endif %} value="教学老师"> 教学老师 </option>
                </select>
                {#<select id="memberType" name="memberType" style="width: 30%;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 6px 12px;">
                    <option value=""> 全选 </option>

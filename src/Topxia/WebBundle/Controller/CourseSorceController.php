@@ -22,6 +22,15 @@ class CourseSorceController extends BaseController
 {
 
     public function indexAction(Request $request,$userId){
+        $year = $request->query->get("year");
+        $startTime = 0;
+        $endTime = 0;
+        if(is_null($year)||$year==''){
+            $year=intval (date("Y"));
+            $startTime = mktime(0,0,0,1,1,$year);
+            $endTime = mktime(23,59,59,31,12,$year);
+        }
+
         $con = mysqli_connect(System::$DBADDR,System::$DBUSER,System::$DBPASSWORD);
         if (!$con)
         {
@@ -31,6 +40,11 @@ class CourseSorceController extends BaseController
         JOIN user_score s on s.userId = u.id 
         left join course c on s.courseId = c.id
         where u.id = ".$userId.";";
+        if($startTime > 0){
+            $sql = $sql." and createdTime > ".$startTime;
+            $sql = $sql." and createdTime < ".$endTime;
+        }
+
         error_log($sql);
         mysqli_select_db($con,System::$DBNAME);
         mysqli_multi_query($con,"set names 'utf8'");
@@ -41,12 +55,22 @@ class CourseSorceController extends BaseController
                 array_push($score,$row);
             }
         }
+        $totalScore = 0;
+        foreach($score as $key=>$val)
+        { //使用循环结构遍历数组,获取学号
+            $totalScore = $totalScore + $val['xuefen'];
+        }
+
+
         //$paginator = new Paginator($this->get('request'), 60, 20);
         $con->close();
         error_log(json_encode($score));
         return $this->render('TopxiaWebBundle:MyCourse:score.html.twig', array(
             'score'  =>  $score,
-            'num' => sizeof($score)
+            'num' => sizeof($score),
+            'userId'=> $userId,
+            'totalScore'=> $totalScore,
+            'year'=>$year
         ));
     }
 

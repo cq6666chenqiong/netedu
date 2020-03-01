@@ -2,33 +2,347 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4906b9a7-0041-4091-bfa2-a0badec4188f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/BatchCreateUserController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/batchCreateUser/index.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/277899f8e2b3808feefef224b6fa01b7b177b448#clearCache.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/277899f8e2b3808feefef224b6fa01b7b177b448#delete.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/277899f8e2b3808feefef224b6fa01b7b177b448#get.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/277899f8e2b3808feefef224b6fa01b7b177b448#getCacheService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/277899f8e2b3808feefef224b6fa01b7b177b448#getSettingDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/277899f8e2b3808feefef224b6fa01b7b177b448#set.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/2ab53bdcda5d3a817cdbbacb429aec520eeaf1ff#addThemeConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/2ab53bdcda5d3a817cdbbacb429aec520eeaf1ff#getThemeConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/2ab53bdcda5d3a817cdbbacb429aec520eeaf1ff#getThemeConfigByName.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/2ab53bdcda5d3a817cdbbacb429aec520eeaf1ff#updateThemeConfigByName.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4a0258f60216de646267527907361c4feaeae3d1#addCache.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4a0258f60216de646267527907361c4feaeae3d1#deleteAllCache.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4a0258f60216de646267527907361c4feaeae3d1#deleteCacheByName.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4a0258f60216de646267527907361c4feaeae3d1#findCachesByNames.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4a0258f60216de646267527907361c4feaeae3d1#getCache.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#addUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#analysisRegisterDataByTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#analysisUserSumByTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#clearCounterById.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#createUserQueryBuilder.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#findUserByEmail.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#findUserByNickname.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#findUserByVerifiedMobile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#findUsersByIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#findUsersByNicknames.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#findUsersCountByLessThanCreatedTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#getUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#getUserByInviteCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#searchUserCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#searchUsers.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#updateUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/4b07395d7ed06a703096ae68547618c39ac6ee23#waveCounterById.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#createAccessDeniedException.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#createDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#createNotFoundException.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#createService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#createServiceException.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#dispatchEvent.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#getCurrentUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#getDispatcher.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#getEnvVariable.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#getKernel.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#getLogger.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/5f653cbf1c522539c8e06ee9e5323396c791495b#purifyHtml.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#createOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#delete.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#deleteOrgsByOrgCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#findOrgsStartByOrgCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#getOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#getOrgByCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#getOrgByOrgCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/64a5ccd7dcf5a9ef447190a266516b19215a69d7#updateOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#addOrderBy.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#checkOrderBy.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#clearCached.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#createDaoException.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#createDynamicQueryBuilder.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#createSerializer.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#fetchCached.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#filterStartLimit.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#getConnection.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#getRedis.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#getTable.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#getTableVersion.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#hasEmptyInCondition.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#setConnection.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#setRedis.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#validateOrderBy.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/755069e7ac779c128d24747c004d07abe14e9ead#wave.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#_prepareSearchConditions.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#createNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#deleteNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#findNavigations.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#findNavigationsByType.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getLogService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getNavigationDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getNavigationsCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getNavigationsCountByType.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getNavigationsListByType.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getOpenedNavigationsTreeByType.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#getSettingService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#makeNavigationTreeList.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#searchNavigationCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#searchNavigations.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#setNavigationOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#updateNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/8399b1c03bce335a2b41df5da191fb68ed63b76b#updateNavigationsSequenceByIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/907b87129ef48c51de79f28065e567f61b8eb23a#clear.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/907b87129ef48c51de79f28065e567f61b8eb23a#garbageCollection.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/907b87129ef48c51de79f28065e567f61b8eb23a#get.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/907b87129ef48c51de79f28065e567f61b8eb23a#getCacheDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/907b87129ef48c51de79f28065e567f61b8eb23a#gets.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/907b87129ef48c51de79f28065e567f61b8eb23a#set.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#checkBeforProccess.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#createOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#deleteOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#findOrgsStartByOrgCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#getOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#getOrgByOrgCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#getOrgDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#isCodeAvaliable.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#sortOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#switchOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#updateOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#updateOrgCodeAndDepth.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/93276ac6301913616834b020cb2af61d1e4ac2a6#updateParentOrg.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#addFileGroup.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#bindFile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#bindFiles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#deleteFile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#deleteFileByUri.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#deleteFileGroup.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#generateUri.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getAllFileGroups.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getCourseService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFileCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFileDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFileGroup.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFileGroupByCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFileObject.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFiles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getFilesByIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getGroupDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getImgFileMetaInfo.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getSettingService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#getTargetFiles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#parseFileUri.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#saveFile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#thumbnailFile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#unbindFile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#unbindFiles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#unbindTargetFiles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#uploadFile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#validateFileExtension.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#validateFileIsImage.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9c000165b6b4d522c9e6250b930c483f8748179c#validateFileNameLength.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#afterJonExecute.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#createJob.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#deleteJob.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#executeJob.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#findJobByNameAndTargetTypeAndTargetId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#findJobByTargetTypeAndTargetId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#getJob.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#getJobDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#getLogService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#getNextExcutedTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#getSettingService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#prepareSearchConditions.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#refreshNextExecutedTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#scheduleJobs.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#searchJobs.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#searchJobsCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#setNextExcutedTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/9ce7f5fe4a962d31fa46890855842e4d9b9795b3#updateJob.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#_createSearchQueryBuilder.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#addNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#deleteNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#deleteNavigationByParentId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#findNavigations.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#findNavigationsByType.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#getNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#getNavigationsCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#getNavigationsCountByType.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#searchNavigationCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#searchNavigations.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/a8bd4786e9c1283aeb5f4e1cc6ddaec0b89955f8#updateNavigation.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#__construct.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#createThemeConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#editThemeConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#getCurrentThemeConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#getSettingService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#getThemeConfigByName.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#getThemeConfigDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#isAllowedConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#resetConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#resetCurrentConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#saveConfirmConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ad0c03b091d89896e56745372eafd72636c6b2fe#saveCurrentThemeConfig.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#_prepareSearchConditions.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#createAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#deleteAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#getAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#getAnnouncementDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#getCourseService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#searchAnnouncements.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#searchAnnouncementsCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/ba22f70e5b7a94671b510d4ae24415fface10929#updateAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#addUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#addUserSecureQuestionsWithUnHashedAnswers.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#analysisRegisterDataByTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#analysisUserSumByTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#applyUserApproval.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#bindUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#cancelPromoteUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changeAvatar.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changeAvatarFromImgUrl.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changeEmail.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changeMobile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changeNickname.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changeOrgCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changePassword.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changePayPassword.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#changeUserRoles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#checkLoginForbidden.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#clearUserCounter.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#createInviteCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#createUserPayAgreement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#deleteToken.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#deleteUserPayAgreements.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#dropFieldData.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#filterFollowingIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findAllUserFollower.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findAllUserFollowing.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findBindsByUserId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findFriendCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findFriends.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findLatestPromotedTeacher.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUnlockedUserMobilesByUserIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserApprovalsByUserIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserFollowerCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserFollowers.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserFollowing.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserFollowingCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserIdsByInviteCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserPayAgreementsByUserId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUserProfilesByIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUsersByIds.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#findUsersCountByLessThanCreatedTime.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#follow.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#generateEmail.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#generateNickname.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getBlacklistService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getCardService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getCouponDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getCouponService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getFileService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getFriendDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getInviteRecordService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getIpBlacklistService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getLastestApprovalByUserIdAndStatus.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getLogService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getNotificationService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getOrgService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getPasswordEncoder.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getProfileDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getRandomChar.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getRegisterMode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getSettingService.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getToken.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserApprovalDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserBindByToken.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserBindByTypeAndFromId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserBindByTypeAndUserId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserBindDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserByEmail.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserByInviteCode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserByLoginField.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserByNickname.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserByVerifiedMobile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserFortuneLogDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserPayAgreement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserPayAgreementByUserId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserPayAgreementByUserIdAndBankAuth.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserPayAgreementDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserProfile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserSecureQuestionDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserSecureQuestionsByUserId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#getUserTokenDao.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#hasAdminRoles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#importUpdateEmail.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#isEmailAvaliable.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#isFollowed.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#isMobileAvaliable.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#isMobileRegisterMode.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#isMobileUnique.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#isNicknameAvaliable.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#lockUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#makeToken.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#markLoginFailed.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#markLoginInfo.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#markLoginSuccess.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#parseAts.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#parseRegistration.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#passApproval.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#promoteUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#register.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#rejectApproval.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#rememberLoginSessionId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#searchApprovals.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#searchApprovalsCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#searchTokenCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#searchUserCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#searchUserProfileCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#searchUserProfiles.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#searchUsers.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#setEmailVerified.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#setupAccount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#typeInOAuthClient.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#unBindUserByTypeAndToId.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#unFollow.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#unlockUser.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#updateUserPayAgreementByUserIdAndBankAuth.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#updateUserProfile.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#validateNickname.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#verifyInSaltOut.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#verifyPassword.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#verifyPayPassword.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f82fb76c26a275f235d31118342759efbc39f5f6#waveUserCounter.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#addAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#createSearchQueryBuilder.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#deleteAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#filterSort.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#getAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#searchAnnouncements.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#searchAnnouncementsCount.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/topxia/f9414ecbb2d7496aebab97aaa1a77974dceedc98#updateAnnouncement.cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/appProdUrlGenerator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/appProdUrlMatcher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/classes.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/classes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/modules_config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/translations/catalogue.zh_CN.40866b64c11305a3b999d9ce77b55a9a25434b02.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" afterPath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/prod/appProdUrlGenerator.php" afterPath="$PROJECT_DIR$/app/cache/prod/appProdUrlGenerator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/prod/appProdUrlMatcher.php" afterPath="$PROJECT_DIR$/app/cache/prod/appProdUrlMatcher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data/session_gc_time.data" afterPath="$PROJECT_DIR$/app/data/session_gc_time.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/prod.log" afterPath="$PROJECT_DIR$/app/logs/prod.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/CourseController.php" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/CourseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/tr.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/tr.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/index.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/index.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/LoginController.php" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/Widget/course-price.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/Widget/course-price.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/courses-block-grid.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/courses-block-grid.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseManage/base.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseManage/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/student.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/student.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Default/member-recently-learned.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Default/member-recently-learned.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Default/xsheader.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Default/xsheader.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Settings/profile.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Settings/profile.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/topxiaadmin/js/controller/course/manage.js" afterPath="$PROJECT_DIR$/web/bundles/topxiaadmin/js/controller/course/manage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse.htm.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse.htm.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/score.html.twig" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/score.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,63 +354,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="departmentsorce.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3078">
+              <caret line="114" column="23" lean-forward="false" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BatchCreateUserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/BatchCreateUserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding>
-                <element signature="e#135#163#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BatchNotificationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/BatchNotificationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="macro.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/macro.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="paginator.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/paginator.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloud-app-layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/cloud-app-layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="200">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,9 +377,31 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41310">
-              <caret line="1530" column="0" lean-forward="false" selection-start-line="1530" selection-start-column="0" selection-end-line="1530" selection-end-column="0" />
+            <state relative-caret-position="27">
+              <caret line="310" column="61" lean-forward="false" selection-start-line="310" selection-start-column="58" selection-end-line="310" selection-end-column="61" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="2075" column="31" lean-forward="false" selection-start-line="2075" selection-start-column="31" selection-end-line="2075" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseSorceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+              <folding>
+                <marker date="1583039865729" expanded="true" signature="988:1262" ph="select u.nic... user" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,18 +409,28 @@
       <file leaf-file-name="SorceStatisticalController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="50" />
+            <state relative-caret-position="810">
+              <caret line="241" column="38" lean-forward="false" selection-start-line="241" selection-start-column="38" selection-end-line="241" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/BatchCreateUser/index.html.twig">
+      <file leaf-file-name="course-item.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/course-item.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="score.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/score.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="25" column="107" lean-forward="false" selection-start-line="25" selection-start-column="107" selection-end-line="25" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -143,14 +447,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ajax</find>
-      <find>getCurrentUser</find>
-      <find>isda</find>
-      <find>TopxiaWebBundle</find>
-      <find>is</find>
-      <find>isadmi</find>
-      <find>isadmin</find>
-      <find>w</find>
       <find>wod</find>
       <find>我的</find>
       <find>我的学习</find>
@@ -161,7 +457,6 @@
       <find>已发布</find>
       <find>发布课程</find>
       <find>delete-course</find>
-      <find>课程类型</find>
       <find>临床药品</find>
       <find>atuo</find>
       <find>atu</find>
@@ -173,6 +468,15 @@
       <find>getRegisterData</find>
       <find>admin_course_delete</find>
       <find>admin_operation_group</find>
+      <find>创建课程</find>
+      <find>学员管理</find>
+      <find>课程类型</find>
+      <find>searchCourseCount</find>
+      <find>用户总数</find>
+      <find>bat</find>
+      <find>{% set</find>
+      <find>set</find>
+      <find>我的学分</find>
     </findStrings>
     <dirStrings>
       <dir>D:\wamp64\wamp\www\netedu\vendor2</dir>
@@ -184,8 +488,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/QuizQuestionTest/do-test-determine.html.twig" />
-        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/QuizQuestionTest/do-test-fill.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseManage/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/user-table-tr.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Default/member-recently-learned.html.twig" />
@@ -196,7 +498,6 @@
         <option value="$PROJECT_DIR$/src/Topxia/Service/Course/Impl/CourseMemberServiceImpl.php" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseOrderController.php" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse2.htm.twig" />
-        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse.htm.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Default/header.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/create-modal.html.twig" />
@@ -207,12 +508,9 @@
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/learn.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/httpclient.php" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/httpclient.php" />
-        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" />
         <option value="$PROJECT_DIR$/web/functionDir/upload_member_score.php" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/tr.html.twig" />
-        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/student.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Settings/profile.html.twig" />
@@ -222,19 +520,25 @@
         <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Topxia/System.php" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/tr.html.twig" />
-        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/CourseController.php" />
         <option value="$PROJECT_DIR$/web/bundles/topxiaadmin/js/controller/course/manage.js" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php" />
-        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig" />
-        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig" />
-        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig" />
         <option value="$PROJECT_DIR$/web/functionDir/System.php" />
         <option value="$PROJECT_DIR$/web/functionDir/createExcel/System.php" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/batchCreateUser/index.html.twig.html" />
-        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/BatchCreateUserController.php" />
         <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/BatchCreateUser/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/CourseController.php" />
+        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse.htm.twig" />
+        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php" />
+        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" />
+        <option value="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/score.html.twig" />
       </list>
     </option>
   </component>
@@ -266,8 +570,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,28 +624,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionDir" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="createExcel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netedu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netedu" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -384,7 +664,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemId" value="WebBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,7 +686,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemId" value="WebBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -436,7 +716,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemId" value="WebBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -448,7 +728,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BatchCreateUser" />
+              <option name="myItemId" value="MyCourse" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,7 +750,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemId" value="WebBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -496,7 +776,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemId" value="WebBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -505,6 +785,80 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netedu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netedu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Topxia" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netedu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netedu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Topxia" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netedu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netedu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Topxia" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,6 +896,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -764,31 +1120,49 @@
       <workItem from="1582438489815" duration="774000" />
       <workItem from="1582440284012" duration="1292000" />
       <workItem from="1582441675727" duration="571000" />
+      <workItem from="1582865242125" duration="1034000" />
+      <workItem from="1582889095906" duration="744000" />
+      <workItem from="1582891187632" duration="1405000" />
+      <workItem from="1582933949760" duration="1638000" />
+      <workItem from="1582935972747" duration="1720000" />
+      <workItem from="1582937836600" duration="1368000" />
+      <workItem from="1582943889906" duration="1410000" />
+      <workItem from="1582945910663" duration="1999000" />
+      <workItem from="1582948268349" duration="1033000" />
+      <workItem from="1582973501176" duration="870000" />
+      <workItem from="1583022557454" duration="1492000" />
+      <workItem from="1583028729982" duration="1760000" />
+      <workItem from="1583030542803" duration="1774000" />
+      <workItem from="1583032464414" duration="1768000" />
+      <workItem from="1583034698500" duration="1224000" />
+      <workItem from="1583036526235" duration="1778000" />
+      <workItem from="1583038346471" duration="1773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144758000" />
+    <option name="totallyTimeSpent" value="169548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28687635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3497831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20190024" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20190024" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -824,118 +1198,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3888">
-          <caret line="144" column="10" lean-forward="false" selection-start-line="142" selection-start-column="4" selection-end-line="144" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/student.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/functionDir/createExcel/PHPExcel/Settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3699">
-          <caret line="147" column="28" lean-forward="false" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/Service/Common/BaseTestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/Service/Course/Impl/CourseServiceImpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67203">
-          <caret line="2494" column="28" lean-forward="false" selection-start-line="2494" selection-start-column="12" selection-end-line="2494" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Custom/WebBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Custom/AdminBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseStudentManage/tr.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Default/xsheader.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Settings/profile.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="73" column="26" lean-forward="true" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/topxiamobilebundlev2/main/view/course.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -947,13 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1297" column="53" lean-forward="false" selection-start-line="1297" selection-start-column="45" selection-end-line="1297" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1006,27 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="128" lean-forward="false" selection-start-line="2" selection-start-column="128" selection-end-line="2" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5832">
-          <caret line="216" column="29" lean-forward="false" selection-start-line="216" selection-start-column="29" selection-end-line="216" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4860">
-          <caret line="180" column="22" lean-forward="false" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5832">
@@ -1059,15 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/System.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,7 +1300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,13 +1317,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="90" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/config/menus_admin.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1107,18 +1324,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/CourseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1647">
-          <caret line="120" column="41" lean-forward="false" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/paginator.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,49 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/macro.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41310">
-          <caret line="1530" column="0" lean-forward="false" selection-start-line="1530" selection-start-column="0" selection-end-line="1530" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/BatchCreateUserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding>
-            <element signature="e#135#163#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1176,22 +1342,227 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/BatchNotificationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="297">
           <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/functionDir/upload_members.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="87" column="7" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/functionDir/upload_member_score.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/BatchCreateUser/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="34" column="551" lean-forward="false" selection-start-line="34" selection-start-column="551" selection-end-line="34" selection-end-column="551" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/macro.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/Service/Course/Impl/CourseServiceImpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="119" column="5" lean-forward="false" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/Service/Course/Dao/Impl/CourseDaoImpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6318">
+          <caret line="235" column="47" lean-forward="false" selection-start-line="235" selection-start-column="40" selection-end-line="235" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/Service/Course/CourseService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/System.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Statistic/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Statistic/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/functionDir/download_student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/User/user-table-tr.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/score.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2862">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="114" column="23" lean-forward="false" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse.htm.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2133">
+          <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="272" column="45" lean-forward="true" selection-start-line="272" selection-start-column="45" selection-end-line="272" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/data.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1285">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/course-item.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="2075" column="31" lean-forward="false" selection-start-line="2075" selection-start-column="31" selection-end-line="2075" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="310" column="61" lean-forward="false" selection-start-line="310" selection-start-column="58" selection-end-line="310" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/BatchCreateUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/CourseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding>
+            <marker date="1583039865729" expanded="true" signature="988:1262" ph="select u.nic... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/Course/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/AdminBundle/Controller/SorceStatisticalController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="241" column="38" lean-forward="false" selection-start-line="241" selection-start-column="38" selection-end-line="241" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/score.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="25" column="107" lean-forward="false" selection-start-line="25" selection-start-column="107" selection-end-line="25" selection-end-column="107" />
           <folding />
         </state>
       </provider>

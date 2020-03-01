@@ -12,6 +12,7 @@ class CourseController extends BaseController
 {
     public function indexAction(Request $request, $filter)
     {
+        error_reporting(0);
         $conditions = $request->query->all();
 
         if ($filter == 'normal') {
@@ -42,6 +43,15 @@ class CourseController extends BaseController
             $conditions['likeOrgCode'] = $conditions['orgCode'];
             unset($conditions['orgCode']);
         }
+
+        //$year = $request->query->get("year");
+        $year =$conditions["year"];
+        if(is_null($year)||$year==''){
+            $year=intval (date("Y"));
+        }
+
+        $conditions['startTime'] = mktime(0,0,0,1,1,$year);
+        $conditions['endTime'] = mktime(23,59,59,31,12,$year);
 
         $coinSetting = $this->getSettingService()->get("coin");
         $coinEnable  = isset($coinSetting["coin_enabled"]) && $coinSetting["coin_enabled"] == 1 && $coinSetting['cash_model'] == 'currency';
@@ -97,7 +107,8 @@ class CourseController extends BaseController
             'liveSetEnabled' => $courseSetting['live_course_enabled'],
             'default'        => $default,
             'classrooms'     => $classrooms,
-            'filter'         => $filter
+            'filter'         => $filter,
+            'year'           => $year
         ));
     }
 
