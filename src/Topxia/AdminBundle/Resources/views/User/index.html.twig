@@ -17,17 +17,18 @@
 {{ web_macro.flash_messages() }}
     <script src="/js/jquery.js?6.17.13"></script>
 <div>
-    <a class="btn btn-info btn-sm" href="{{ path('admin_batch_createuser') }}"><span class="glyphicon glyphicon-plus"></span>新批量</a>
+
   <a class="btn btn-info btn-sm" href="{{ path('admin_user_create') }}"><span class="glyphicon glyphicon-plus"></span>添加用户</a>
     <a class="btn btn-info btn-sm" onclick="getBatMemenber()"><span class="glyphicon glyphicon-plus"></span>批量下载用户信息</a>
-<a id="download" href="" target="_blank"></a>
+  <a id="download" href="" target="_blank"></a>
   <div class="form-group div">
+      <a class="btn btn-info btn-sm" href="{{ path('admin_batch_createuser') }}"><span class="glyphicon glyphicon-plus"></span>批量添加用户</a>
 
-    <button type="button" class="btn btn-info btn-sm button1"  onclick="myajaxFileUpload('/functionDir/upload_members.php',null)" class="btn"><span class="glyphicon glyphicon-plus"></span>批量创建用户</button>
+    {#<button type="button" class="btn btn-info btn-sm button1"  onclick="myajaxFileUpload('/functionDir/upload_members.php',null)" class="btn"><span class="glyphicon glyphicon-plus"></span>批量创建用户</button>
     <input type="text" id="copyFile" name="copyFile"  style=" width:66%;margin-right:10px;display: none" />
 
     <input type="file" class="input"id="file"    name="file" onchange="getFile(this,'copyFile')"  />
-    <a href="/functionDir/download_student.php">下载模板</a>
+    <a href="/functionDir/download_student.php">下载模板</a>#}
 
   </div>
 </div>
@@ -92,7 +93,8 @@
             var nickname = $("#keyword").val();
             var truename = encodeURIComponent($("#truename").val());
             var company = $("#company").val();
-            var url = "/functionDir/ajax/download_user_message.php?nickname=" + nickname + "&truename=" + truename + "&company=" + company;
+            //var url = "/functionDir/ajax/download_user_message.php?nickname=" + nickname + "&truename=" + truename + "&company=" + company;
+            var url = "http://localhost:8080/memberUpload/downLoadMemberExcel?nickname=" + nickname + "&truename=" + truename + "&company=" + company;
 
             myajax(url);
         }

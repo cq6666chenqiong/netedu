@@ -503,5 +503,17 @@ class SorceStatisticalController  extends BaseController
     }
 
 
+    public function uploadScoreAction(Request $request){
+
+        $conditions = $request->query->all();
+
+        error_log("线下上传成绩");
+
+        return $this->render('TopxiaAdminBundle:sorce:uploadScore.html.twig', array(
+
+        ));
+    }
+
+
 
 }

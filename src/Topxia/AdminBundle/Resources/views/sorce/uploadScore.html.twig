@@ -1,0 +1,12 @@
+{% extends 'TopxiaAdminBundle::layout.html.twig' %}
+
+{% block title %}{{'学分统计'|trans}} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <style>
+        .ri {
+            float: right;
+        }
+    </style>
+    <iframe src="http://localhost:8080/scoreUpload" width="400" height="400"></iframe>
+{% endblock %}
