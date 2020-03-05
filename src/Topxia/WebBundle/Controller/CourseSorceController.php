@@ -28,7 +28,10 @@ class CourseSorceController extends BaseController
         if(is_null($year)||$year==''){
             $year=intval (date("Y"));
             $startTime = mktime(0,0,0,1,1,$year);
-            $endTime = mktime(23,59,59,31,12,$year);
+            $endTime = mktime(23,59,59,12,31,$year);
+        }else{
+            $startTime = mktime(0,0,0,1,1,$year);
+            $endTime = mktime(23,59,59,12,31,$year);
         }
 
         $con = mysqli_connect(System::$DBADDR,System::$DBUSER,System::$DBPASSWORD);
@@ -39,10 +42,10 @@ class CourseSorceController extends BaseController
         $sql = "select u.nickname nickname,ifnull(s.score,0) xuefen,c.title title,s.year year,ifnull(s.courseName,'在线课程') courseName,ifnull(s.remark,'在线') remark from user u 
         JOIN user_score s on s.userId = u.id 
         left join course c on s.courseId = c.id
-        where u.id = ".$userId.";";
+        where u.id = ".$userId;
         if($startTime > 0){
-            $sql = $sql." and createdTime > ".$startTime;
-            $sql = $sql." and createdTime < ".$endTime;
+            $sql = $sql." and c.createdTime > ".$startTime;
+            $sql = $sql." and c.createdTime < ".$endTime;
         }
 
         error_log($sql);
@@ -55,10 +58,25 @@ class CourseSorceController extends BaseController
                 array_push($score,$row);
             }
         }
+        $sql = "select * from user_score where courseId < 0 and userId = ".$userId;
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_multi_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,$sql);
+        $other = array();
+        if(!empty($result)){
+            while(($row = mysqli_fetch_array($result)) != null){
+                array_push($other,$row);
+            }
+        }
+
         $totalScore = 0;
         foreach($score as $key=>$val)
         { //使用循环结构遍历数组,获取学号
             $totalScore = $totalScore + $val['xuefen'];
+        }
+        foreach($other as $key=>$val)
+        { //使用循环结构遍历数组,获取学号
+            $totalScore = $totalScore + $val['score'];
         }
 
 
@@ -67,6 +85,7 @@ class CourseSorceController extends BaseController
         error_log(json_encode($score));
         return $this->render('TopxiaWebBundle:MyCourse:score.html.twig', array(
             'score'  =>  $score,
+            'other' => $other,
             'num' => sizeof($score),
             'userId'=> $userId,
             'totalScore'=> $totalScore,

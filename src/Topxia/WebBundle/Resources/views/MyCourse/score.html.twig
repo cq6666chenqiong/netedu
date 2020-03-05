@@ -39,6 +39,11 @@
                         <tr><td>{{ sc.courseName }}</td><td>{{ sc.year }}</td><td>{{ sc.xuefen }}</td><td>{{ sc.remark }}</td></tr>
                     {% endif %}
                 {% endfor %}
+                {% for  sc in other  %}
+
+                        <tr><td>{{ sc.courseName }}</td><td>{{ sc.year }}</td><td>{{ sc.score }}</td><td>{{ sc.remark }}</td></tr>
+
+                {% endfor %}
             </table>
         </div>
     </div>
