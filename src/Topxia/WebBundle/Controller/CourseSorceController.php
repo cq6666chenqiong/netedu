@@ -39,7 +39,7 @@ class CourseSorceController extends BaseController
         {
             die('Could not connect: ' . mysql_error());
         }
-        $sql = "select u.nickname nickname,ifnull(s.score,0) xuefen,c.title title,s.year year,ifnull(s.courseName,'在线课程') courseName,ifnull(s.remark,'在线') remark from user u 
+        $sql = "select u.nickname nickname,ifnull(s.score,0) xuefen,c.title title,s.year year,ifnull(s.courseName,'在线课程') courseName,ifnull(s.remark,'在线') remark,c.buyable type from user u 
         JOIN user_score s on s.userId = u.id 
         left join course c on s.courseId = c.id
         where u.id = ".$userId;

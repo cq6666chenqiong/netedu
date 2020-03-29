@@ -222,8 +222,9 @@ class CourseWorkController extends BaseController
         $users = array();
         $sql = "select u.id id,u.nickname nickname,p.weixin num,p.truename truename,p.company company  from user_profile p join user u on p.id = u.id where  
           u.id not in ( select userId from course_member where courseId = ".$courseId.") ";
+        error_log("keshi==".$keshi);
 
-        if(!empty($keshi)){
+        if($keshi != ""){
             $sql = $sql." and p.company = ".$keshi;
         }
         if(!empty($sskeshi)){
@@ -245,8 +246,10 @@ class CourseWorkController extends BaseController
             $sql = $sql ." and p.varcharField5 = '".$degree."'";
         }
         if(!empty($position)){
-            if($position == "护士长" || $position == "教学老师"){
-                $sql = $sql ." and p.varcharField2 like  '%".$position."%'";
+            if($position == "教学老师"){
+                $sql = $sql ." and p.varcharField5 like  '%".$position."%'";
+            }else if($position == "护士长"){
+                $sql = $sql ." and p.varcharField2 =  '".$position."'";
             }else{
                 $sql = $sql ." and p.varcharField2 = '".$position."'";
             }

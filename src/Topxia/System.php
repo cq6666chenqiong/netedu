@@ -10,6 +10,7 @@ define("DBPASSWORD","");
 */
 class System
 {
+    //public static $DBADDR = 'localhost';
     public static $DBADDR = 'localhost';
     public static $DBNAME = 'netedu';
     public static $DBUSER = 'root';

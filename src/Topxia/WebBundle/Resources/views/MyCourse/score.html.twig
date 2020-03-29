@@ -31,12 +31,49 @@
             </div>
             总学分:{{ totalScore }}
             <table class="table table-striped table-hover">
-                <tr><th>课程名</th><th>学分年度</th><th>学分</th><th>备注</th></tr>
+                <tr><th>课程名</th><th>课程类型</th><th>学分年度</th><th>学分</th><th>备注</th></tr>
                 {% for  sc in score  %}
                     {% if(sc.title != null) %}
-                        <tr><td>{{ sc.title }}</td><td>{{ sc.year }}</td><td>{{ sc.xuefen }}</td><td>{{ sc.remark }}</td></tr>
+                        <tr><td>{{ sc.title }}</td>
+                            <td>
+                                {% if sc.type == "0" %} N0 {% endif %}
+                                {% if sc.type == "1" %} N1 {% endif %}
+                                {% if sc.type == "2" %} N2 {% endif %}
+                                {% if sc.type == "3" %} N3 {% endif %}
+                                {% if sc.type == "4" %} N4 {% endif %}
+                                {% if sc.type == "5" %} GN {% endif %}
+                                {% if sc.type == "35" %} 静疗 {% endif %}
+                                {% if sc.type == "36" %} 糖尿病 {% endif %}
+                                {% if sc.type == "37" %} 危重症 {% endif %}
+                                {% if sc.type == "38" %} 跌倒坠床 {% endif %}
+                                {% if sc.type == "39" %} 肿瘤 {% endif %}
+                                {% if sc.type == "40" %} 管路 {% endif %}
+                                {% if sc.type == "41" %} 健康教育 {% endif %}
+                                {% if sc.type == "42" %} 信息化建设	 {% endif %}
+                                {% if sc.type == "43" %} 设备及耗材	 {% endif %}
+                                {% if sc.type == "44" %} 科室运行文件	 {% endif %}
+                                {% if sc.type == "45" %} 临床药品	 {% endif %}
+                                {% if sc.type == "46" %} 院感	 {% endif %}
+                                {% if sc.type == "47" %} 敏感指标	 {% endif %}
+                                {% if sc.type == "48" %} 造口	 {% endif %}
+                                {% if sc.type == "49" %} 宣传	 {% endif %}
+                                {% if sc.type == "50" %} 护理文书	{% endif %}
+                                {% if sc.type == "51" %} 应急	{% endif %}
+                                {% if sc.type == "53" %} VTE		 {% endif %}
+                                {% if sc.type == "54" %} 压力性损伤		 {% endif %}
+                                {% if sc.type == "55" %} 公共课		 {% endif %}
+                                {% if sc.type == "56" %} 护士长		 {% endif %}
+                                {% if sc.type == "57" %} 教学老师		 {% endif %}
+                            </td>
+                            <td>{{ sc.year }}</td><td>{{ sc.xuefen }}</td>
+                            <td>{{ sc.remark }}</td></tr>
                     {% else %}
-                        <tr><td>{{ sc.courseName }}</td><td>{{ sc.year }}</td><td>{{ sc.xuefen }}</td><td>{{ sc.remark }}</td></tr>
+                        <tr><td>{{ sc.courseName }}</td>
+                            <td>
+                                {% if sc.type == "-1" %} 线下专业课 {% endif %}
+                                {% if sc.type == "-2" %} 线下层级课 {% endif %}
+                            </td>
+                            <td>{{ sc.year }}</td><td>{{ sc.xuefen }}</td><td>{{ sc.remark }}</td></tr>
                     {% endif %}
                 {% endfor %}
                 {% for  sc in other  %}

@@ -44,7 +44,7 @@
         <p class="teacher-name">危重病</p>
     {% endif %}
     {% if course.buyable == 38 %}
-        <p class="teacher-name">跌倒坠床及压疮</p>
+        <p class="teacher-name">跌倒坠床</p>
     {% endif %}
     {% if course.buyable == 39 %}
         <p class="teacher-name">肿瘤</p>
@@ -84,6 +84,22 @@
     {% endif %}
     {% if course.buyable == 51 %}
         <p class="teacher-name">应急</p>
+    {% endif %}
+
+    {% if course.buyable == 53 %}
+        <p class="teacher-name">VTE</p>
+    {% endif %}
+    {% if course.buyable == 54 %}
+        <p class="teacher-name">压力性损伤</p>
+    {% endif %}
+    {% if course.buyable == 55 %}
+        <p class="teacher-name">公共课</p>
+    {% endif %}
+    {% if course.buyable == 56 %}
+        <p class="teacher-name">护士长</p>
+    {% endif %}
+    {% if course.buyable == 57 %}
+        <p class="teacher-name">教学老师</p>
     {% endif %}
   {% if course.discountId %}
 
