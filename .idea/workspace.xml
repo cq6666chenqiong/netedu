@@ -4,18 +4,12 @@
     <list default="true" id="4906b9a7-0041-4091-bfa2-a0badec4188f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/session_gc_time.data" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/session_gc_time.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/logs/prod.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/prod.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/AdminBundle/Resources/views/sorce/departmentsorce.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/System.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/System.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseSorceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/CourseWorkController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/Widget/course-price.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/Widget/course-price.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/Course/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseManage/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/CourseManage/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse.htm.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse.htm.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse1.htm.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse2.htm.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/batstudentcourse2.htm.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/MyCourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Controller/MyCourseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/score.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topxia/WebBundle/Resources/views/MyCourse/score.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,43 +29,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>临床药品</find>
-      <find>atuo</find>
-      <find>atu</find>
-      <find>a</find>
-      <find>autop</find>
-      <find>auto</find>
-      <find>autoloa</find>
-      <find>autoload</find>
-      <find>getRegisterData</find>
-      <find>admin_course_delete</find>
-      <find>admin_operation_group</find>
-      <find>创建课程</find>
-      <find>学员管理</find>
-      <find>searchCourseCount</find>
-      <find>用户总数</find>
-      <find>{% set</find>
-      <find>set</find>
-      <find>我的学分</find>
-      <find>课程类型</find>
-      <find>123.56.7.13:8080</find>
-      <find>卫生</find>
-      <find>卫生人才</find>
-      <find>course-list-section</find>
-      <find>course-price-widget</find>
-      <find>/sorce/member</find>
-      <find>bat</find>
-      <find>batstu</find>
-      <find>course_fetch_bat_student</find>
-      <find>batstudent1index</find>
-      <find>score</find>
-    </findStrings>
-    <dirStrings>
-      <dir>D:\wamp64\wamp\www\netedu\vendor2</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -82,17 +39,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\wamp64\wamp\www\netedu\src\Topxia\AdminBundle\Resources\views\sorce" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\netedu\web" />
       <recent name="D:\wamp64\www\netedu\src\Topxia\WebBundle\Controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\wamp\www\netedu\src\Topxia\AdminBundle\Resources\views\sorce" />
     </key>
   </component>
   <component name="RunManager">
@@ -270,7 +227,14 @@
       <workItem from="1585439629302" duration="384000" />
       <workItem from="1585440048528" duration="57000" />
       <workItem from="1585440137342" duration="70000" />
-      <workItem from="1585440409442" duration="4354000" />
+      <workItem from="1585440409442" duration="4955000" />
+      <workItem from="1586650654505" duration="4214000" />
+      <workItem from="1587976501529" duration="811000" />
+      <workItem from="1587991375874" duration="2521000" />
+      <workItem from="1588067762038" duration="431000" />
+      <workItem from="1588122921378" duration="1014000" />
+      <workItem from="1589802387906" duration="2058000" />
+      <workItem from="1589888543550" duration="4987000" />
     </task>
     <servers />
   </component>
@@ -278,9 +242,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="336" y="167" key="com.intellij.ide.util.TipDialog" timestamp="1585440451899">
+    <state x="419" y="76" key="FileChooserDialogImpl" timestamp="1588123336622">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="336" y="167" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585440451899" />
+    <state x="419" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588123336622" />
+    <state x="336" y="167" key="com.intellij.ide.util.TipDialog" timestamp="1589888531826">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="336" y="167" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589888531826" />
+    <state x="331" y="87" width="783" height="490" key="find.popup" timestamp="1588068183728">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="331" y="87" width="783" height="490" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1588068183728" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1589889673189">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1589889673189" />
   </component>
 </project>

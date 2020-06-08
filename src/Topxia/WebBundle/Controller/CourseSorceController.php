@@ -39,7 +39,48 @@ class CourseSorceController extends BaseController
         {
             die('Could not connect: ' . mysql_error());
         }
-        $sql = "select u.nickname nickname,ifnull(s.score,0) xuefen,c.title title,s.year year,ifnull(s.courseName,'在线课程') courseName,ifnull(s.remark,'在线') remark,c.buyable type from user u 
+
+        $sql = "select id,title from classroom";
+        $cengjiMap ='';
+        error_log($sql);
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_multi_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,$sql);
+        if(!empty($result)){
+            while(($row = mysqli_fetch_array($result)) != null){
+                //$cengjiMap[$row.id] = $row.title;
+                //error_log($row["id"]);
+                //error_log($row["title"]);
+                $cengjiMap[$row["id"]] = $row["title"];
+                //error_log(json_encode($row));
+            }
+        }
+
+        error_log(json_encode($cengjiMap));
+
+        $sql = "select u.nickname nickname,up.truename truename,up.company cengji,up.varcharField3 endemic_area,
+        IF(up.varcharField4='' , '其他' , up.varcharField4) professional_groups,up.varcharField5 teacher,up.job duty
+         from user u 
+        JOIN user_profile up on up.id = u.id 
+        where u.id = ".$userId;
+        $thisUser = "";
+        error_log($sql);
+        mysqli_select_db($con,System::$DBNAME);
+        mysqli_multi_query($con,"set names 'utf8'");
+        $result = mysqli_query($con,$sql);
+        $score = array();
+        if(!empty($result)){
+            while(($row = mysqli_fetch_array($result)) != null){
+                $thisUser = $row;
+            }
+        }
+
+
+
+        $sql = "select u.nickname nickname,up.truename truename,up.company cengji,up.varcharField3 endemic_area,
+        IF(up.varcharField4='' , '其他' , up.varcharField4) professional_groups,up.varcharField4 teacher,up.job duty,
+        ifnull(s.score,0) xuefen,c.title title,s.year year,ifnull(s.courseName,'在线课程') courseName,ifnull(s.remark,'在线') remark,c.buyable type from user u 
+        JOIN user_profile up on up.id = u.id 
         JOIN user_score s on s.userId = u.id 
         left join course c on s.courseId = c.id
         where u.id = ".$userId;
@@ -58,7 +99,7 @@ class CourseSorceController extends BaseController
                 array_push($score,$row);
             }
         }
-        $sql = "select * from user_score where courseId < 0 and userId = ".$userId;
+        $sql = "select * from user_score where courseId < 0 and userId = ".$userId." and year = ".$year;
         mysqli_select_db($con,System::$DBNAME);
         mysqli_multi_query($con,"set names 'utf8'");
         $result = mysqli_query($con,$sql);
@@ -89,7 +130,9 @@ class CourseSorceController extends BaseController
             'num' => sizeof($score),
             'userId'=> $userId,
             'totalScore'=> $totalScore,
-            'year'=>$year
+            'year'=>$year,
+            'thisUser'=>$thisUser,
+            'cengjiMap'=>$cengjiMap
         ));
     }
 

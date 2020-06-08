@@ -13,12 +13,13 @@ class DefaultController extends BaseController
 
         $user = $this->getCurrentUser();
 
-
+        error_log(json_encode($user));
 
         if($user->isAdmin()){
 
         }else{
             if($request->query->get('index') == null){
+
                 return $this->redirect($this->generateUrl('my_courses_learning'));
             }
         }
