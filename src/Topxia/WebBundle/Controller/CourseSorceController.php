@@ -41,7 +41,7 @@ class CourseSorceController extends BaseController
         }
 
         $sql = "select id,title from classroom";
-        $cengjiMap ='';
+        $cengjiMap = array();
         error_log($sql);
         mysqli_select_db($con,System::$DBNAME);
         mysqli_multi_query($con,"set names 'utf8'");
@@ -55,8 +55,15 @@ class CourseSorceController extends BaseController
                 //error_log(json_encode($row));
             }
         }
-
-        error_log(json_encode($cengjiMap));
+        $cengjiMap[0] = "N0";
+		$cengjiMap[1] = "N1";
+		$cengjiMap[2] = "N2";
+		$cengjiMap[3] = "N3";
+		$cengjiMap[4] = "N4";
+		$cengjiMap[5] = "GN1";
+		$cengjiMap[34] = "线下层级课程";
+		
+        error_log("iiiii===".json_encode($cengjiMap));
 
         $sql = "select u.nickname nickname,up.truename truename,up.company cengji,up.varcharField3 endemic_area,
         IF(up.varcharField4='' , '其他' , up.varcharField4) professional_groups,up.varcharField5 teacher,up.job duty

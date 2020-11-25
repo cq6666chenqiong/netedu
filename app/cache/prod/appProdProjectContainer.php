@@ -290,7 +290,7 @@ class appProdProjectContainer extends Container
     }
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => 3306, 'dbname' => 'netedu', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driverOptions' => array(), 'wrapperClass' => 'Topxia\\Service\\Common\\Connection'), new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array('enum' => 'string'));
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '123.56.7.13', 'port' => 3306, 'dbname' => 'netedu', 'user' => 'root', 'password' => 'ADMINhyl321', 'charset' => 'UTF8', 'driverOptions' => array(), 'wrapperClass' => 'Topxia\\Service\\Common\\Connection'), new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array('enum' => 'string'));
     }
     protected function getDoctrine_Orm_DefaultEntityListenerResolverService()
     {
@@ -768,7 +768,7 @@ class appProdProjectContainer extends Container
         $x->addHandler($w);
         $y = new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $v, 'main', new \Topxia\WebBundle\Handler\AuthenticationSuccessHandler($v, array()), new \Topxia\WebBundle\Handler\AuthenticationFailureHandler($f, $v, array(), $a), array('check_path' => 'login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $a, $d);
         $y->setRememberMeServices($w);
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($u, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $x, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $w, $g, $a, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5e75c6c2b7822', $a), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $u, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $v, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $v, 'login', false), NULL, NULL, $a));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($u, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $x, 3 => $y, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $w, $g, $a, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5fbdbe253e025', $a), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $u, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $v, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $v, 'login', false), NULL, NULL, $a));
     }
     protected function getSecurity_Rememberme_ResponseListenerService()
     {
@@ -839,7 +839,7 @@ class appProdProjectContainer extends Container
     }
     protected function getSession_Handler_Pdo_ConnectionService()
     {
-        $this->services['session.handler.pdo.connection'] = $instance = new \PDO('mysql:host=localhost;port=3306;dbname=netedu', 'root', NULL);
+        $this->services['session.handler.pdo.connection'] = $instance = new \PDO('mysql:host=123.56.7.13;port=3306;dbname=netedu', 'root', 'ADMINhyl321');
         $instance->setAttribute(3, 2);
         return $instance;
     }
@@ -1420,7 +1420,7 @@ class appProdProjectContainer extends Container
     protected function getSecurity_Authentication_ManagerService()
     {
         $a = new \Symfony\Component\Security\Core\User\UserChecker();
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Topxia\WebBundle\Handler\AuthenticationProvider($this->get('topxia.user_provider'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, '1hkcbroykc004gc8ko844co40g4kwco', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5e75c6c2b7822')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Topxia\WebBundle\Handler\AuthenticationProvider($this->get('topxia.user_provider'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, '1hkcbroykc004gc8ko844co40g4kwco', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5fbdbe253e025')), true);
         $instance->setEventDispatcher($this->get('event_dispatcher'));
         return $instance;
     }
@@ -1611,11 +1611,11 @@ class appProdProjectContainer extends Container
                 24 => '/bddServer/callback',
             ),
             'database_driver' => 'pdo_mysql',
-            'database_host' => 'localhost',
+            'database_host' => '123.56.7.13',
             'database_port' => 3306,
             'database_name' => 'netedu',
             'database_user' => 'root',
-            'database_password' => NULL,
+            'database_password' => 'ADMINhyl321',
             'mailer_transport' => 'smtp',
             'mailer_host' => '127.0.0.1',
             'mailer_user' => NULL,
